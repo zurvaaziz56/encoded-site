@@ -7,9 +7,10 @@
 <meta name="description" content="Encoded sets up AI to write like your team on its best day. Your voice, your format, your rules, on the first pass. For PR agencies, podcast producers, and content teams.">
 
 <!-- ============================================================
-  LIVE-READY. One upgrade when available:
-  Cal.com: find-replace every href that has data-booking="swap-to-calcom"
-  with your Cal.com URL (currently mailto fallback, fully functional)
+  CTA LINKS: paste your two URLs into BOOKING_URL and FORM_URL near
+  the top of the <script> block below. Every "Book a call" button
+  (data-cta="book") and every "Tell us what's breaking" link
+  (data-cta="form") then points there automatically. No mailto.
   ============================================================ -->
 
 <meta property="og:title" content="Encoded · AI that follows your rules">
@@ -105,6 +106,8 @@ header{
 .cta-row{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-bottom:1.1rem}
 .hero .quiet{font-size:.92rem;color:#7a7f87}
 .hero .quiet a{color:#7a7f87}
+.cta-alt{display:inline-block;font-size:.98rem;font-weight:600;color:var(--ink);text-decoration:underline;text-decoration-color:var(--mark);text-decoration-thickness:2px;text-underline-offset:3px}
+.cta-alt:hover{text-decoration-color:var(--ink)}
 
 /* receipts strip */
 .receipts{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--panel)}
@@ -501,7 +504,7 @@ body.js .folder.in-view:hover{transform:rotate(0deg) translateY(-7px)}
       <li><a href="#audit">The audit</a></li>
       <li><a href="#pricing">Pricing</a></li>
       <li><a href="#faq">FAQ</a></li>
-      <li><a class="btn small nav-cta" href="mailto:hello@getencoded.co?subject=Founding%20spot%20—%20Encoded" data-booking="swap-to-calcom">Book a call</a></li>
+      <li><a class="btn small nav-cta" href="#" data-cta="book">Book a call</a></li>
     </ul>
   </div>
 </header>
@@ -515,9 +518,10 @@ body.js .folder.in-view:hover{transform:rotate(0deg) translateY(-7px)}
       <h1>Stop fixing the same AI mistakes <span class="hl">every week.</span></h1>
       <p class="lede">Encoded sets up AI to write like your team on its best day. Your voice, your format, your rules, on the first pass. Built for PR agencies, podcast producers, and content teams that publish a lot.</p>
       <div class="cta-row">
-        <a class="btn" href="mailto:hello@getencoded.co?subject=Founding%20spot%20—%20Encoded" data-booking="swap-to-calcom">Book a 30-minute call</a>
+        <a class="btn" href="#" data-cta="book">Book a 30-minute call</a>
         <a class="btn ghost" href="#demo">See it work ↓</a>
       </div>
+      <p><a class="cta-alt" href="#" data-cta="form">Not ready for a call? Tell us what's breaking →</a></p>
       </div>
 
       <div class="scene hero-right" aria-hidden="true">
@@ -705,8 +709,8 @@ body.js .folder.in-view:hover{transform:rotate(0deg) translateY(-7px)}
           <li>Delivered within 7 days of the call</li>
           <li>Full fee credited if you start a build within 60 days</li>
         </ul>
-        <a class="btn" href="mailto:hello@getencoded.co?subject=Founding%20spot%20—%20Encoded" data-booking="swap-to-calcom">Claim a founding spot</a>
-        <p class="quiet">Questions first? <a href="mailto:hello@getencoded.co">hello@getencoded.co</a></p>
+        <a class="btn" href="#" data-cta="book">Claim a founding spot</a>
+        <p class="quiet">Not ready to book? <a href="#" data-cta="form">Tell us what's breaking →</a></p>
       </div>
       <div class="ladder">
         <h3>How pricing works</h3>
@@ -772,8 +776,8 @@ body.js .folder.in-view:hover{transform:rotate(0deg) translateY(-7px)}
       <h2>One workflow. Seven days. <span class="hl">Real numbers.</span> <span class="stamp inline-stamp">YOUR MOVE</span></h2>
       <p class="prose" style="margin:.8rem 0 1.8rem">You'll know exactly where your AI breaks your rules, what it costs you every month, and how to fix it.</p>
       <div class="cta-row">
-        <a class="btn" href="mailto:hello@getencoded.co?subject=Founding%20spot%20—%20Encoded" data-booking="swap-to-calcom">Book a 30-minute call</a>
-        <a class="btn ghost" href="mailto:hello@getencoded.co">Email instead</a>
+        <a class="btn" href="#" data-cta="book">Book a 30-minute call</a>
+        <a class="btn ghost" href="#" data-cta="form">Tell us what's breaking</a>
       </div>
     </div>
   </section>
@@ -783,12 +787,19 @@ body.js .folder.in-view:hover{transform:rotate(0deg) translateY(-7px)}
 <footer>
   <div class="wrap">
     <span>© 2026 Encoded · getencoded.co</span>
-    <a href="mailto:hello@getencoded.co">hello@getencoded.co</a>
+    <a href="#" data-cta="form">Get in touch →</a>
   </div>
 </footer>
 
 <script>
 document.body.classList.add('js');
+
+/* ===== YOUR LINKS — paste your two URLs here, everything else updates ===== */
+const BOOKING_URL = "https://cal.com/zurva-aziz-encoded/30min";  /* Cal.com intro call */
+const FORM_URL    = "https://tally.so/r/RGl40j";  /* Tally "what's breaking" form */
+document.querySelectorAll('[data-cta="book"]').forEach(a=>{ if(BOOKING_URL){a.href=BOOKING_URL;a.target="_blank";a.rel="noopener";} });
+document.querySelectorAll('[data-cta="form"]').forEach(a=>{ if(FORM_URL){a.href=FORM_URL;a.target="_blank";a.rel="noopener";} });
+
 const noMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 /* mobile menu */
