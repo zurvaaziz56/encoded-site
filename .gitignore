@@ -1,0 +1,8 @@
+# macOS
+.DS_Store
+
+# Private project context — never publish (repo is public)
+CLAUDE.md
+
+# Local Claude Code settings
+.claude/settings.local.json
