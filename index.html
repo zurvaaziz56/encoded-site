@@ -108,12 +108,14 @@ header{
 
 /* receipts strip */
 .receipts{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--panel)}
-.receipts .wrap{padding:22px 24px}
+.receipts .wrap{padding:30px 24px}
 .receipts p{font-size:.98rem;max-width:860px}
+.r-lead{font-size:1.1rem;color:var(--ink);max-width:760px;margin:.15rem 0 1.15rem}
+.r-lead b{color:var(--ink)}
 
 /* ---------- sections ---------- */
-section{padding:84px 0}
-.section-tight{padding:64px 0}
+section{padding:50px 0}
+.section-tight{padding:38px 0}
 
 
 /* ---------- demo ---------- */
@@ -147,11 +149,28 @@ section{padding:84px 0}
 .who-block h3{margin-top:1.8rem;margin-bottom:.35rem}
 .who-block p{margin-bottom:.4rem}
 
-/* ---------- audit timeline ---------- */
-.days{margin-top:2.4rem;display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
-.day{display:flex;flex-direction:column;gap:14px;padding:0}
-.day .d-when{font-family:var(--display);font-weight:700;font-size:1rem}
-.day p{font-size:1rem}
+/* ---------- audit: 3-step process ---------- */
+.steps{list-style:none;margin:2.8rem 0 0;display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.step{
+  position:relative;background:#fff;border:1px solid var(--line);border-top:4px solid var(--pen);
+  border-radius:12px;padding:1.6rem 1.5rem 1.5rem;
+  box-shadow:0 3px 12px rgba(20,24,29,.05);
+  transition:transform .2s cubic-bezier(.2,.8,.3,1),box-shadow .2s ease,opacity .5s ease;
+}
+.step:hover{transform:translateY(-6px);box-shadow:0 16px 32px rgba(20,24,29,.12)}
+.step-cal{display:inline-block;font-family:var(--display);font-weight:800;font-size:.78rem;letter-spacing:.07em;text-transform:uppercase;color:var(--pen)}
+.step-ico{position:absolute;top:1.2rem;right:1.3rem;font-size:1.6rem;line-height:1;transition:transform .2s ease}
+.step:hover .step-ico{transform:scale(1.14) rotate(-5deg)}
+.step h3{margin:.45rem 0 .5rem;font-size:1.18rem}
+.step p{font-size:.98rem;color:var(--ink-soft);line-height:1.55}
+/* flow arrows between steps (desktop) */
+.step:not(:last-child)::after{
+  content:"→";position:absolute;right:-22px;top:2.4rem;
+  font-family:var(--display);font-weight:700;font-size:1.4rem;color:#c9c3b2;z-index:2;
+}
+body.js .step{opacity:0;transform:translateY(16px)}
+body.js .step.in-view{opacity:1;transform:translateY(0)}
+body.js .step.in-view:hover{transform:translateY(-6px)}
 
 /* ---------- offer ---------- */
 .offer{background:var(--ink);color:#fff}
@@ -244,8 +263,6 @@ body.js .hl.hl-on{background-size:100% 100%}
 /* micro-interactions */
 .run{transition:transform .12s ease,box-shadow .12s ease}
 .run:hover{transform:translateY(-2px);box-shadow:0 4px 14px rgba(20,24,29,.06)}
-.day{transition:background .15s ease}
-.day:hover{background:var(--panel)}
 
 /* colophon */
 .colophon{background:var(--paper)}
@@ -267,7 +284,8 @@ body.js .hl.hl-on{background-size:100% 100%}
 
 @media (prefers-reduced-motion: reduce){
   body.js .card{opacity:1;transform:rotate(var(--rot));transition:none}
-  body.js .folder{opacity:1;transform:none;transition:none}
+  body.js .folder{opacity:1;transform:rotate(var(--rot));transition:none}
+  body.js .step{opacity:1;transform:none;transition:none}
   .dot{animation:none}
   body.js .hl{background-size:100% 100%;transition:none}
   .strike::after,.pains .pen::after{transition:none}
@@ -350,7 +368,7 @@ body.js .card.in-view:hover{transform:rotate(0deg) translateY(-3px)}
 }
 
 /* status board */
-.r-head{font-family:var(--display);font-weight:700;font-size:1rem;margin-bottom:.8rem}
+.r-head{font-family:var(--display);font-weight:700;font-size:.82rem;letter-spacing:.09em;text-transform:uppercase;color:var(--ok);margin-bottom:.5rem}
 .badges{display:flex;flex-wrap:wrap;gap:10px}
 .badge{
   display:inline-flex;align-items:center;gap:8px;
@@ -363,23 +381,38 @@ body.js .card.in-view:hover{transform:rotate(0deg) translateY(-3px)}
 @keyframes livePulse{0%,100%{box-shadow:0 0 0 0 rgba(31,122,77,.5)}50%{box-shadow:0 0 0 5px rgba(31,122,77,0)}}
 .r-sub{font-size:.9rem;color:#7a7f87;margin-top:.8rem}
 
-/* manila folders */
-.folders{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:2.4rem}
+/* manila folders — case files */
+.folders{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:2.8rem}
 .folder{
-  position:relative;background:#f8f0dc;border:1px solid #e6d9b8;border-radius:0 10px 10px 10px;
-  padding:1.5rem 1.3rem 1.3rem;margin-top:20px;
-  transition:transform .15s ease,box-shadow .15s ease,opacity .5s ease;
+  position:relative;background:#f8f0dc;border:1px solid #e6d9b8;border-radius:0 12px 12px 12px;
+  padding:1.9rem 1.5rem 1.5rem;margin-top:24px;
+  transform:rotate(var(--rot,0deg));
+  box-shadow:0 3px 12px rgba(20,24,29,.06);
+  transition:transform .22s cubic-bezier(.2,.8,.3,1),box-shadow .22s ease,opacity .5s ease;
 }
-.folder:hover{transform:translateY(-3px);box-shadow:0 8px 20px rgba(20,24,29,.08)}
+/* a second sheet peeking out behind the folder */
+.folder::before{
+  content:"";position:absolute;inset:7px 7px -7px -7px;z-index:-1;
+  background:#fdf7e6;border:1px solid #e8dcbd;border-radius:0 12px 12px 12px;
+  transform:rotate(1.8deg);transition:transform .22s ease;
+}
+.folder:hover{transform:rotate(0deg) translateY(-7px);box-shadow:0 18px 36px rgba(20,24,29,.14)}
+.folder:hover::before{transform:rotate(3.4deg) translate(3px,4px)}
 .f-tab{
-  position:absolute;top:-21px;left:-1px;
-  background:#f8f0dc;border:1px solid #e6d9b8;border-bottom:0;border-radius:8px 8px 0 0;
-  padding:.25em .9em;font-family:var(--display);font-weight:700;font-size:.88rem;color:var(--ink);
+  position:absolute;top:-23px;left:-1px;
+  background:var(--ink);color:#fff;border:1px solid var(--ink);border-bottom:0;border-radius:8px 8px 0 0;
+  padding:.35em 1em;font-family:var(--display);font-weight:700;font-size:.9rem;
 }
-.folder p{font-size:.97rem;color:var(--ink-soft)}
-body.js .folder{opacity:0;transform:translateY(14px)}
-body.js .folder.in-view{opacity:1;transform:translateY(0)}
-body.js .folder.in-view:hover{transform:translateY(-3px)}
+.f-icon{font-size:2.1rem;line-height:1;margin-bottom:.7rem;display:block;transition:transform .22s ease}
+.folder:hover .f-icon{transform:scale(1.12) rotate(-4deg)}
+.folder p{font-size:1.02rem;color:var(--ink-soft);line-height:1.55}
+.f-pain{
+  font-family:'Caveat',cursive;font-weight:700;font-size:1.32rem;color:var(--pen);
+  margin-top:1rem;transform:rotate(-1deg);line-height:1.12;
+}
+body.js .folder{opacity:0;transform:rotate(var(--rot)) translateY(16px)}
+body.js .folder.in-view{opacity:1;transform:rotate(var(--rot)) translateY(0)}
+body.js .folder.in-view:hover{transform:rotate(0deg) translateY(-7px)}
 
 /* founding spot tickets */
 .spots{display:flex;flex-wrap:wrap;gap:12px;margin:.4rem 0 1.4rem}
@@ -393,12 +426,6 @@ body.js .folder.in-view:hover{transform:translateY(-3px)}
 .spot.taken{
   border-color:#5a636e;color:#5a636e;text-decoration:line-through;
   text-decoration-color:var(--pen);text-decoration-thickness:2.5px;
-}
-/* audit day calendar sheets */
-.day .d-when{
-  width:88px;align-self:flex-start;background:#fff;border:1px solid var(--line);border-top:4px solid var(--pen);
-  border-radius:8px;text-align:center;padding:.55rem .3rem;height:fit-content;
-  font-size:.92rem;box-shadow:0 2px 6px rgba(20,24,29,.05);
 }
 /* inline stamp */
 .inline-stamp{
@@ -447,8 +474,8 @@ body.js .folder.in-view:hover{transform:translateY(-3px)}
 @media (max-width:760px){
   .desk{grid-template-columns:1fr;max-width:460px}
   .folders{grid-template-columns:1fr;max-width:460px;gap:34px}
-  .days{grid-template-columns:1fr;gap:20px;max-width:520px}
-  .day{flex-direction:row;gap:16px;align-items:flex-start}
+  .steps{grid-template-columns:1fr;gap:34px}
+  .step:not(:last-child)::after{content:"↓";right:auto;left:50%;top:auto;bottom:-27px;transform:translateX(-50%)}
   .nav-links{
     display:none;position:absolute;top:64px;left:0;right:0;
     background:#fff;border-bottom:1px solid var(--line);
@@ -457,8 +484,8 @@ body.js .folder.in-view:hover{transform:translateY(-3px)}
   .nav-links.open{display:flex}
   .menu-btn{display:block}
   .offer-cols{grid-template-columns:1fr;gap:36px}
-  section{padding:64px 0}
-  .hero{padding:56px 0 48px}
+  section{padding:42px 0}
+  .hero{padding:44px 0 40px}
 }
 </style>
 </head>
@@ -491,7 +518,6 @@ body.js .folder.in-view:hover{transform:translateY(-3px)}
         <a class="btn" href="mailto:hello@getencoded.co?subject=Founding%20spot%20—%20Encoded" data-booking="swap-to-calcom">Book a 30-minute call</a>
         <a class="btn ghost" href="#demo">See it work ↓</a>
       </div>
-      <p class="quiet">Or email <a href="mailto:hello@getencoded.co">hello@getencoded.co</a>. Replies within a day.</p>
       </div>
 
       <div class="scene hero-right" aria-hidden="true">
@@ -514,13 +540,14 @@ body.js .folder.in-view:hover{transform:translateY(-3px)}
   <!-- RECEIPTS -->
   <div class="receipts">
     <div class="wrap">
-      <p class="r-head">Running in production, today</p>
+      <p class="r-head">Proof, not promises</p>
+      <p class="r-lead">Encoded isn't a concept. Three editorial AI systems we built are running for real clients <b>right now:</b></p>
       <div class="badges">
-        <span class="badge"><i class="dot" aria-hidden="true"></i>PR editorial pipeline · 8 checks per piece · weekly batches</span>
-        <span class="badge"><i class="dot" aria-hidden="true"></i>Podcast content packages · 200+ episodes shipped</span>
-        <span class="badge"><i class="dot" aria-hidden="true"></i>LinkedIn engine · publishing daily</span>
+        <span class="badge"><i class="dot" aria-hidden="true"></i>PR agency · editorial QA on every piece, weekly</span>
+        <span class="badge"><i class="dot" aria-hidden="true"></i>Podcast magazine · 200+ episode packages shipped</span>
+        <span class="badge"><i class="dot" aria-hidden="true"></i>Growth agency · LinkedIn posts, daily</span>
       </div>
-      <p class="r-sub">Real systems for real clients. This page is that work, productized.</p>
+      <p class="r-sub">Encoded is that same work, set up for your team.</p>
     </div>
   </div>
 
@@ -605,17 +632,23 @@ body.js .folder.in-view:hover{transform:translateY(-3px)}
     <div class="wrap">
       <h2>Who this is for</h2>
       <div class="folders">
-        <article class="folder">
+        <article class="folder" style="--rot:-1.2deg">
           <span class="f-tab">PR &amp; comms</span>
+          <span class="f-icon" aria-hidden="true">📰</span>
           <p>You send expert quotes and press pieces out every week, and an editor rereads every one because the AI drafts can't be trusted on their own. We make the checking happen before the work reaches you.</p>
+          <p class="f-pain">“Does this even sound like the client?”</p>
         </article>
-        <article class="folder">
+        <article class="folder" style="--rot:0.9deg">
           <span class="f-tab">Podcasts &amp; media</span>
+          <span class="f-icon" aria-hidden="true">🎙️</span>
           <p>Every episode needs a title, clips, quotes, social posts, and an article. Strict formats, volume that never stops. We turn your packaging process into a system that gets it right on the first pass.</p>
+          <p class="f-pain">“Another title to fix by hand.”</p>
         </article>
-        <article class="folder">
+        <article class="folder" style="--rot:-0.6deg">
           <span class="f-tab">Agencies &amp; newsletters</span>
+          <span class="f-icon" aria-hidden="true">✉️</span>
           <p>Ten clients, ten voices, one team. Keeping every client's voice intact across everyone who touches the work is the hardest problem in content. It's also the one we're best at.</p>
+          <p class="f-pain">“Wait, whose voice was this again?”</p>
         </article>
       </div>
       <p class="prose" style="margin-top:2rem">The short version: if your team publishes a lot and someone rereads everything before it ships, <span class="hl">we should talk.</span></p>
@@ -627,20 +660,26 @@ body.js .folder.in-view:hover{transform:translateY(-3px)}
     <div class="wrap">
       <h2>Start with the audit</h2>
       <p class="prose">We won't ask you to trust a pitch. We ask for one workflow and seven days.</p>
-      <div class="days">
-        <div class="day">
-          <div class="d-when">Day 1</div>
-          <p>A 30-minute call. You pick one workflow that hurts. We collect your rules: voice, formats, banned words, the stuff your best editor holds in their head.</p>
-        </div>
-        <div class="day">
-          <div class="d-when">Days 2–5</div>
-          <p>We take your last 10 to 20 published pieces and measure them against your own rules. Where the AI broke your rules, how often, and what all that fixing costs you in hours.</p>
-        </div>
-        <div class="day">
-          <div class="d-when">Day 7</div>
-          <p>You get the report and a working session to walk through it: exactly where your output breaks your rules, and a concrete plan to fix it. Yours to keep either way.</p>
-        </div>
-      </div>
+      <ol class="steps">
+        <li class="step">
+          <span class="step-ico" aria-hidden="true">📞</span>
+          <span class="step-cal">Day 1</span>
+          <h3>Pick one workflow that hurts</h3>
+          <p>A 30-minute call. You choose the workflow, we collect your rules: voice, formats, banned words, the stuff your best editor holds in their head.</p>
+        </li>
+        <li class="step">
+          <span class="step-ico" aria-hidden="true">🔍</span>
+          <span class="step-cal">Days 2–5</span>
+          <h3>We measure the damage</h3>
+          <p>We take your last 10 to 20 published pieces and check them against your own rules: where the AI broke them, how often, and what the fixing costs you in hours.</p>
+        </li>
+        <li class="step">
+          <span class="step-ico" aria-hidden="true">📋</span>
+          <span class="step-cal">Day 7</span>
+          <h3>You get the report</h3>
+          <p>A written report and a working session to walk it through: exactly where your output breaks your rules, and a concrete plan to fix it. Yours to keep either way.</p>
+        </li>
+      </ol>
       <p class="prose" style="margin-top:2rem"><strong>What happens after:</strong> most teams ask us to build the fix. Builds start at $10,000. Go ahead within 60 days and your audit fee comes off the price.</p>
     </div>
   </section>
@@ -825,10 +864,10 @@ if(!noMotion && 'IntersectionObserver' in window){
     });
   },{threshold:0.6});
   document.querySelectorAll('.hl').forEach(el=>io.observe(el));
-  document.querySelectorAll('.desk .card, .folder').forEach((el,i)=>{el.style.transitionDelay=((i%4)*90)+'ms';io.observe(el);});
+  document.querySelectorAll('.desk .card, .folder, .step').forEach((el,i)=>{el.style.transitionDelay=((i%3)*90)+'ms';io.observe(el);});
 }else{
   document.querySelectorAll('.hl').forEach(el=>el.classList.add('hl-on'));
-  document.querySelectorAll('.desk .card, .folder').forEach(el=>el.classList.add('in-view'));
+  document.querySelectorAll('.desk .card, .folder, .step').forEach(el=>el.classList.add('in-view'));
 }
 
 /* demo: be the editor */
