@@ -17,6 +17,10 @@
 <meta property="og:description" content="Stop fixing the same AI mistakes every week. Audits and builds for teams that publish a lot.">
 <meta property="og:url" content="https://getencoded.co">
 <meta property="og:type" content="website">
+<meta name="author" content="Zurva Aziz">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Zurva Aziz","jobTitle":"Copywriter and content strategist","image":"https://getencoded.co/zurva.jpg","worksFor":{"@type":"Organization","name":"Encoded","url":"https://getencoded.co"},"sameAs":["https://www.linkedin.com/in/zurva-aziz","https://www.upwork.com/freelancers/zurvaa"]}
+</script>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='2' y='18' width='28' height='11' rx='2' fill='%23FFE566' transform='rotate(-2 16 23)'/%3E%3Ctext x='16' y='23' font-family='Arial Black,sans-serif' font-size='22' font-weight='900' fill='%2314181D' text-anchor='middle'%3EE%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -203,6 +207,51 @@ body.js .step.in-view:hover{transform:translateY(-6px)}
 .ladder .row span:first-child{color:#c7ccd3}
 .ladder .row span:last-child{color:#fff;font-weight:600;white-space:nowrap}
 .ladder p{font-size:.9rem;margin-top:1rem}
+
+/* ---------- about Zurva: a signed note from the person who does the work ---------- */
+.desk-note{
+  position:relative;max-width:880px;margin-top:1.6rem;
+  border:2px solid var(--ink);border-radius:14px;padding:2.1rem 2rem 1.9rem;
+  display:grid;grid-template-columns:200px 1fr;gap:40px;align-items:start;
+}
+.desk-note::before{
+  content:"FROM ZURVA'S DESK";
+  position:absolute;top:-0.8em;left:1.4rem;background:var(--paper);
+  padding:0 .6em;font-size:.75rem;font-weight:700;letter-spacing:.08em;color:var(--ink);
+}
+.desk-note .f-stamp{right:22px;top:-14px;font-size:.9rem;z-index:2}
+.desk-note .f-stamp.in-view{animation:stampIn .32s cubic-bezier(.2,1.5,.4,1) .3s forwards}
+/* photo: a taped-on print. Swap the initials block for an <img>; nothing else changes. */
+.f-photo{
+  position:relative;width:200px;background:#fff;border:1px solid var(--line);
+  padding:10px 10px 12px;box-shadow:0 3px 12px rgba(20,24,29,.08);
+  transform:rotate(-2deg);transition:transform .2s ease,box-shadow .2s ease;
+}
+.f-photo:hover{transform:rotate(0deg) translateY(-3px);box-shadow:0 10px 24px rgba(20,24,29,.12)}
+.f-frame{
+  aspect-ratio:4/5;background:var(--mark);overflow:hidden;
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--display);font-weight:800;font-size:3rem;letter-spacing:-.02em;color:var(--ink);
+}
+.f-frame img{width:100%;height:100%;object-fit:cover;display:block}
+.f-cap{
+  font-family:'Caveat',cursive;font-weight:700;font-size:1.3rem;line-height:1.1;
+  color:var(--ink);margin-top:.55rem;transform:rotate(-1deg);
+}
+.desk-note h2{font-size:clamp(1.6rem,3vw,2.1rem);margin-bottom:.15rem}
+.f-byline{font-size:.95rem;color:#7a7f87;margin-bottom:1.2rem}
+.f-text p{margin-bottom:.85rem;max-width:560px}
+.f-proof-h{display:block;font-size:.76rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:#9aa0a8;margin-top:1.5rem}
+.f-proof{list-style:none;margin-top:.5rem;max-width:560px}
+.f-proof li{position:relative;padding:.3rem 0 .3rem 1.6rem;font-size:.98rem;color:var(--ink-soft);line-height:1.5}
+.f-proof li::before{content:"\2713";position:absolute;left:0;top:.3rem;color:var(--ok);font-weight:700}
+.f-proof li b{color:var(--ink)}
+.f-links{display:flex;flex-wrap:wrap;gap:.5rem 1.6rem;margin-top:1.3rem}
+.f-links .cta-alt{font-size:.95rem}
+.f-sign{
+  display:inline-block;font-family:'Caveat',cursive;font-weight:700;font-size:2.2rem;line-height:1;
+  color:var(--ink);margin-top:1.5rem;transform:rotate(-3deg);
+}
 
 /* ---------- faq ---------- */
 .faq{max-width:680px;margin-top:1.6rem}
@@ -472,6 +521,8 @@ body.js .folder.in-view:hover{transform:rotate(0deg) translateY(-7px)}
   .stamp.on{animation:none}
   .pulse{animation:none;outline:3px solid var(--mark)}
   .chip,.chip:hover{transition:none;transform:none}
+  .desk-note .f-stamp.in-view{animation:none}
+  .f-photo,.f-photo:hover{transform:rotate(-2deg);transition:none}
 }
 
 @media (max-width:760px){
@@ -487,6 +538,9 @@ body.js .folder.in-view:hover{transform:rotate(0deg) translateY(-7px)}
   .nav-links.open{display:flex}
   .menu-btn{display:block}
   .offer-cols{grid-template-columns:1fr;gap:36px}
+  .desk-note{grid-template-columns:1fr;gap:26px;padding:1.9rem 1.3rem 1.6rem}
+  .f-photo{width:180px}
+  .desk-note .f-stamp{right:12px;top:-13px;font-size:.74rem}
   section{padding:42px 0}
   .hero{padding:44px 0 40px}
 }
@@ -503,6 +557,7 @@ body.js .folder.in-view:hover{transform:rotate(0deg) translateY(-7px)}
       <li><a href="#demo">See it work</a></li>
       <li><a href="#audit">The audit</a></li>
       <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#about">About Zurva</a></li>
       <li><a href="#faq">FAQ</a></li>
       <li><a class="btn small nav-cta" href="#" data-cta="book">Book a call</a></li>
     </ul>
@@ -722,6 +777,45 @@ body.js .folder.in-view:hover{transform:rotate(0deg) translateY(-7px)}
     </div>
   </section>
 
+  <!-- ABOUT ZURVA -->
+  <section id="about">
+    <div class="wrap">
+      <div class="desk-note">
+        <span class="stamp f-stamp" aria-hidden="true">DOES THE WORK</span>
+
+        <div class="f-photo">
+          <div class="tape" aria-hidden="true"></div>
+          <!-- PHOTO: zurva.jpg, 800x1000 (4:5), metadata stripped. To swap, replace the file and keep the name. -->
+          <div class="f-frame"><img src="zurva.jpg" alt="Zurva Aziz, copywriter and content strategist" width="800" height="1000" loading="lazy"></div>
+          <p class="f-cap">who you'll talk to</p>
+        </div>
+
+        <div class="f-text">
+          <h2>Hi, I'm Zurva.</h2>
+          <div class="f-byline">Zurva Aziz · copywriter and content strategist</div>
+          <p>I'm a copywriter and content strategist, and I build the systems on this page. For the last two years that's been the work: setting up AI for editorial teams so it follows their rules on the first pass, then keeping it that way as the tools change. The three systems under “Proof, not promises” at the top of this page are mine, and they're still running.</p>
+          <p>Most AI advice is about writing a better prompt. I think that's the wrong place to look. The teams I work with don't need a better request. They need their rules written down and checked on every run, and that's the part I'm good at.</p>
+          <p>When you book a call, <span class="hl">you're talking to me.</span> I run the intake, do the audit, and build the fix myself. Three clients at a time, so none of them get rushed.</p>
+
+          <span class="f-proof-h">For the record</span>
+          <ul class="f-proof">
+            <li><b>100+ completed projects</b> on Upwork, Top Rated Plus</li>
+            <li><b>Two years</b> building editorial AI that runs in production every week</li>
+            <li><b>Three client systems live today:</b> a PR agency's QA pipeline, a podcast magazine's episode packages, a growth agency's LinkedIn engine</li>
+          </ul>
+
+          <div class="f-links">
+            <a class="cta-alt" href="https://www.linkedin.com/in/zurva-aziz" target="_blank" rel="noopener">Find me on LinkedIn →</a>
+            <a class="cta-alt" href="https://www.upwork.com/freelancers/zurvaa" target="_blank" rel="noopener">See the Upwork profile →</a>
+            <a class="cta-alt" href="#" data-cta="book">Book a call with me →</a>
+          </div>
+
+          <div class="f-sign" aria-hidden="true">Zurva</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- FAQ -->
   <section id="faq" class="section-tight">
     <div class="wrap">
@@ -875,10 +969,10 @@ if(!noMotion && 'IntersectionObserver' in window){
     });
   },{threshold:0.6});
   document.querySelectorAll('.hl').forEach(el=>io.observe(el));
-  document.querySelectorAll('.desk .card, .folder, .step').forEach((el,i)=>{el.style.transitionDelay=((i%3)*90)+'ms';io.observe(el);});
+  document.querySelectorAll('.desk .card, .folder, .step, .f-stamp').forEach((el,i)=>{el.style.transitionDelay=((i%3)*90)+'ms';io.observe(el);});
 }else{
   document.querySelectorAll('.hl').forEach(el=>el.classList.add('hl-on'));
-  document.querySelectorAll('.desk .card, .folder, .step').forEach(el=>el.classList.add('in-view'));
+  document.querySelectorAll('.desk .card, .folder, .step, .f-stamp').forEach(el=>el.classList.add('in-view'));
 }
 
 /* demo: be the editor */
