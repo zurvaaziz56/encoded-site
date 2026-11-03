@@ -91,6 +91,30 @@
     </div>
   </section>
 
+  <!-- DEMO -->
+  <section id="demo" class="section-tight">
+    <div class="wrap">
+      <h2>Same prompt. Two tries.</h2>
+      <p class="prose"><strong>A demonstration, not client work.</strong> The client is invented. The rules, and the ways AI breaks them, are the ones we see every week.</p>
+
+      <div class="demo-shell">
+        <p class="task-line"><b>The task:</b> write the headline for a client's press release. <b>The rules:</b> sentence case, the client's full name on first mention, no hype words, clean punctuation.</p>
+
+        <div class="toggle" aria-label="Demo mode">
+          <button id="btnPlain" aria-pressed="true" onclick="setMode('plain')">Plain AI</button>
+          <button id="btnEnc" aria-pressed="false" onclick="setMode('enc')">With Encoded</button>
+        </div>
+
+        <p class="hint" id="hint"></p>
+        <div class="runs" id="runs" aria-live="polite"></div>
+        <p class="meter" id="meter" aria-live="polite"></p>
+
+        <button class="rerun" onclick="rerun()">↻ Run it again</button>
+        <p class="demo-caption" id="caption"></p>
+      </div>
+    </div>
+  </section>
+
   <!-- WHERE IT FITS -->
   <section class="section-tight">
     <div class="wrap">
@@ -281,5 +305,126 @@
 </footer>
 
 <script src="site.js"></script>
+<script>
+/* page-specific: the editor demo. noMotion comes from site.js. */
+/* demo: be the editor */
+const RULES=[
+  {id:'case', label:'sentence case'},
+  {id:'name', label:'full client name'},
+  {id:'hype', label:'no hype words'},
+  {id:'punct',label:'clean punctuation'}
+];
+const plainPool=[
+  {out:"Northwind Unveils Game-Changing Freight Platform", broken:{case:"Every Word Capitalised",hype:'"unveils", "game-changing"',name:'"Northwind Logistics" cut to "Northwind"'}},
+  {out:"A seismic leap forward for logistics — Northwind delivers", broken:{hype:'"seismic leap forward"',punct:"em dash, the classic",name:"client buried at the end, short name"}},
+  {out:"northwind launches freight platform", broken:{case:"no capital at all",name:"not the client's full name"}},
+  {out:"Revolutionary New Platform Set To Disrupt UK Freight", broken:{case:"Title Case",hype:'"revolutionary", "disrupt"',name:"client missing entirely"}},
+  {out:"Northwind Logistics launches a freight platform!!", broken:{punct:"double exclamation mark"}},
+  {out:"Game-Changing: Northwind Rewrites The Rules Of Freight", broken:{case:"Title Case",hype:'"game-changing", "rewrites the rules"',name:"short name only"}}
+];
+const encPool=[
+  {out:"Northwind Logistics opens its freight platform to small carriers"},
+  {out:"Northwind Logistics launches same-day freight for independent retailers"},
+  {out:"Northwind Logistics adds live tracking across its UK network"},
+  {out:"Northwind Logistics brings freight booking under one login"},
+  {out:"Northwind Logistics cuts booking time for small freight operators"},
+  {out:"Northwind Logistics extends same-day delivery to three more cities"}
+];
+let mode='plain', fixes=0, totalBroken=0, current=[];
+function pick(pool,n){
+  const copy=[...pool]; const out=[];
+  for(let i=0;i<n;i++){out.push(copy.splice(Math.floor(Math.random()*copy.length),1)[0]);}
+  return out;
+}
+function meterText(){
+  if(mode==='enc') return '0 fixes · 0 minutes · your evening back';
+  const mins=fixes*2;
+  return fixes+' fixes found · ≈ '+mins+' min of your day';
+}
+function updateMeter(){
+  document.getElementById('meter').textContent=meterText();
+  if(mode==='plain' && totalBroken>0 && fixes>=totalBroken){
+    document.getElementById('caption').textContent='And that is two headlines. Now imagine forty pieces a week. Flip the switch.';
+    document.getElementById('btnEnc').classList.add('pulse');
+  }
+}
+function chipRow(run,idx){
+  return '<div class="chips">'+RULES.map(rule=>{
+    return '<button class="chip" data-run="'+idx+'" data-rule="'+rule.id+'" onclick="judge(this)">'+rule.label+'</button>';
+  }).join('')+'</div>';
+}
+function judge(btn){
+  if(mode!=='plain'||btn.classList.contains('done'))return;
+  btn.classList.add('done');
+  const run=current[+btn.dataset.run];
+  const why=run.broken[btn.dataset.rule];
+  if(why){
+    btn.classList.add('hit');
+    btn.innerHTML='✕ '+btn.textContent+' · <i>'+why+'</i>';
+    fixes++;
+  }else{
+    btn.classList.add('held');
+    btn.innerHTML='✓ '+btn.textContent+' · held';
+  }
+  updateMeter();
+}
+let renderSeq=0;
+async function render(){
+  const seq=++renderSeq;
+  fixes=0;
+  document.getElementById('btnEnc').classList.remove('pulse');
+  const isPlain=mode==='plain';
+  current=pick(isPlain?plainPool:encPool,2);
+  totalBroken=isPlain?current.reduce((n,r)=>n+Object.keys(r.broken).length,0):0;
+  const box=document.getElementById('runs');
+  box.innerHTML=current.map((r,i)=>
+    '<div class="run '+(isPlain?'bad':'good')+'">'+
+      (isPlain?'':'<span class="stamp" id="st'+i+'">APPROVED</span>')+
+      '<span class="r-label">Run '+String(i+1).padStart(2,'0')+'</span>'+
+      '<span class="r-out" id="ro'+i+'"></span>'+
+      (isPlain?chipRow(r,i):'<span class="r-note good-note" id="gn'+i+'"></span>')+
+    '</div>').join('');
+  document.getElementById('hint').textContent=isPlain
+    ? 'Your turn: tap the rules each run breaks. Be the editor for a second.'
+    : 'Nothing to tap. Every run already passed the same four rules.';
+  document.getElementById('caption').textContent=isPlain
+    ? 'Every fix you find is a fix someone on your team makes by hand today.'
+    : 'Still different headlines. Creative where it can be, fixed where it must be. That is the difference between a prompt and a system.';
+  updateMeter();
+  const typeSpeed=noMotion?0:14;
+  for(let i=0;i<current.length;i++){
+    if(seq!==renderSeq)return;
+    const out=document.getElementById('ro'+i);
+    if(!out)return;
+    if(typeSpeed===0){out.textContent=current[i].out;}
+    else{
+      out.classList.add('caret');
+      for(const ch of current[i].out){
+        if(seq!==renderSeq)return;
+        out.textContent+=ch;
+        await new Promise(r=>setTimeout(r,typeSpeed));
+      }
+      out.classList.remove('caret');
+    }
+    if(!isPlain){
+      const st=document.getElementById('st'+i);
+      const gn=document.getElementById('gn'+i);
+      if(st){st.classList.add('on');}
+      if(gn){gn.textContent='✓ passed all four rules · no edits';}
+      await new Promise(r=>setTimeout(r,noMotion?0:260));
+    }else{
+      await new Promise(r=>setTimeout(r,noMotion?0:140));
+    }
+  }
+}
+function setMode(m){
+  mode=m;
+  document.getElementById('btnPlain').setAttribute('aria-pressed',m==='plain');
+  document.getElementById('btnEnc').setAttribute('aria-pressed',m==='enc');
+  render();
+}
+function rerun(){render();}
+render();
+</script>
 </body>
 </html>
