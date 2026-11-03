@@ -3,6 +3,7 @@
 
 # Private project context — never publish (repo is public)
 CLAUDE.md
+BRANDSCRIPT.md
 
 # Local Claude Code settings
 .claude/settings.local.json

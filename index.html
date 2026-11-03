@@ -3,562 +3,62 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Encoded · AI that follows your rules</title>
-<meta name="description" content="Encoded sets up AI to write like your team on its best day. Your voice, your format, your rules, on the first pass. For PR agencies, podcast producers, and content teams.">
+<title>Encoded · Editorial AI systems for PR agencies</title>
+<meta name="description" content="Encoded builds the editorial system that checks every AI draft against your own rules, so the work reaching your editors is already right. Built for PR agencies.">
+<link rel="canonical" href="https://www.getencoded.co/">
 
 <!-- ============================================================
-  CTA LINKS: paste your two URLs into BOOKING_URL and FORM_URL near
-  the top of the <script> block below. Every "Book a call" button
-  (data-cta="book") and every "Tell us what's breaking" link
-  (data-cta="form") then points there automatically. No mailto.
+  CTA LINKS: two URLs drive every call to action. They are set in the
+  <script> block at the foot of this file: BOOKING_URL (Cal.com) powers
+  every data-cta="book" button, FORM_URL (Tally) powers every
+  data-cta="form" link. Change them in one place. No mailto anywhere.
   ============================================================ -->
 
-<meta property="og:title" content="Encoded · AI that follows your rules">
-<meta property="og:description" content="Stop fixing the same AI mistakes every week. Audits and builds for teams that publish a lot.">
-<meta property="og:url" content="https://getencoded.co">
+<meta property="og:title" content="Encoded · Editorial AI systems for PR agencies">
+<meta property="og:description" content="Turn interviews, research and source material into drafts in your voice and formats, checked against your own editorial rules before an editor sees them.">
+<meta property="og:url" content="https://www.getencoded.co/">
 <meta property="og:type" content="website">
+<meta property="og:site_name" content="Encoded">
+<meta property="og:locale" content="en_GB">
+<meta property="og:image" content="https://www.getencoded.co/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Encoded: editorial AI systems for PR agencies.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Encoded · Editorial AI systems for PR agencies">
+<meta name="twitter:description" content="Turn interviews, research and source material into drafts in your voice and formats, checked against your own editorial rules.">
+<meta name="twitter:image" content="https://www.getencoded.co/og.png">
 <meta name="author" content="Zurva Aziz">
+<meta name="theme-color" content="#ffffff">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Person","name":"Zurva Aziz","jobTitle":"Copywriter and content strategist","image":"https://getencoded.co/zurva.jpg","worksFor":{"@type":"Organization","name":"Encoded","url":"https://getencoded.co"},"sameAs":["https://www.upwork.com/freelancers/zurvaa"]}
+{"@context":"https://schema.org","@graph":[
+{"@type":"Organization","@id":"https://www.getencoded.co/#org","name":"Encoded","url":"https://www.getencoded.co/","description":"Encoded builds editorial AI systems for PR agencies, podcast producers and content teams.","areaServed":"Worldwide","address":{"@type":"PostalAddress","addressLocality":"London","addressCountry":"GB"}},
+{"@type":"Person","@id":"https://www.getencoded.co/#zurva","name":"Zurva Aziz","jobTitle":"Copywriter and content strategist","image":"https://www.getencoded.co/zurva.jpg","worksFor":{"@id":"https://www.getencoded.co/#org"},"sameAs":["https://www.upwork.com/freelancers/zurvaa"]},
+{"@type":"WebSite","@id":"https://www.getencoded.co/#site","url":"https://www.getencoded.co/","name":"Encoded","publisher":{"@id":"https://www.getencoded.co/#org"}},
+{"@type": "FAQPage", "@id": "https://www.getencoded.co/#faq", "mainEntity": [{"@type": "Question", "name": "Will this replace our writers?", "acceptedAnswer": {"@type": "Answer", "text": "No, and we would push back on anyone selling you that. What it removes is the pass where your team fixes the same formatting and voice problems every week. Judgment, story sense and the client relationship stay with people, and a person still signs off on everything that goes out."}}, {"@type": "Question", "name": "What do you need from us to start?", "acceptedAnswer": {"@type": "Answer", "text": "One workflow that hurts, 10 to 20 pieces you have already published, and 30 minutes. If your rules only live in one editor's head, the intake call is where we write them down. That hour is usually the most useful part of the audit."}}, {"@type": "Question", "name": "Which AI tools do you work with?", "acceptedAnswer": {"@type": "Answer", "text": "Whatever your team already uses. Claude, ChatGPT, Gemini, or a mix. The system lives in your rules and your workflow, so it works wherever your team does. You don't need to switch tools."}}, {"@type": "Question", "name": "Do we need technical people on our side?", "acceptedAnswer": {"@type": "Answer", "text": "No. If someone on your team can write down your rules in a Google Doc, that's all we need. We handle everything else."}}, {"@type": "Question", "name": "How do you handle our clients' confidential material?", "acceptedAnswer": {"@type": "Answer", "text": "The audit runs on work you have already published, so nothing sensitive has to move at that stage. Before a build we agree the rest in writing: your NDA, which tools and AI providers process your material, where it lives, and what gets deleted at the end."}}, {"@type": "Question", "name": "What if the audit finds our setup is fine?", "acceptedAnswer": {"@type": "Answer", "text": "Then you get a report saying so, with the numbers to prove it, and that's worth knowing too. It hasn't happened yet."}}, {"@type": "Question", "name": "Why only three spots?", "acceptedAnswer": {"@type": "Answer", "text": "Because I do the work myself and won't rush it. Three concurrent clients is the honest limit for doing this properly."}}, {"@type": "Question", "name": "Do we own what you build?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. All of it. The rules, the documentation, the workflow files. If we ever part ways, everything keeps working and it's all yours."}}, {"@type": "Question", "name": "How is this different from hiring a prompt engineer?", "acceptedAnswer": {"@type": "Answer", "text": "A prompt is a request. We build the system around it: your rules written down properly, tested against your real content, and kept up to date as AI tools change. The difference shows up on run one hundred, not run one."}}]}
+]}
 </script>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='2' y='18' width='28' height='11' rx='2' fill='%23FFE566' transform='rotate(-2 16 23)'/%3E%3Ctext x='16' y='23' font-family='Arial Black,sans-serif' font-size='22' font-weight='900' fill='%2314181D' text-anchor='middle'%3EE%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
 
-<style>
-:root{
-  --ink:#14181D;
-  --ink-soft:#3d444d;
-  --paper:#ffffff;
-  --panel:#f4f4f1;
-  --mark:#FFE566;        /* highlighter */
-  --pen:#D93A3F;         /* red pen */
-  --ok:#1F7A4D;          /* approved green */
-  --line:#e3e3de;
-  --display:'Bricolage Grotesque',sans-serif;
-  --body:'Instrument Sans',sans-serif;
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
-body{
-  font-family:var(--body);
-  color:var(--ink);
-  background:var(--paper);
-  font-size:1.0625rem;
-  line-height:1.65;
-  -webkit-font-smoothing:antialiased;
-}
-::selection{background:var(--mark)}
-
-.wrap{max-width:1060px;margin:0 auto;padding:0 24px}
-.prose{max-width:640px}
-
-h1,h2,h3{font-family:var(--display);line-height:1.08;letter-spacing:-0.015em}
-h1{font-size:clamp(2.4rem,6.2vw,4.2rem);font-weight:800}
-h2{font-size:clamp(1.7rem,3.6vw,2.5rem);font-weight:700;margin-bottom:.9rem}
-h3{font-size:1.15rem;font-weight:700}
-p{color:var(--ink-soft)}
-strong{color:var(--ink)}
-a{color:inherit}
-
-/* highlighter mark */
-.hl{
-  background:linear-gradient(100deg, transparent 1%, var(--mark) 3%, var(--mark) 97%, transparent 99%);
-  box-decoration-break:clone;-webkit-box-decoration-break:clone;
-  padding:.06em .18em;margin:0 -.06em;
-  border-radius:2px;
-}
-
-/* red-pen strike */
-.pen{
-  text-decoration:line-through;
-  text-decoration-color:var(--pen);
-  text-decoration-thickness:2.5px;
-}
-
-/* ---------- nav ---------- */
-header{
-  position:sticky;top:0;z-index:50;
-  background:rgba(255,255,255,.94);backdrop-filter:blur(8px);
-  border-bottom:1px solid var(--line);
-}
-.nav{display:flex;align-items:center;justify-content:space-between;height:64px}
-.logo{font-family:var(--display);font-weight:800;font-size:1.3rem;text-decoration:none;letter-spacing:-.02em}
-.logo .hl{padding:.02em .14em}
-.nav-links{display:flex;gap:26px;align-items:center;list-style:none}
-.nav-links a{font-size:.95rem;font-weight:500;text-decoration:none;color:var(--ink-soft)}
-.nav-links a:hover{color:var(--ink)}
-.btn{
-  display:inline-block;font-family:var(--body);font-weight:600;font-size:1rem;
-  background:var(--ink);color:#fff;text-decoration:none;
-  padding:.72em 1.35em;border-radius:8px;border:2px solid var(--ink);
-  cursor:pointer;transition:transform .08s ease;
-}
-.btn:hover{transform:translateY(-1px)}
-.btn:focus-visible,a:focus-visible,button:focus-visible{outline:3px solid var(--mark);outline-offset:2px}
-.btn.small{padding:.5em 1em;font-size:.92rem}
-.btn.ghost{background:transparent;color:var(--ink)}
-.nav .btn{margin-left:6px}
-.menu-btn{display:none;background:none;border:0;font-size:1.6rem;cursor:pointer;line-height:1}
-
-/* ---------- hero ---------- */
-.hero{padding:88px 0 64px}
-.hero h1{max-width:820px;margin-bottom:1.3rem}
-.hero .lede{font-size:1.25rem;max-width:620px;margin-bottom:2rem}
-.cta-row{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-bottom:1.1rem}
-.hero .quiet{font-size:.92rem;color:#7a7f87}
-.hero .quiet a{color:#7a7f87}
-.cta-alt{display:inline-block;font-size:.98rem;font-weight:600;color:var(--ink);text-decoration:underline;text-decoration-color:var(--mark);text-decoration-thickness:2px;text-underline-offset:3px}
-.cta-alt:hover{text-decoration-color:var(--ink)}
-
-/* receipts strip */
-.receipts{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--panel)}
-.receipts .wrap{padding:30px 24px}
-.receipts p{font-size:.98rem;max-width:860px}
-.r-lead{font-size:1.1rem;color:var(--ink);max-width:760px;margin:.15rem 0 1.15rem}
-.r-lead b{color:var(--ink)}
-
-/* ---------- sections ---------- */
-section{padding:50px 0}
-.section-tight{padding:38px 0}
-
-
-/* ---------- demo ---------- */
-.demo-shell{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:26px;margin-top:2rem}
-.task-line{
-  font-size:.95rem;background:#fff;border:1px solid var(--line);border-radius:8px;
-  padding:.8rem 1rem;margin-bottom:1.2rem;color:var(--ink-soft);
-}
-.task-line b{color:var(--ink)}
-.toggle{display:inline-flex;background:#e9e9e4;border-radius:9px;padding:4px;margin-bottom:1.2rem}
-.toggle button{
-  font-family:var(--body);font-weight:600;font-size:.95rem;border:0;background:transparent;
-  padding:.55em 1.1em;border-radius:7px;cursor:pointer;color:var(--ink-soft);
-}
-.toggle button[aria-pressed="true"]{background:var(--ink);color:#fff}
-.runs{display:grid;gap:12px}
-.run{
-  background:#fff;border:1px solid var(--line);border-radius:10px;
-  padding:1rem 1.1rem;display:flex;flex-direction:column;gap:.35rem;
-}
-.run .r-label{font-size:.78rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:#9aa0a8}
-.run .r-out{font-size:1.08rem;font-weight:500;color:var(--ink)}
-.run .r-note{font-size:.9rem;font-weight:600}
-.run.bad .r-note{color:var(--pen)}
-.run.good .r-note{color:var(--ok)}
-.demo-caption{margin-top:1.2rem;font-size:.98rem;max-width:640px}
-.rerun{margin-top:1rem;background:none;border:0;font-family:var(--body);font-weight:600;font-size:.95rem;color:var(--ink);cursor:pointer;text-decoration:underline;text-underline-offset:3px}
-
-/* ---------- who ---------- */
-.who-block{margin-top:1.6rem;max-width:680px}
-.who-block h3{margin-top:1.8rem;margin-bottom:.35rem}
-.who-block p{margin-bottom:.4rem}
-
-/* ---------- audit: 3-step process ---------- */
-.steps{list-style:none;margin:2.8rem 0 0;display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
-.step{
-  position:relative;background:#fff;border:1px solid var(--line);border-top:4px solid var(--pen);
-  border-radius:12px;padding:1.6rem 1.5rem 1.5rem;
-  box-shadow:0 3px 12px rgba(20,24,29,.05);
-  transition:transform .2s cubic-bezier(.2,.8,.3,1),box-shadow .2s ease,opacity .5s ease;
-}
-.step:hover{transform:translateY(-6px);box-shadow:0 16px 32px rgba(20,24,29,.12)}
-.step-cal{display:inline-block;font-family:var(--display);font-weight:800;font-size:.78rem;letter-spacing:.07em;text-transform:uppercase;color:var(--pen)}
-.step-ico{position:absolute;top:1.2rem;right:1.3rem;font-size:1.6rem;line-height:1;transition:transform .2s ease}
-.step:hover .step-ico{transform:scale(1.14) rotate(-5deg)}
-.step h3{margin:.45rem 0 .5rem;font-size:1.18rem}
-.step p{font-size:.98rem;color:var(--ink-soft);line-height:1.55}
-/* flow arrows between steps (desktop) */
-.step:not(:last-child)::after{
-  content:"→";position:absolute;right:-22px;top:2.4rem;
-  font-family:var(--display);font-weight:700;font-size:1.4rem;color:#c9c3b2;z-index:2;
-}
-body.js .step{opacity:0;transform:translateY(16px)}
-body.js .step.in-view{opacity:1;transform:translateY(0)}
-body.js .step.in-view:hover{transform:translateY(-6px)}
-
-/* ---------- offer ---------- */
-.offer{background:var(--ink);color:#fff}
-.offer h2{color:#fff}
-.offer p{color:#c7ccd3}
-.offer strong{color:#fff}
-.offer .price{
-  font-family:var(--display);font-weight:800;font-size:clamp(2.6rem,6vw,4rem);
-  color:#fff;line-height:1;margin:.4rem 0 1.2rem;
-}
-.offer .price .hl{color:var(--ink)}
-.offer-cols{display:grid;grid-template-columns:1.2fr .8fr;gap:56px;align-items:start}
-.includes{list-style:none;margin:1.4rem 0 2rem}
-.includes li{
-  padding:.55rem 0 .55rem 1.9rem;position:relative;color:#e8eaed;font-size:1.02rem;
-}
-.includes li::before{
-  content:"✓";position:absolute;left:0;top:.55rem;
-  color:var(--mark);font-weight:700;
-}
-.offer .btn{background:var(--mark);border-color:var(--mark);color:var(--ink)}
-.offer .quiet{font-size:.92rem;color:#9aa0a8;margin-top:.9rem}
-.offer .quiet a{color:#c7ccd3}
-.ladder{border:1px solid #333a42;border-radius:12px;padding:1.4rem 1.5rem}
-.ladder h3{color:#fff;margin-bottom:1rem}
-.ladder .row{display:flex;justify-content:space-between;gap:16px;padding:.7rem 0;border-top:1px solid #333a42;font-size:.98rem}
-.ladder .row span:first-child{color:#c7ccd3}
-.ladder .row span:last-child{color:#fff;font-weight:600;white-space:nowrap}
-.ladder p{font-size:.9rem;margin-top:1rem}
-
-/* ---------- about Zurva: a signed note from the person who does the work ---------- */
-.desk-note{
-  position:relative;max-width:880px;margin-top:1.6rem;
-  border:2px solid var(--ink);border-radius:14px;padding:2.1rem 2rem 1.9rem;
-  display:grid;grid-template-columns:200px 1fr;gap:40px;align-items:start;
-}
-.desk-note::before{
-  content:"FROM ZURVA'S DESK";
-  position:absolute;top:-0.8em;left:1.4rem;background:var(--paper);
-  padding:0 .6em;font-size:.75rem;font-weight:700;letter-spacing:.08em;color:var(--ink);
-}
-.desk-note .f-stamp{right:22px;top:-14px;font-size:.9rem;z-index:2}
-.desk-note .f-stamp.in-view{animation:stampIn .32s cubic-bezier(.2,1.5,.4,1) .3s forwards}
-/* photo: a taped-on print. Swap the initials block for an <img>; nothing else changes. */
-.f-photo{
-  position:relative;width:200px;background:#fff;border:1px solid var(--line);
-  padding:10px 10px 12px;box-shadow:0 3px 12px rgba(20,24,29,.08);
-  transform:rotate(-2deg);transition:transform .2s ease,box-shadow .2s ease;
-}
-.f-photo:hover{transform:rotate(0deg) translateY(-3px);box-shadow:0 10px 24px rgba(20,24,29,.12)}
-.f-frame{
-  aspect-ratio:4/5;background:var(--mark);overflow:hidden;
-  display:flex;align-items:center;justify-content:center;
-  font-family:var(--display);font-weight:800;font-size:3rem;letter-spacing:-.02em;color:var(--ink);
-}
-.f-frame img{width:100%;height:100%;object-fit:cover;display:block}
-.f-cap{
-  font-family:'Caveat',cursive;font-weight:700;font-size:1.3rem;line-height:1.1;
-  color:var(--ink);margin-top:.55rem;transform:rotate(-1deg);
-}
-.desk-note h2{font-size:clamp(1.6rem,3vw,2.1rem);margin-bottom:.15rem}
-.f-byline{font-size:.95rem;color:#7a7f87;margin-bottom:1.2rem}
-.f-text p{margin-bottom:.85rem;max-width:560px}
-.f-proof-h{display:block;font-size:.76rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:#9aa0a8;margin-top:1.5rem}
-.f-proof{list-style:none;margin-top:.5rem;max-width:560px}
-.f-proof li{position:relative;padding:.3rem 0 .3rem 1.6rem;font-size:.98rem;color:var(--ink-soft);line-height:1.5}
-.f-proof li::before{content:"\2713";position:absolute;left:0;top:.3rem;color:var(--ok);font-weight:700}
-.f-proof li b{color:var(--ink)}
-.f-links{display:flex;flex-wrap:wrap;gap:.5rem 1.6rem;margin-top:1.3rem}
-.f-links .cta-alt{font-size:.95rem}
-.f-sign{
-  display:inline-block;font-family:'Caveat',cursive;font-weight:700;font-size:2.2rem;line-height:1;
-  color:var(--ink);margin-top:1.5rem;transform:rotate(-3deg);
-}
-
-/* ---------- faq ---------- */
-.faq{max-width:680px;margin-top:1.6rem}
-.faq details{border-top:1px solid var(--line)}
-.faq details:last-child{border-bottom:1px solid var(--line)}
-.faq summary{
-  cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px;
-  padding:1.05rem 0;font-weight:600;font-size:1.08rem;
-}
-.faq summary::-webkit-details-marker{display:none}
-.faq summary::after{content:"+";font-family:var(--display);font-weight:700;font-size:1.3rem;color:#9aa0a8}
-.faq details[open] summary::after{content:"–"}
-.faq details p{padding:0 0 1.2rem;max-width:600px}
-
-/* ---------- final ---------- */
-.final{background:var(--panel);text-align:left}
-.final .wrap{max-width:760px}
-.final h2{max-width:640px}
-
-footer{padding:36px 0;border-top:1px solid var(--line)}
-footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:.92rem;color:#7a7f87}
-footer a{color:#7a7f87}
-
-/* ---------- hero live-editing scene ---------- */
-.scene{
-  margin-top:2.4rem;max-width:660px;
-  background:var(--panel);border:1px solid var(--line);border-radius:14px;
-  padding:1.5rem 1.6rem 1.4rem;
-}
-.scene .s-label{font-size:.78rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:#9aa0a8;display:flex;justify-content:space-between;gap:12px}
-.scene .s-text{
-  font-size:1.2rem;font-weight:500;min-height:3.2em;margin-top:.6rem;
-  color:var(--ink);line-height:1.45;
-}
-.scene .s-note{font-size:.92rem;font-weight:600;min-height:1.4em;margin-top:.2rem}
-.s-rules{margin-top:1.35rem;padding-top:1.15rem;border-top:1px solid var(--line)}
-.s-rules-h{font-size:.76rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:#9aa0a8}
-.s-rules ul{list-style:none;margin-top:.75rem;display:grid;grid-template-columns:1fr 1fr;gap:.55rem .9rem}
-.s-rules li{position:relative;padding-left:1.45rem;font-size:.95rem;font-weight:500;color:var(--ink-soft)}
-.s-rules li::before{content:"✓";position:absolute;left:0;top:0;color:var(--ok);font-weight:700}
-.scene .s-note.bad{color:var(--pen)}
-.scene .s-note.good{color:var(--ok)}
-.caret::after{content:"";display:inline-block;width:2px;height:1.05em;background:var(--ink);margin-left:2px;vertical-align:-0.15em;animation:blink 1s steps(1) infinite}
-@keyframes blink{50%{opacity:0}}
-.strike{position:relative;text-decoration:none}
-.strike::after{
-  content:"";position:absolute;left:-1%;top:54%;height:2.5px;width:102%;
-  background:var(--pen);transform:scaleX(0);transform-origin:left center;
-  transition:transform .45s ease;
-}
-.strike.on::after{transform:scaleX(1)}
-
-/* animated highlighter draw */
-body.js .hl{
-  background-size:0% 100%;background-repeat:no-repeat;
-  transition:background-size .6s cubic-bezier(.6,0,.3,1);
-}
-body.js .hl.hl-on{background-size:100% 100%}
-
-
-/* micro-interactions */
-.run{transition:transform .12s ease,box-shadow .12s ease}
-.run:hover{transform:translateY(-2px);box-shadow:0 4px 14px rgba(20,24,29,.06)}
-
-/* colophon */
-.colophon{background:var(--paper)}
-.colophon .rules{
-  max-width:680px;margin-top:1.6rem;
-  border:2px solid var(--ink);border-radius:14px;padding:1.6rem 1.8rem;
-  position:relative;
-}
-.colophon .rules::before{
-  content:"HOUSE RULES · THIS PAGE";
-  position:absolute;top:-0.8em;left:1.4rem;background:var(--paper);
-  padding:0 .6em;font-size:.75rem;font-weight:700;letter-spacing:.08em;color:var(--ink);
-}
-.colophon .rules li{
-  list-style:none;padding:.5rem 0 .5rem 1.9rem;position:relative;color:var(--ink-soft);font-size:1.02rem;
-}
-.colophon .rules li::before{content:"✓";position:absolute;left:0;top:.5rem;color:var(--ok);font-weight:700}
-.colophon .rules li b{color:var(--ink)}
-
-@media (prefers-reduced-motion: reduce){
-  body.js .card{opacity:1;transform:rotate(var(--rot));transition:none}
-  body.js .folder{opacity:1;transform:rotate(var(--rot));transition:none}
-  body.js .step{opacity:1;transform:none;transition:none}
-  .dot{animation:none}
-  body.js .hl{background-size:100% 100%;transition:none}
-  .strike::after,.pains .pen::after{transition:none}
-  .caret::after{animation:none}
-  .run,.run:hover{transform:none;box-shadow:none}
-}
-
-
-
-/* your week, probably: the desk */
-.desk{
-  display:grid;grid-template-columns:1fr 1fr;gap:28px;
-  margin:2.4rem 0 2.6rem;
-}
-.card{
-  position:relative;background:#fff;border:1px solid var(--line);border-radius:10px;
-  padding:1.3rem 1.3rem 1.1rem;box-shadow:0 2px 10px rgba(20,24,29,.05);
-  transform:rotate(var(--rot,0deg));
-  transition:transform .18s ease,box-shadow .18s ease,opacity .5s ease;
-}
-.card:hover{transform:rotate(0deg) translateY(-3px);box-shadow:0 8px 22px rgba(20,24,29,.09)}
-body.js .card{opacity:0;transform:rotate(var(--rot)) translateY(16px)}
-body.js .card.in-view{opacity:1;transform:rotate(var(--rot)) translateY(0)}
-body.js .card.in-view:hover{transform:rotate(0deg) translateY(-3px)}
-.tape{
-  position:absolute;top:-11px;left:50%;transform:translateX(-50%) rotate(-2deg);
-  width:74px;height:22px;background:rgba(255,229,102,.75);border-radius:2px;
-}
-.scribble{
-  font-family:'Caveat',cursive;font-weight:700;font-size:1.25rem;color:var(--pen);
-  transform:rotate(-1.2deg);margin-top:.7rem;line-height:1.15;
-}
-/* chat card */
-.bub{border-radius:12px;padding:.6rem .9rem;font-size:.98rem;max-width:92%;line-height:1.45}
-.bub.you{background:var(--ink);color:#fff;border-bottom-right-radius:3px;margin-left:auto;margin-bottom:.6rem;width:fit-content}
-.bub.ai{background:var(--panel);border:1px solid var(--line);border-bottom-left-radius:3px;width:fit-content}
-.card .strike::after{transition-delay:.55s}
-.card.in-view .strike::after{transform:scaleX(1)}
-/* doc card */
-.doc-line{font-size:.98rem;color:var(--ink);line-height:1.6}
-.doc-hl{background:var(--mark);padding:.05em .15em;border-radius:2px}
-.doc-comment{
-  border:1px solid var(--line);border-left:3px solid var(--mark);border-radius:8px;
-  padding:.6rem .8rem;margin-top:.8rem;background:#fffdf2;font-size:.92rem;
-}
-.doc-comment b{display:block;font-size:.78rem;color:#9aa0a8;font-weight:600;margin-bottom:.15rem}
-.doc-comment p{color:var(--ink)}
-/* sticky card */
-.c-sticky{
-  background:var(--mark);border:0;border-radius:2px;
-  box-shadow:0 6px 16px rgba(20,24,29,.12);
-  min-height:170px;display:flex;flex-direction:column;justify-content:space-between;
-}
-.c-sticky .sticky-text{
-  font-family:'Caveat',cursive;font-weight:700;font-size:1.55rem;line-height:1.15;color:var(--ink);
-}
-.c-sticky .tally{font-family:'Caveat',cursive;font-weight:600;font-size:1.2rem;color:var(--ink);margin-top:1rem}
-.c-sticky .tally span{letter-spacing:.12em;text-decoration:line-through;text-decoration-thickness:1.5px;text-decoration-color:var(--ink)}
-/* slack card */
-.slack-msg{display:flex;gap:12px;align-items:flex-start}
-.slack-msg .avatar{
-  flex:0 0 36px;height:36px;border-radius:8px;background:var(--ink);color:#fff;
-  display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1rem;
-}
-.slack-msg b{font-size:.85rem;color:#9aa0a8;font-weight:600;display:block;margin-bottom:.1rem}
-.slack-msg p{color:var(--ink);font-size:.98rem;line-height:1.45}
-
-
-
-/* nav CTA yellow — dark outline so it clearly reads as a button */
-.nav-cta{background:var(--mark);border-color:var(--ink);color:var(--ink);font-weight:700}
-.nav-cta:hover{background:#ffdb33;border-color:var(--ink)}
-
-/* hero two-column */
-.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
-.hero-right{margin-top:0;align-self:center}
-@media (max-width:860px){
-  .hero-grid{grid-template-columns:1fr;gap:0}
-  .hero-right{margin-top:2.4rem}
-}
-
-/* status board */
-.r-head{font-family:var(--display);font-weight:700;font-size:.82rem;letter-spacing:.09em;text-transform:uppercase;color:var(--ok);margin-bottom:.5rem}
-.badges{display:flex;flex-wrap:wrap;gap:10px}
-.badge{
-  display:inline-flex;align-items:center;gap:8px;
-  background:#fff;border:1px solid var(--line);border-radius:999px;
-  padding:.45em .95em;font-size:.9rem;font-weight:500;color:var(--ink);
-}
-.dot{width:8px;height:8px;border-radius:50%;background:var(--ok);flex:0 0 8px;animation:livePulse 2s ease-in-out infinite}
-.badge:nth-child(2) .dot{animation-delay:.4s}
-.badge:nth-child(3) .dot{animation-delay:.8s}
-@keyframes livePulse{0%,100%{box-shadow:0 0 0 0 rgba(31,122,77,.5)}50%{box-shadow:0 0 0 5px rgba(31,122,77,0)}}
-.r-sub{font-size:.9rem;color:#7a7f87;margin-top:.8rem}
-
-/* manila folders — case files */
-.folders{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:2.8rem}
-.folder{
-  position:relative;background:#f8f0dc;border:1px solid #e6d9b8;border-radius:0 12px 12px 12px;
-  padding:1.9rem 1.5rem 1.5rem;margin-top:24px;
-  transform:rotate(var(--rot,0deg));
-  box-shadow:0 3px 12px rgba(20,24,29,.06);
-  transition:transform .22s cubic-bezier(.2,.8,.3,1),box-shadow .22s ease,opacity .5s ease;
-}
-/* a second sheet peeking out behind the folder */
-.folder::before{
-  content:"";position:absolute;inset:7px 7px -7px -7px;z-index:-1;
-  background:#fdf7e6;border:1px solid #e8dcbd;border-radius:0 12px 12px 12px;
-  transform:rotate(1.8deg);transition:transform .22s ease;
-}
-.folder:hover{transform:rotate(0deg) translateY(-7px);box-shadow:0 18px 36px rgba(20,24,29,.14)}
-.folder:hover::before{transform:rotate(3.4deg) translate(3px,4px)}
-.f-tab{
-  position:absolute;top:-23px;left:-1px;
-  background:var(--ink);color:#fff;border:1px solid var(--ink);border-bottom:0;border-radius:8px 8px 0 0;
-  padding:.35em 1em;font-family:var(--display);font-weight:700;font-size:.9rem;
-}
-.f-icon{font-size:2.1rem;line-height:1;margin-bottom:.7rem;display:block;transition:transform .22s ease}
-.folder:hover .f-icon{transform:scale(1.12) rotate(-4deg)}
-.folder p{font-size:1.02rem;color:var(--ink-soft);line-height:1.55}
-.f-pain{
-  font-family:'Caveat',cursive;font-weight:700;font-size:1.32rem;color:var(--pen);
-  margin-top:1rem;transform:rotate(-1deg);line-height:1.12;
-}
-body.js .folder{opacity:0;transform:rotate(var(--rot)) translateY(16px)}
-body.js .folder.in-view{opacity:1;transform:rotate(var(--rot)) translateY(0)}
-body.js .folder.in-view:hover{transform:rotate(0deg) translateY(-7px)}
-
-/* founding spot tickets */
-.spots{display:flex;flex-wrap:wrap;gap:12px;margin:.4rem 0 1.4rem}
-.spot{
-  border:2px dashed var(--mark);color:var(--mark);
-  font-family:var(--display);font-weight:800;font-size:.82rem;letter-spacing:.08em;
-  padding:.5em .9em;border-radius:8px;
-}
-.spot:nth-child(1){transform:rotate(-1.5deg)}
-.spot:nth-child(3){transform:rotate(1.5deg)}
-.spot.taken{
-  border-color:#5a636e;color:#5a636e;text-decoration:line-through;
-  text-decoration-color:var(--pen);text-decoration-thickness:2.5px;
-}
-/* inline stamp */
-.inline-stamp{
-  position:static;display:inline-block;opacity:1;
-  transform:rotate(-6deg) scale(1);vertical-align:middle;margin-left:8px;
-  font-size:1rem;
-}
-
-/* editor game */
-.hint{font-size:.95rem;font-weight:600;color:var(--ink);margin-bottom:1rem}
-.meter{
-  margin-top:1.1rem;font-family:var(--display);font-weight:700;font-size:1.05rem;
-  color:var(--ink);border-top:2px solid var(--ink);padding-top:.8rem;max-width:420px;
-}
-.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:.55rem}
-.chip{
-  font-family:var(--body);font-weight:600;font-size:.85rem;
-  border:1.5px solid var(--line);background:#fff;color:var(--ink-soft);
-  border-radius:999px;padding:.34em .85em;cursor:pointer;
-  transition:transform .1s ease,border-color .1s ease;
-}
-.chip:hover:not(.done){border-color:var(--ink);transform:translateY(-1px)}
-.chip.hit{border-color:var(--pen);color:var(--pen);background:#fdf0f0;cursor:default}
-.chip.held{border-color:var(--ok);color:var(--ok);background:#eef6f1;cursor:default}
-.chip i{font-style:normal;font-weight:500;opacity:.85}
-.run{position:relative}
-.stamp{
-  position:absolute;right:14px;top:12px;
-  border:3px solid var(--ok);color:var(--ok);
-  font-family:var(--display);font-weight:800;font-size:.85rem;letter-spacing:.08em;
-  padding:.15em .6em;border-radius:6px;
-  transform:rotate(-8deg) scale(2.4);opacity:0;pointer-events:none;
-}
-.stamp.on{animation:stampIn .32s cubic-bezier(.2,1.5,.4,1) forwards}
-@keyframes stampIn{to{opacity:1;transform:rotate(-8deg) scale(1)}}
-.good-note{color:var(--ok);font-weight:600;font-size:.9rem}
-.pulse{animation:pulseBtn 1.1s ease-in-out infinite}
-@keyframes pulseBtn{0%,100%{box-shadow:0 0 0 0 rgba(255,229,102,0)}50%{box-shadow:0 0 0 6px rgba(255,229,102,.85)}}
-@media (prefers-reduced-motion: reduce){
-  .stamp{opacity:1;transform:rotate(-8deg) scale(1)}
-  .stamp.on{animation:none}
-  .pulse{animation:none;outline:3px solid var(--mark)}
-  .chip,.chip:hover{transition:none;transform:none}
-  .desk-note .f-stamp.in-view{animation:none}
-  .f-photo,.f-photo:hover{transform:rotate(-2deg);transition:none}
-}
-
-@media (max-width:760px){
-  .desk{grid-template-columns:1fr;max-width:460px}
-  .folders{grid-template-columns:1fr;max-width:460px;gap:34px}
-  .steps{grid-template-columns:1fr;gap:34px}
-  .step:not(:last-child)::after{content:"↓";right:auto;left:50%;top:auto;bottom:-27px;transform:translateX(-50%)}
-  .nav-links{
-    display:none;position:absolute;top:64px;left:0;right:0;
-    background:#fff;border-bottom:1px solid var(--line);
-    flex-direction:column;align-items:flex-start;padding:18px 24px;gap:16px;
-  }
-  .nav-links.open{display:flex}
-  .menu-btn{display:block}
-  .offer-cols{grid-template-columns:1fr;gap:36px}
-  .desk-note{grid-template-columns:1fr;gap:26px;padding:1.9rem 1.3rem 1.6rem}
-  .f-photo{width:180px}
-  .desk-note .f-stamp{right:12px;top:-13px;font-size:.74rem}
-  section{padding:42px 0}
-  .hero{padding:44px 0 40px}
-}
-</style>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+<a class="skip" href="#top">Skip to content</a>
 
 <header>
   <div class="wrap nav">
     <a class="logo" href="#top">En<span class="hl">coded</span></a>
     <button class="menu-btn" aria-label="Open menu" aria-expanded="false" onclick="toggleMenu(this)">☰</button>
     <ul class="nav-links" id="navLinks">
-      <li><a href="#familiar">The problem</a></li>
-      <li><a href="#demo">See it work</a></li>
-      <li><a href="#audit">The audit</a></li>
+      <li><a href="#pr">For PR agencies</a></li>
+      <li><a href="#how">How it works</a></li>
+      <li><a href="#work">Our work</a></li>
       <li><a href="#pricing">Pricing</a></li>
-      <li><a href="#about">About Zurva</a></li>
-      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#about">About</a></li>
       <li><a class="btn small nav-cta" href="#" data-cta="book">Book a call</a></li>
     </ul>
   </div>
@@ -570,12 +70,13 @@ body.js .folder.in-view:hover{transform:rotate(0deg) translateY(-7px)}
   <div class="hero">
     <div class="wrap hero-grid">
       <div class="hero-left">
-      <h1>Stop fixing the same AI mistakes <span class="hl">every week.</span></h1>
-      <p class="lede">Encoded sets up AI to write like your team on its best day. Your voice, your format, your rules, on the first pass. Built for PR agencies, podcast producers, and content teams that publish a lot.</p>
+      <h1>Editorial AI that follows <span class="hl">your agency's rules.</span></h1>
+      <p class="lede">Encoded builds the system that turns interviews, research and source material into drafts that already follow your rules. Your editors get their time back for the story. Built first for PR agencies.</p>
       <div class="cta-row">
         <a class="btn" href="#" data-cta="book">Book a 30-minute call</a>
-        <a class="btn ghost" href="#demo">See it work ↓</a>
+        <a class="btn ghost" href="#how">See how it works ↓</a>
       </div>
+      <p class="quiet">Three editorial systems running in production today. Start with a fixed-price audit, not a retainer.</p>
       <p><a class="cta-alt" href="#" data-cta="form">Not ready for a call? Tell us what's breaking →</a></p>
       </div>
 
@@ -586,9 +87,9 @@ body.js .folder.in-view:hover{transform:rotate(0deg) translateY(-7px)}
         <div class="s-rules">
           <span class="s-rules-h">Checked against your rules</span>
           <ul>
-            <li>Colon format</li>
             <li>Sentence case</li>
-            <li>No guest name</li>
+            <li>Full client name</li>
+            <li>No hype words</li>
             <li>Clean punctuation</li>
           </ul>
         </div>
@@ -602,11 +103,11 @@ body.js .folder.in-view:hover{transform:rotate(0deg) translateY(-7px)}
       <p class="r-head">Proof, not promises</p>
       <p class="r-lead">Encoded isn't a concept. Three editorial AI systems we built are running for real clients <b>right now:</b></p>
       <div class="badges">
-        <span class="badge"><i class="dot" aria-hidden="true"></i>PR agency · editorial QA on every piece, weekly</span>
+        <span class="badge"><i class="dot" aria-hidden="true"></i>PR agency · 8-stage editorial check on every piece, weekly</span>
         <span class="badge"><i class="dot" aria-hidden="true"></i>Podcast magazine · 200+ episode packages shipped</span>
         <span class="badge"><i class="dot" aria-hidden="true"></i>Growth agency · LinkedIn posts, daily</span>
       </div>
-      <p class="r-sub">Encoded is that same work, set up for your team.</p>
+      <p class="r-sub">Client names stay private. <a class="cta-alt" href="#work">See what each system actually does →</a></p>
     </div>
   </div>
 
@@ -658,7 +159,38 @@ body.js .folder.in-view:hover{transform:rotate(0deg) translateY(-7px)}
 
       </div>
 
-      <p class="prose">None of this is your prompt's fault. A prompt is a request. What actually holds your standards is a system that checks the work against your rules before it reaches you. That's what we build.</p>
+      <p class="prose"><strong>None of this gets better on its own. It just becomes normal.</strong> The reread turns into somebody's job. The bottleneck turns into one person with a calendar. And your most expensive editorial judgment goes on capitalisation and banned words, which is not what you hired it for.</p>
+
+      <p class="prose" style="margin-top:1.1rem">None of it is your prompt's fault either. A prompt is a request. What actually holds a standard is a system that checks the work against your rules before it reaches you. <span class="hl">That's what we build.</span></p>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="how">
+    <div class="wrap">
+      <h2>What you're actually buying</h2>
+      <p class="prose">Encoded is not a prompt, a template, or another tool to log into. It is a system that sits between your source material and your editor, and it does the same three things every time.</p>
+      <ol class="steps">
+        <li class="step">
+          <span class="step-ico" aria-hidden="true">&#128229;</span>
+          <span class="step-cal">Goes in</span>
+          <h3>Your rules and your raw material</h3>
+          <p>House style, client voice, formats, banned words, the corrections your best editor makes without thinking. Plus the interviews, transcripts, briefs and research a piece gets built from.</p>
+        </li>
+        <li class="step">
+          <span class="step-ico" aria-hidden="true">&#9881;&#65039;</span>
+          <span class="step-cal">The system</span>
+          <h3>It drafts, then checks its own work</h3>
+          <p>It writes to your formats, then checks the draft against your rules stage by stage, the same way every time. Anything that breaks a rule gets flagged and fixed before a person opens it.</p>
+        </li>
+        <li class="step">
+          <span class="step-ico" aria-hidden="true">&#128228;</span>
+          <span class="step-cal">Comes out</span>
+          <h3>A draft that already passes</h3>
+          <p>Plus a record of what was checked and what it caught. Your editor spends the time on judgment and story instead of sentence case and the banned-words list.</p>
+        </li>
+      </ol>
+      <p class="prose" style="margin-top:2rem">None of this replaces your writers. It removes the pass where they fix the same things every week, and it holds on run one hundred, not just run one.</p>
     </div>
   </section>
 
@@ -666,10 +198,10 @@ body.js .folder.in-view:hover{transform:rotate(0deg) translateY(-7px)}
   <section id="demo" class="section-tight">
     <div class="wrap">
       <h2>Same prompt. Three tries.</h2>
-      <p class="prose">Here's the whole problem in one screen. The task is real, and so are the failures.</p>
+      <p class="prose"><strong>A demonstration, not client work.</strong> The client and the headlines below are invented. The rules, and the ways AI breaks them, are the ones we see every week.</p>
 
       <div class="demo-shell">
-        <p class="task-line"><b>The task:</b> write an episode title for a leadership podcast. <b>The rules:</b> colon format, sentence case, no guest name, clean punctuation.</p>
+        <p class="task-line"><b>The task:</b> write the headline for a client's press release. <b>The rules:</b> sentence case, the client's full name on first mention, no hype words, clean punctuation.</p>
 
         <div class="toggle" aria-label="Demo mode">
           <button id="btnPlain" aria-pressed="true" onclick="setMode('plain')">Plain AI</button>
@@ -686,31 +218,111 @@ body.js .folder.in-view:hover{transform:rotate(0deg) translateY(-7px)}
     </div>
   </section>
 
-  <!-- WHO -->
-  <section>
+  <!-- FOR PR AGENCIES -->
+  <section id="pr" class="section-tight">
     <div class="wrap">
-      <h2>Who this is for</h2>
-      <div class="folders">
-        <article class="folder" style="--rot:-1.2deg">
-          <span class="f-tab">PR &amp; comms</span>
-          <span class="f-icon" aria-hidden="true">📰</span>
-          <p>You send expert quotes and press pieces out every week, and an editor rereads every one because the AI drafts can't be trusted on their own. We make the checking happen before the work reaches you.</p>
-          <p class="f-pain">“Does this even sound like the client?”</p>
+      <h2>Built for PR agencies first</h2>
+      <p class="prose">PR is where we started, because agency editorial is the hardest version of this problem. Several clients, several voices, a deadline most days, and someone's name on everything that goes out.</p>
+
+      <div class="uses">
+        <div class="use">
+          <h3>Interviews into copy</h3>
+          <p>Call notes and transcripts become drafts in the client's voice and your house format, not a generic summary somebody has to rewrite.</p>
+        </div>
+        <div class="use">
+          <h3>Source material, organised</h3>
+          <p>Research, briefing docs and past coverage pulled into one place the system can actually use, instead of five tabs and one person's memory.</p>
+        </div>
+        <div class="use">
+          <h3>Quotes kept intact</h3>
+          <p>Usable quotes and lines pulled from the source with the wording preserved, so nothing gets smoothed over or invented on the way into a draft.</p>
+        </div>
+        <div class="use">
+          <h3>Outreach that reads like a person</h3>
+          <p>Pitch notes and journalist outreach drafted to your angle and your tone, ready for someone on your team to read, change and send.</p>
+        </div>
+        <div class="use">
+          <h3>One story, every channel</h3>
+          <p>The release, the social post, the newsletter line and the client summary, each in its own format, all from the same source material.</p>
+        </div>
+        <div class="use">
+          <h3>Your standards, enforced</h3>
+          <p>Sentence case, banned words, client naming rules, embargo lines. The checks an editor runs by hand today, run on every piece instead.</p>
+        </div>
+      </div>
+
+      <div class="note-box">
+        <p><strong>Where the line is.</strong> Encoded fits inside the way your agency already works. It does not send anything, approve anything, or speak to your clients. A person still signs off on every piece, with more time to do it properly.</p>
+        <p><strong>What is proven, and what we would build.</strong> The system we run for a PR agency today does the last one on that list: an 8-stage editorial check on every piece, around 20 checks each, in weekly batches. The others are builds we scope with you on the call, against your own workflow.</p>
+      </div>
+
+      <h3 class="also-h">Also built for</h3>
+      <div class="also">
+        <article class="also-card">
+          <b>Podcasts and media</b>
+          <p>Every episode needs a title, clips, quotes, social posts and an article, to strict formats, with the next episode already recorded.</p>
         </article>
-        <article class="folder" style="--rot:0.9deg">
-          <span class="f-tab">Podcasts &amp; media</span>
-          <span class="f-icon" aria-hidden="true">🎙️</span>
-          <p>Every episode needs a title, clips, quotes, social posts, and an article. Strict formats, volume that never stops. We turn your packaging process into a system that gets it right on the first pass.</p>
-          <p class="f-pain">“Another title to fix by hand.”</p>
-        </article>
-        <article class="folder" style="--rot:-0.6deg">
-          <span class="f-tab">Agencies &amp; newsletters</span>
-          <span class="f-icon" aria-hidden="true">✉️</span>
-          <p>Ten clients, ten voices, one team. Keeping every client's voice intact across everyone who touches the work is the hardest problem in content. It's also the one we're best at.</p>
-          <p class="f-pain">“Wait, whose voice was this again?”</p>
+        <article class="also-card">
+          <b>Agencies and newsletters</b>
+          <p>Ten clients, ten voices, one team. Keeping each voice intact across everyone who touches the work is the hardest problem in content.</p>
         </article>
       </div>
-      <p class="prose" style="margin-top:2rem">The short version: if your team publishes a lot and someone rereads everything before it ships, <span class="hl">we should talk.</span></p>
+
+      <div class="cta-row" style="margin-top:2.4rem">
+        <a class="btn" href="#" data-cta="book">Book a 30-minute call</a>
+        <a class="btn ghost" href="for-pr-agencies.html">The longer agency walk-through &#8594;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CASE FILES -->
+  <section id="work">
+    <div class="wrap">
+      <h2>Three systems, running now</h2>
+      <p class="prose">Client names stay private, and we do not publish numbers we cannot show you. Here is what each system does and what it replaced.</p>
+      <div class="folders">
+
+        <article class="folder" style="--rot:-1.2deg">
+          <span class="f-tab">Case 01 &#183; PR agency</span>
+          <span class="f-icon" aria-hidden="true">&#128240;</span>
+          <dl class="cf">
+            <dt>The problem</dt>
+            <dd>Every piece needed a full reread before it went out. The AI drafts broke house style somewhere different each time, so nobody could trust them unchecked.</dd>
+            <dt>What the system does</dt>
+            <dd>An <b>8-stage editorial check</b> runs on each piece, around 20 checks per piece, in weekly batches.</dd>
+            <dt>What they get</dt>
+            <dd>The checking happens before the work reaches a person, in the same order every week.</dd>
+          </dl>
+        </article>
+
+        <article class="folder" style="--rot:0.9deg">
+          <span class="f-tab">Case 02 &#183; Podcast magazine</span>
+          <span class="f-icon" aria-hidden="true">&#127897;&#65039;</span>
+          <dl class="cf">
+            <dt>The problem</dt>
+            <dd>Each episode needs a title, quotes, clips, social posts and an article, all to strict formats, with the next episode already recorded.</dd>
+            <dt>What the system does</dt>
+            <dd>Turns the episode transcript into the full package, each piece written to its own format.</dd>
+            <dt>What they get</dt>
+            <dd><b>200+ episode packages</b> shipped so far.</dd>
+          </dl>
+        </article>
+
+        <article class="folder" style="--rot:-0.6deg">
+          <span class="f-tab">Case 03 &#183; Growth agency</span>
+          <span class="f-icon" aria-hidden="true">&#9993;&#65039;</span>
+          <dl class="cf">
+            <dt>The problem</dt>
+            <dd>Publishing every day in more than one voice, where a post in the wrong voice is worse than no post at all.</dd>
+            <dt>What the system does</dt>
+            <dd>Drafts and checks each post against the right voice before it ever reaches the queue.</dd>
+            <dt>What they get</dt>
+            <dd>Posts go out <b>daily</b>.</dd>
+          </dl>
+        </article>
+
+      </div>
+      <p class="prose" style="margin-top:2rem">On a call we will walk you through the real pipelines, stage by stage, including the parts that were hard. <span class="hl">That conversation is free.</span></p>
     </div>
   </section>
 
@@ -740,40 +352,106 @@ body.js .folder.in-view:hover{transform:rotate(0deg) translateY(-7px)}
         </li>
       </ol>
       <p class="prose" style="margin-top:2rem"><strong>What happens after:</strong> most teams ask us to build the fix. Builds start at $10,000. Go ahead within 60 days and your audit fee comes off the price.</p>
+
+      <div class="note-box" style="margin-top:2.2rem">
+        <h3 class="also-h" style="margin-top:0">What you're agreeing to</h3>
+        <ul class="mat-list" style="margin-top:.5rem">
+          <li><b>A fixed price.</b> $1,500, agreed before anything starts. No hourly creep, no scope conversation halfway through.</li>
+          <li><b>The report is yours either way.</b> Hire us for the build or don't. It is worth having on its own.</li>
+          <li><b>We start with work you have already published.</b> Nothing confidential has to move for you to get the answer.</li>
+          <li><b>Your fee comes off the build</b> if you go ahead within 60 days.</li>
+        </ul>
+      </div>
     </div>
   </section>
 
   <!-- OFFER -->
   <section class="offer" id="pricing">
-    <div class="wrap offer-cols">
-      <div>
-        <h2>The founding rate</h2>
-        <div class="price">$1,500</div>
-        <!-- To mark a spot sold: change class "spot open" to "spot taken" and text to "SPOT 01 · TAKEN" -->
-        <div class="spots">
-          <span class="spot open">SPOT 01 · OPEN</span>
-          <span class="spot open">SPOT 02 · OPEN</span>
-          <span class="spot open">SPOT 03 · OPEN</span>
+    <div class="wrap">
+      <div class="offer-cols">
+        <div>
+          <h2>The founding rate</h2>
+          <div class="price">$1,500</div>
+          <!-- To mark a spot sold: change class "spot open" to "spot taken" and text to "SPOT 01 &#183; TAKEN" -->
+          <div class="spots">
+            <span class="spot open">SPOT 01 &#183; OPEN</span>
+            <span class="spot open">SPOT 02 &#183; OPEN</span>
+            <span class="spot open">SPOT 03 &#183; OPEN</span>
+          </div>
+          <p>Three founding clients at this price, then it goes up. That is not fake urgency. We want three strong reference stories and we are willing to pay for them with a lower rate.</p>
+          <h3 class="inc-h">Stage 1 &#183; what the $1,500 buys</h3>
+          <ul class="includes">
+            <li>A 30-minute intake call where we write down your rules</li>
+            <li>10 to 20 of your published pieces checked against those rules</li>
+            <li>The written report: what breaks, how often, what the fixing costs you</li>
+            <li>A step-by-step fix plan you can act on with us or without us</li>
+            <li>Delivered within 7 days of the call</li>
+            <li>The full fee comes off a build you start within 60 days</li>
+          </ul>
+          <a class="btn" href="#" data-cta="book">Claim a founding spot</a>
+          <p class="quiet">Not ready to book? <a href="#" data-cta="form">Tell us what's breaking &#8594;</a></p>
         </div>
-        <p>Three founding clients at this price, then it goes up. That's not fake urgency. We want three strong reference stories and we're willing to pay for them with a lower rate.</p>
-        <ul class="includes">
-          <li>The 30-minute intake call</li>
-          <li>We check 10–20 of your recent pieces against your own rules</li>
-          <li>The written report: what breaks, how often, what it costs you</li>
-          <li>A step-by-step fix plan you can act on with or without us</li>
-          <li>Delivered within 7 days of the call</li>
-          <li>Full fee credited if you start a build within 60 days</li>
-        </ul>
-        <a class="btn" href="#" data-cta="book">Claim a founding spot</a>
-        <p class="quiet">Not ready to book? <a href="#" data-cta="form">Tell us what's breaking →</a></p>
+        <div class="ladder">
+          <h3>How the work is staged</h3>
+          <div class="row"><span>1 &#183; Find what's breaking</span><span>$1,500 fixed</span></div>
+          <div class="row"><span>2 &#183; Fix it for good</span><span>from $10,000</span></div>
+          <div class="row"><span>3 &#183; Keep it working</span><span>from $2,000/mo</span></div>
+          <p>Start at stage one. It stands on its own: you get the report and the plan whether or not you hire us again. If you do go ahead, the $1,500 comes off the build. Stage three is optional and you can start it later.</p>
+        </div>
       </div>
-      <div class="ladder">
-        <h3>How pricing works</h3>
-        <div class="row"><span>Find what's breaking</span><span>$1,500 fixed</span></div>
-        <div class="row"><span>Fix it for good</span><span>from $10,000</span></div>
-        <div class="row"><span>Keep it working</span><span>from $2,000/mo</span></div>
-        <p>Start with the $1,500 check. If you hire us to fix what it finds, that $1,500 comes off the price. The monthly option keeps everything working as AI tools change.</p>
+
+      <div class="stages">
+        <div class="stage">
+          <span class="stage-n">Stage 2</span>
+          <h3>Fix it for good</h3>
+          <span class="stage-p">from $10,000 &#183; your audit fee comes off this</span>
+          <ul>
+            <li>Your rules written down properly, in a form your team and the system can both follow</li>
+            <li>The workflow built and tested against your real content, not a demo</li>
+            <li>Documentation and a handover session, so your team can run it without us</li>
+            <li>You own all of it: the rules, the documentation, the files</li>
+          </ul>
+        </div>
+        <div class="stage">
+          <span class="stage-n">Stage 3</span>
+          <h3>Keep it working</h3>
+          <span class="stage-p">from $2,000/mo &#183; optional, and you can start it later</span>
+          <ul>
+            <li>We keep the system working as the AI tools change underneath it</li>
+            <li>Rules updated as your house style and your client roster change</li>
+            <li>New checks added as new problems show up</li>
+            <li>Skip it and the system still runs. This is for teams who would rather not maintain it themselves</li>
+          </ul>
+        </div>
       </div>
+    </div>
+  </section>
+
+  <!-- YOUR MATERIAL -->
+  <section id="material" class="section-tight">
+    <div class="wrap">
+      <h2>Working with your material</h2>
+      <p class="prose">You would be handing us client interviews and copy that has not been published yet. Here is what we can tell you now, and what we put in writing before anything sensitive moves.</p>
+      <div class="mat">
+        <div class="mat-col">
+          <h3>True today</h3>
+          <ul class="mat-list">
+            <li><b>The audit only needs work you have already published.</b> Nothing confidential has to leave your side for us to find what is breaking.</li>
+            <li><b>Zurva does the work herself.</b> She runs the intake, the audit and the build. No subcontractors, no team to brief.</li>
+            <li><b>You own everything we build.</b> The rules, the documentation, the workflow files. If we part ways it all keeps working and it is yours.</li>
+          </ul>
+        </div>
+        <div class="mat-col pending">
+          <h3>Agreed in writing before a build</h3>
+          <ul class="mat-list">
+            <li><b>Your NDA,</b> signed before you send anything.</li>
+            <li><b>Which tools and AI providers</b> process your material, named.</li>
+            <li><b>Where the material lives</b> and how long it is kept.</li>
+            <li><b>What gets deleted at the end,</b> and when.</li>
+          </ul>
+        </div>
+      </div>
+      <p class="prose" style="margin-top:1.8rem">If your client contracts set rules we would have to meet, bring them to the call. That is a better conversation before a build than after one.</p>
     </div>
   </section>
 
@@ -793,6 +471,7 @@ body.js .folder.in-view:hover{transform:rotate(0deg) translateY(-7px)}
         <div class="f-text">
           <h2>Hi, I'm Zurva.</h2>
           <div class="f-byline">Zurva Aziz · copywriter and content strategist</div>
+          <p>Every team I work with says a version of the same thing: the drafts are fine until they are not, and nobody can tell which day it will be. That uncertainty costs more than the editing does.</p>
           <p>I'm a copywriter and content strategist, and I build the systems on this page. For the last two years that's been the work: setting up AI for editorial teams so it follows their rules on the first pass, then keeping it that way as the tools change. The three systems under “Proof, not promises” at the top of this page are mine, and they're still running.</p>
           <p>Most AI advice is about writing a better prompt. I think that's the wrong place to look. The teams I work with don't need a better request. They need their rules written down and checked on every run, and that's the part I'm good at.</p>
           <p>When you book a call, <span class="hl">you're talking to me.</span> I run the intake, do the audit, and build the fix myself. Three clients at a time, so none of them get rushed.</p>
@@ -821,12 +500,24 @@ body.js .folder.in-view:hover{transform:rotate(0deg) translateY(-7px)}
       <h2>Fair questions</h2>
       <div class="faq">
         <details>
+          <summary>Will this replace our writers?</summary>
+          <p>No, and we would push back on anyone selling you that. What it removes is the pass where your team fixes the same formatting and voice problems every week. Judgment, story sense and the client relationship stay with people, and a person still signs off on everything that goes out.</p>
+        </details>
+        <details>
+          <summary>What do you need from us to start?</summary>
+          <p>One workflow that hurts, 10 to 20 pieces you have already published, and 30 minutes. If your rules only live in one editor's head, the intake call is where we write them down. That hour is usually the most useful part of the audit.</p>
+        </details>
+        <details>
           <summary>Which AI tools do you work with?</summary>
           <p>Whatever your team already uses. Claude, ChatGPT, Gemini, or a mix. The system lives in your rules and your workflow, so it works wherever your team does. You don't need to switch tools.</p>
         </details>
         <details>
           <summary>Do we need technical people on our side?</summary>
           <p>No. If someone on your team can write down your rules in a Google Doc, that's all we need. We handle everything else.</p>
+        </details>
+        <details>
+          <summary>How do you handle our clients' confidential material?</summary>
+          <p>The audit runs on work you have already published, so nothing sensitive has to move at that stage. Before a build we agree the rest in writing: your NDA, which tools and AI providers process your material, where it lives, and what gets deleted at the end. <a class="cta-alt" href="#material">What we can tell you today &#8594;</a></p>
         </details>
         <details>
           <summary>What if the audit finds our setup is fine?</summary>
@@ -857,7 +548,7 @@ body.js .folder.in-view:hover{transform:rotate(0deg) translateY(-7px)}
         <li><b>Sentence case headings.</b> Every one, no exceptions.</li>
         <li><b>No em dashes.</b> The only ones on this page live inside AI failures, struck through in red.</li>
         <li><b>No stock photos, no purple gradients, no "unlock," "seamless," or "supercharge."</b></li>
-        <li><b>Every system described here runs in production today.</b> Nothing on this page is a mockup.</li>
+        <li><b>Every client system described here runs in production today.</b> Where something is a demonstration, or a build we would scope with you, the page says so.</li>
       </ul>
       <p class="prose" style="margin-top:1.6rem">Writing rules down and enforcing them, every time. <span class="hl">That's the whole product.</span> You just watched it work.</p>
     </div>
@@ -867,7 +558,27 @@ body.js .folder.in-view:hover{transform:rotate(0deg) translateY(-7px)}
   <section class="final">
     <div class="wrap">
       <h2>One workflow. Seven days. <span class="hl">Real numbers.</span> <span class="stamp inline-stamp">YOUR MOVE</span></h2>
-      <p class="prose" style="margin:.8rem 0 1.8rem">You'll know exactly where your AI breaks your rules, what it costs you every month, and how to fix it.</p>
+      <p class="prose" style="margin:.8rem 0 1.6rem">You'll know exactly where your AI breaks your rules, what it costs you every month, and how to fix it.</p>
+
+      <div class="mat" style="max-width:780px;margin-top:0;margin-bottom:2rem">
+        <div class="mat-col pending">
+          <h3>Today</h3>
+          <ul class="mat-list">
+            <li>Somebody rereads everything before it ships</li>
+            <li>The same corrections, week after week</li>
+            <li>Tuesday's draft and Thursday's sound like different companies</li>
+          </ul>
+        </div>
+        <div class="mat-col">
+          <h3>After</h3>
+          <ul class="mat-list">
+            <li>Drafts arrive already following your rules</li>
+            <li>Editors spend their time on the story, not the style guide</li>
+            <li>The same checks run whether it's Tuesday or Thursday</li>
+          </ul>
+        </div>
+      </div>
+
       <div class="cta-row">
         <a class="btn" href="#" data-cta="book">Book a 30-minute call</a>
         <a class="btn ghost" href="#" data-cta="form">Tell us what's breaking</a>
@@ -880,39 +591,28 @@ body.js .folder.in-view:hover{transform:rotate(0deg) translateY(-7px)}
 <footer>
   <div class="wrap">
     <span>© 2026 Encoded · getencoded.co · London, United Kingdom</span>
-    <a href="#" data-cta="form">Get in touch →</a>
+    <nav class="foot-links" aria-label="Footer">
+      <a href="for-pr-agencies.html">For PR agencies</a>
+      <a href="#material">Your material</a>
+      <a href="#faq">FAQ</a>
+      <a href="#" data-cta="form">Get in touch →</a>
+    </nav>
   </div>
 </footer>
 
+<script src="site.js"></script>
 <script>
-document.body.classList.add('js');
-
-/* ===== YOUR LINKS — paste your two URLs here, everything else updates ===== */
-const BOOKING_URL = "https://cal.com/zurva-aziz-encoded/30min";  /* Cal.com intro call */
-const FORM_URL    = "https://tally.so/r/RGl40j";  /* Tally "what's breaking" form */
-document.querySelectorAll('[data-cta="book"]').forEach(a=>{ if(BOOKING_URL){a.href=BOOKING_URL;a.target="_blank";a.rel="noopener";} });
-document.querySelectorAll('[data-cta="form"]').forEach(a=>{ if(FORM_URL){a.href=FORM_URL;a.target="_blank";a.rel="noopener";} });
-
-const noMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-/* mobile menu */
-function toggleMenu(btn){
-  const links=document.getElementById('navLinks');
-  const open=links.classList.toggle('open');
-  btn.setAttribute('aria-expanded',open);
-}
-document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>{
-  document.getElementById('navLinks').classList.remove('open');
-}));
+/* page-specific: the hero scene and the editor demo.
+   noMotion, BOOKING_URL and FORM_URL are declared in site.js, which loads first. */
 
 /* ---------- hero live-editing scene ---------- */
 const scenes=[
-  {bad:"How Sarah Quietly Reinvented Mindful Leadership",flag:"✕ Title Case · guest name · no colon",
-   good:"Mindful leadership: the case for slowing down"},
-  {bad:"Leadership Reimagined — A Fresh Take!",flag:"✕ em dash · Title Case · no colon",
-   good:"Quiet authority: what stillness does for a leader"},
-  {bad:"ep 47: sarah on being present",flag:"✕ guest name · reads like a note to self",
-   good:"Steady at the top: leading without the noise"}
+  {bad:"Northwind Unveils Game-Changing Freight Platform",flag:"✕ Title Case · hype words · client name cut short",
+   good:"Northwind Logistics opens its freight platform to small carriers"},
+  {bad:"A seismic leap forward for UK logistics — Northwind delivers",flag:"✕ em dash · hype words · client buried at the end",
+   good:"Northwind Logistics adds live tracking across its UK network"},
+  {bad:"northwind launches new platform!!",flag:"✕ no capital · short name · stray punctuation",
+   good:"Northwind Logistics launches same-day freight for retailers"}
 ];
 const sT=document.getElementById('sceneText');
 const sN=document.getElementById('sceneNote');
@@ -930,7 +630,7 @@ async function playScenes(){
   for(;;){
     const s=scenes[i%scenes.length];
     sL.textContent='draft · run '+String((i%scenes.length)+1).padStart(2,'0');
-    sS.textContent='plain AI';sS.style.color='#9aa0a8';
+    sS.textContent='plain AI';sS.style.color='#757b84';
     sN.textContent='';sN.className='s-note';
     await type(sT,s.bad,26);
     await wait(450);
@@ -957,45 +657,28 @@ if(noMotion){
   playScenes();
 }
 
-/* ---------- scroll-triggered marks ---------- */
-if(!noMotion && 'IntersectionObserver' in window){
-  const io=new IntersectionObserver(entries=>{
-    entries.forEach(e=>{
-      if(e.isIntersecting){
-        e.target.classList.add(e.target.classList.contains('hl')?'hl-on':'in-view');
-        io.unobserve(e.target);
-      }
-    });
-  },{threshold:0.6});
-  document.querySelectorAll('.hl').forEach(el=>io.observe(el));
-  document.querySelectorAll('.desk .card, .folder, .step, .f-stamp').forEach((el,i)=>{el.style.transitionDelay=((i%3)*90)+'ms';io.observe(el);});
-}else{
-  document.querySelectorAll('.hl').forEach(el=>el.classList.add('hl-on'));
-  document.querySelectorAll('.desk .card, .folder, .step, .f-stamp').forEach(el=>el.classList.add('in-view'));
-}
-
 /* demo: be the editor */
 const RULES=[
-  {id:'colon',label:'colon format'},
   {id:'case', label:'sentence case'},
-  {id:'guest',label:'no guest name'},
+  {id:'name', label:'full client name'},
+  {id:'hype', label:'no hype words'},
   {id:'punct',label:'clean punctuation'}
 ];
 const plainPool=[
-  {out:"How Sarah Built A Mindful Leadership Practice", broken:{colon:"no colon anywhere",case:"Every Word Capitalized",guest:'"Sarah"'}},
-  {out:"Leadership Reimagined — Finding Stillness In Chaos", broken:{colon:"dash instead of colon",case:"Title Case again",punct:"em dash, the classic"}},
-  {out:"mindful leadership: why slowing down works", broken:{case:"forgot the capital"}},
-  {out:"Ep 47: Sarah Chen On Leading With Presence", broken:{case:"Title Case",guest:'"Sarah Chen"'}},
-  {out:"The Power of Stillness in Modern Leadership!", broken:{colon:"no colon",case:"Title-ish Case",punct:"stray exclamation mark"}},
-  {out:"why leaders should slow down", broken:{colon:"no colon",case:"no capital"}}
+  {out:"Northwind Unveils Game-Changing Freight Platform", broken:{case:"Every Word Capitalised",hype:'"unveils", "game-changing"',name:'"Northwind Logistics" cut to "Northwind"'}},
+  {out:"A seismic leap forward for logistics — Northwind delivers", broken:{hype:'"seismic leap forward"',punct:"em dash, the classic",name:"client buried at the end, short name"}},
+  {out:"northwind launches freight platform", broken:{case:"no capital at all",name:"not the client's full name"}},
+  {out:"Revolutionary New Platform Set To Disrupt UK Freight", broken:{case:"Title Case",hype:'"revolutionary", "disrupt"',name:"client missing entirely"}},
+  {out:"Northwind Logistics launches a freight platform!!", broken:{punct:"double exclamation mark"}},
+  {out:"Game-Changing: Northwind Rewrites The Rules Of Freight", broken:{case:"Title Case",hype:'"game-changing", "rewrites the rules"',name:"short name only"}}
 ];
 const encPool=[
-  {out:"Mindful leadership: the case for slowing down"},
-  {out:"Quiet authority: what stillness does for a leader"},
-  {out:"Steady at the top: leading without the noise"},
-  {out:"Room to think: why calm leaders decide better"},
-  {out:"Present tense: the discipline of slowing down"},
-  {out:"Under pressure: keeping a level head in charge"}
+  {out:"Northwind Logistics opens its freight platform to small carriers"},
+  {out:"Northwind Logistics launches same-day freight for independent retailers"},
+  {out:"Northwind Logistics adds live tracking across its UK network"},
+  {out:"Northwind Logistics brings freight booking under one login"},
+  {out:"Northwind Logistics cuts booking time for small freight operators"},
+  {out:"Northwind Logistics extends same-day delivery to three more cities"}
 ];
 let mode='plain', fixes=0, totalBroken=0, current=[];
 function pick(pool,n){
