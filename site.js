@@ -1,281 +1,85 @@
-/* Encoded · shared behaviour for every page. */
+/* Encoded · shared behaviour. */
 
-/* ===== YOUR LINKS: the only place these two URLs live. =====
-   data-cta="book" links open Cal.com, data-cta="form" links open Tally. */
-const BOOKING_URL = "https://cal.com/zurva-aziz-encoded/30min";  /* Cal.com intro call */
-const FORM_URL    = "https://tally.so/r/RGl40j";                 /* Tally "what's breaking" form */
+/* ===== YOUR LINKS: the only place these URLs live. =====
+   BUY_URL            data-cta="buy"             $99 House Rules Kit checkout (Stripe or Lemon Squeezy payment link)
+   BUY_CALIBRATED_URL data-cta="buy-calibrated"  $249 Calibrated Kit checkout
+   BOOKING_URL        data-cta="book"            Cal.com intro call (custom systems)
+   FORM_URL           data-cta="form"            Tally "what's breaking" form
+   Until a checkout link is set, its buttons fall back to FORM_URL so nobody hits a dead end. */
+const BUY_URL            = "";  /* paste the $99 payment link here */
+const BUY_CALIBRATED_URL = "";  /* paste the $249 payment link here */
+const BOOKING_URL        = "https://cal.com/zurva-aziz-encoded/30min";
+const FORM_URL           = "https://tally.so/r/RGl40j";
 
-document.querySelectorAll('[data-cta="book"]').forEach(a => { a.href = BOOKING_URL; a.target = "_blank"; a.rel = "noopener"; });
-document.querySelectorAll('[data-cta="form"]').forEach(a => { a.href = FORM_URL; a.target = "_blank"; a.rel = "noopener"; });
-
-const noMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-const clamp = (v, a = 0, b = 1) => Math.min(b, Math.max(a, v));
-
-/* ---------- small helpers ---------- */
-document.querySelectorAll('.viz-stages i, .viz-days i').forEach(el => {
-  el.style.setProperty('--i', [...el.parentNode.children].indexOf(el));
-});
-document.querySelectorAll('.rulebook li').forEach((el, i) => el.style.setProperty('--i', i));
-document.querySelectorAll('[data-dots]').forEach(box => {
-  const n = +box.dataset.dots, frag = document.createDocumentFragment();
-  for (let i = 0; i < n; i++) { const d = document.createElement('i'); d.style.setProperty('--i', i); frag.appendChild(d); }
-  box.appendChild(frag);
+const LINKS = { buy: BUY_URL || FORM_URL, "buy-calibrated": BUY_CALIBRATED_URL || FORM_URL, book: BOOKING_URL, form: FORM_URL };
+document.querySelectorAll('[data-cta]').forEach(a => {
+  const url = LINKS[a.dataset.cta];
+  if (url) { a.href = url; a.target = "_blank"; a.rel = "noopener"; }
 });
 
-/* ---------- reveal on enter ---------- */
-const revealables = document.querySelectorAll('[data-reveal], .viz-dots');
-if (noMotion || !('IntersectionObserver' in window)) {
-  revealables.forEach(el => el.classList.add('in'));
+const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* nav background once scrolled */
+const nav = document.getElementById('nav');
+const onScroll = () => nav && nav.classList.toggle('is-scrolled', window.scrollY > 10);
+window.addEventListener('scroll', onScroll, { passive: true });
+onScroll();
+
+/* reveal on enter */
+const reveal = document.querySelectorAll('[data-reveal], .tray');
+if (reduce || !('IntersectionObserver' in window)) {
+  reveal.forEach(el => el.classList.add('in'));
 } else {
   const io = new IntersectionObserver(entries => {
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-  }, { threshold: 0.18, rootMargin: '0px 0px -6% 0px' });
-  revealables.forEach(el => io.observe(el));
+  }, { threshold: 0.2, rootMargin: '0px 0px -6% 0px' });
+  reveal.forEach(el => io.observe(el));
 }
+document.querySelectorAll('.tray .kf').forEach((k, i) => { k.style.transitionDelay = (i * 90) + 'ms'; });
 
-/* ---------- count up ---------- */
-if (!noMotion && 'IntersectionObserver' in window) {
-  const co = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      if (!e.isIntersecting) return;
-      co.unobserve(e.target);
-      const el = e.target, end = +el.dataset.count, t0 = performance.now(), dur = 1400;
-      const tick = now => {
-        const k = clamp((now - t0) / dur), eased = 1 - Math.pow(1 - k, 3);
-        el.textContent = Math.round(end * eased);
-        if (k < 1) requestAnimationFrame(tick);
-      };
-      requestAnimationFrame(tick);
-    });
-  }, { threshold: 0.6 });
-  document.querySelectorAll('[data-count]').forEach(el => co.observe(el));
-}
-
-/* ---------- nav border on scroll ---------- */
-const nav = document.getElementById('nav');
-const nightZones = [...document.querySelectorAll('[data-night]')];
-
-/* ---------- hero: a draft checked against house rules ---------- */
-(function draftDemo() {
-  const fig = document.getElementById('draft');
-  if (!fig) return;
-  const rows = [...fig.querySelectorAll('[data-issue]')];
-  const checks = [...fig.querySelectorAll('[data-check]')];
-  const checkFor = n => checks.find(c => c.dataset.check === String(n));
-  const passing = checks.filter(c => c.dataset.check === '0');
-
-  if (noMotion) {
-    rows.forEach(r => r.classList.add('flag', 'fixed'));
-    checks.forEach(c => c.classList.add('pass'));
-    fig.classList.add('is-done');
-    return;
-  }
-
-  let timers = [], visible = true, waiting = false;
-  const at = (ms, fn) => timers.push(setTimeout(fn, ms));
-  const reset = () => {
-    timers.forEach(clearTimeout); timers = [];
-    fig.classList.remove('is-scan', 'is-done');
-    rows.forEach(r => r.classList.remove('flag', 'fixed'));
-    checks.forEach(c => c.classList.remove('pass', 'fail'));
-  };
-  const play = () => {
-    reset();
-    at(300, () => fig.classList.add('is-scan'));
-    at(900, () => passing.forEach(c => c.classList.add('pass')));
-    rows.forEach((r, i) => at(1000 + i * 380, () => { r.classList.add('flag'); checkFor(r.dataset.issue).classList.add('fail'); }));
-    rows.forEach((r, i) => at(3100 + i * 520, () => {
-      r.classList.add('fixed');
-      const c = checkFor(r.dataset.issue); c.classList.remove('fail'); c.classList.add('pass');
-    }));
-    at(5500, () => { fig.classList.remove('is-scan'); fig.classList.add('is-done'); });
-    at(14000, () => { if (visible && !document.hidden) play(); else waiting = true; });
-  };
-
-  if ('IntersectionObserver' in window) {
-    new IntersectionObserver(([e]) => {
-      visible = e.isIntersecting;
-      if (visible && waiting) { waiting = false; play(); }
-    }, { threshold: 0.3 }).observe(fig);
-  }
-  play();
-})();
-
-/* ---------- flowing ruled lines (canvas) ----------
-   Lines run loose on the left and settle into straight rules on the right:
-   the drafts before and after the rules hold. Drawn at device resolution. */
-function smooth(a, b, x) { const t = clamp((x - a) / (b - a)); return t * t * (3 - 2 * t); }
-
-const FLOWS = {
-  hero: {
-    gap: 17,
-    amp: u => 1.2 + 30 * (1 - smooth(0.12, 0.72, u)),
-    alpha: u => 0.045 + 0.10 * smooth(0.25, 0.9, u),
-    rgb: '22,19,15',
-    red: 0.8,
-    redAlpha: u => 0.6 * smooth(0.45, 0.95, u)
-  },
-  final: {
-    gap: 22,
-    amp: u => 2 + 7 * Math.sin(u * Math.PI),
-    alpha: u => 0.05 + 0.07 * Math.sin(u * Math.PI),
-    rgb: '239,233,221',
-    red: 0.12,
-    redAlpha: u => 0.5 * Math.sin(u * Math.PI)
-  }
-};
-
-document.querySelectorAll('canvas[data-flow]').forEach(canvas => {
-  const cfg = FLOWS[canvas.dataset.flow];
-  const ctx = canvas.getContext('2d');
-  if (!cfg || !ctx) return;
-  let w = 0, h = 0, running = false, raf = 0, grad = null, redGrad = null;
-  const ptr = { x: -9999, y: -9999, tx: -9999, ty: -9999 };
-
-  const size = () => {
-    const r = canvas.getBoundingClientRect();
-    const dpr = Math.min(window.devicePixelRatio || 1, 2);
-    w = r.width; h = r.height;
-    canvas.width = Math.max(1, Math.round(w * dpr));
-    canvas.height = Math.max(1, Math.round(h * dpr));
-    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    grad = ctx.createLinearGradient(0, 0, w, 0);
-    redGrad = ctx.createLinearGradient(0, 0, w, 0);
-    for (let s = 0; s <= 10; s++) {
-      grad.addColorStop(s / 10, `rgba(${cfg.rgb},${cfg.alpha(s / 10).toFixed(3)})`);
-      redGrad.addColorStop(s / 10, `rgba(210,62,38,${cfg.redAlpha(s / 10).toFixed(3)})`);
-    }
-  };
-
-  const draw = t => {
-    ctx.clearRect(0, 0, w, h);
-    const n = Math.ceil(h / cfg.gap) + 1;
-    const step = w > 900 ? 6 : 5;
-    const redLine = Math.round(n * cfg.red);
-    ptr.x += (ptr.tx - ptr.x) * 0.08; ptr.y += (ptr.ty - ptr.y) * 0.08;
-    for (let li = 0; li < n; li++) {
-      const y0 = li * cfg.gap + cfg.gap * 0.5;
-      const isRed = li === redLine;
-      ctx.beginPath();
-      for (let x = 0; x <= w + step; x += step) {
-        const u = x / w;
-        const a = cfg.amp(u);
-        const nz = Math.sin(x * 0.0042 + t * 0.5 + li * 0.38) * 0.55
-                 + Math.sin(x * 0.011 - t * 0.75 + li * 0.93) * 0.3
-                 + Math.sin(x * 0.024 + t * 1.15 + li * 1.71) * 0.15;
-        let y = y0 + a * nz;
-        const dx = x - ptr.x, dy = y0 - ptr.y, d2 = dx * dx + dy * dy;
-        if (d2 < 52000) y += Math.sign(dy || 1) * 16 * Math.exp(-d2 / 11000);
-        if (x === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
-      }
-      if (isRed) { ctx.strokeStyle = redGrad; ctx.lineWidth = 1.5; }
-      else { ctx.strokeStyle = grad; ctx.lineWidth = 1; }
-      ctx.stroke();
-    }
-  };
-
-  const loop = now => { draw(now / 1000); raf = requestAnimationFrame(loop); };
-  const start = () => { if (!running && !noMotion) { running = true; raf = requestAnimationFrame(loop); } };
-  const stop = () => { running = false; cancelAnimationFrame(raf); };
-
-  size(); draw(0);
-  window.addEventListener('resize', () => { size(); if (!running) draw(0); }, { passive: true });
-
-  if (noMotion) return;
-  const host = canvas.parentElement;
-  host.addEventListener('pointermove', e => {
-    const r = canvas.getBoundingClientRect();
-    ptr.tx = e.clientX - r.left; ptr.ty = e.clientY - r.top;
-    if (ptr.x < -9000) { ptr.x = ptr.tx; ptr.y = ptr.ty; }
-  }, { passive: true });
-  host.addEventListener('pointerleave', () => { ptr.tx = -9999; ptr.ty = -9999; ptr.x = -9999; ptr.y = -9999; });
-  if ('IntersectionObserver' in window) {
-    new IntersectionObserver(([e]) => (e.isIntersecting ? start() : stop())).observe(canvas);
-  } else start();
-  document.addEventListener('visibilitychange', () => (document.hidden ? stop() : start()));
-});
-
-/* ---------- scroll scenes ---------- */
-// 1. The problem statement fills in word by word, then the red pencil circles "everything".
-const statement = document.querySelector('[data-words]');
-let words = [];
-if (statement && !noMotion) {
-  const parts = [];
-  [...statement.childNodes].forEach(node => {
-    if (node.nodeType === 3) {
-      node.textContent.split(/(\s+)/).forEach(tok => {
-        if (!tok) return;
-        if (/^\s+$/.test(tok)) parts.push(document.createTextNode(tok));
-        else { const s = document.createElement('span'); s.className = 'w'; s.textContent = tok; parts.push(s); }
-      });
-    } else { node.classList.add('w'); parts.push(node); }
+/* hero glass cards tilt with the cursor */
+const hero = document.querySelector('.hero'), cards = document.getElementById('cards');
+if (hero && cards && !reduce) {
+  hero.addEventListener('pointermove', e => {
+    const r = hero.getBoundingClientRect();
+    const x = (e.clientX - r.left) / r.width - 0.5, y = (e.clientY - r.top) / r.height - 0.5;
+    cards.style.transform = `rotateX(${-y * 10}deg) rotateY(${x * 14}deg)`;
   });
-  statement.textContent = '';
-  parts.forEach(p => statement.appendChild(p));
-  words = [...statement.querySelectorAll('.w')];
-}
-const circle = document.querySelector('.circled');
-
-// 2. Drafts flow through the rules.
-const system = document.querySelector('[data-scene="system"]');
-const stream = system && system.querySelector('.stream');
-const docs = stream ? [...stream.querySelectorAll('.doc')] : [];
-const rules = stream ? [...stream.querySelectorAll('.gate__rules li')] : [];
-const tilt = [-4, 3.5, -2.5, 5, -3.5, 2.5, -4.5];
-const jolt = [10, -14, 8, -6, 12, -10, 7];
-docs.forEach((d, i) => { d.style.setProperty('--r', tilt[i % tilt.length] + 'deg'); d.style.setProperty('--jy', jolt[i % jolt.length] + 'px'); });
-
-// 3. The plan line draws as you read the steps.
-const steps = document.querySelector('[data-line]');
-
-function viewProgress(el, from, to) {
-  const top = el.getBoundingClientRect().top, vh = window.innerHeight;
-  return clamp((vh * from - top) / (vh * (from - to)));
+  hero.addEventListener('pointerleave', () => { cards.style.transform = ''; });
 }
 
-function update() {
-  ticking = false;
-  if (nav) {
-    nav.classList.toggle('is-scrolled', window.scrollY > 8);
-    const mid = nav.offsetHeight / 2;
-    nav.classList.toggle('is-night', nightZones.some(z => { const r = z.getBoundingClientRect(); return r.top <= mid && r.bottom >= mid; }));
-  }
-  const vh = window.innerHeight;
-
-  if (words.length) {
-    const p = viewProgress(statement, 0.88, 0.32), n = words.length;
-    words.forEach((w, i) => { w.style.opacity = (0.16 + 0.84 * clamp((p * (n + 2) - i) / 2.5)).toFixed(3); });
-    if (circle) circle.style.setProperty('--draw', (1 - clamp((p - 0.62) / 0.3)).toFixed(3));
-  }
-
-  if (docs.length) {
-    let p = 0.46;
-    if (!noMotion) {
-      const r = system.getBoundingClientRect();
-      const span = r.height - vh;
-      p = span > 10 ? clamp(-r.top / span) : 0.46;
-    }
-    const W = stream.clientWidth, dw = docs[0].offsetWidth || 170;
-    const gx = W / 2, gap = dw * 1.32;
-    const travel = gap * (docs.length + 0.9);
-    let nearest = null, best = Infinity;
-    docs.forEach((d, i) => {
-      const cx = gx - gap * 0.75 - i * gap + p * travel;
-      const c = clamp((cx - (gx - dw * 0.35)) / (dw * 0.7));
-      d.style.setProperty('--x', (cx - dw / 2).toFixed(1) + 'px');
-      d.style.setProperty('--c', c.toFixed(3));
-      const dist = Math.abs(cx - gx);
-      if (dist < best) { best = dist; nearest = c; }
-    });
-    const lit = noMotion ? rules.length : nearest === null ? 0 : Math.floor(nearest * (rules.length + 0.999));
-    rules.forEach((li, i) => li.classList.toggle('on', i < lit));
-  }
-
-  if (steps && !noMotion) steps.style.setProperty('--line', viewProgress(steps, 0.82, 0.42).toFixed(3));
+/* before / after: the same draft, without and with a House Rules Kit (sample kit: Fernhill PR, fictional) */
+const PAIRS = [
+  ["6 Financial Mistakes Every New Parent Makes", "5 money mistakes new parents make, according to a chartered financial planner", "S2 · H2 · H3"],
+  ["In today's fast-paced world, becoming a parent is a thrilling journey!", "Most new parents budget for nappies and a pram. Far fewer plan for the paperwork.", "V1 · N1 · L6"],
+  ["Finance expert Mia Okafor from Ledgerwise shares her top tips:", "Mia Okafor, chartered financial planner at Ledgerwise, says:", "F1"],
+  ["Not having a will. Tip: Get one written ASAP.", "Not updating your will. Why it matters: a court decides who raises your child.", "S3"],
+  ["No emergency fund. Tip: Save 3 months of expenses.", "Treating savings as an emergency fund. What to do: keep three months aside.", "L3 · S4"],
+  ["Start a color-coded budget — it's a game-changer.", "Start a colour-coded budget, and review it every month.", "L1 · L5 · N1"]
+];
+function fillDraft(el, after) {
+  const sw = p => `<span class="sw"><span class="o">${p[0]}</span><span class="n">${p[1]}</span></span><span class="rt">${p[2]}</span>`;
+  el.innerHTML =
+    `<div class="tagline"><span>${after ? 'With your House Rules Kit' : 'AI draft today'}</span><span>${after ? 'READY · 23/23 rules' : '15 rule breaks'}</span></div>` +
+    `<div class="hd">${sw(PAIRS[0])}</div><p>${sw(PAIRS[1])}</p><p style="margin-top:10px">${sw(PAIRS[2])}</p>` +
+    `<ol><li>${sw(PAIRS[3])}</li><li>${sw(PAIRS[4])}</li><li>${sw(PAIRS[5])}</li></ol>`;
+  if (!after) el.querySelectorAll('.n, .rt').forEach(n => n.setAttribute('aria-hidden', 'true'));
 }
-
-let ticking = false;
-const onScroll = () => { if (!ticking) { ticking = true; requestAnimationFrame(update); } };
-window.addEventListener('scroll', onScroll, { passive: true });
-window.addEventListener('resize', onScroll, { passive: true });
-update();
+const cmp = document.getElementById('cmp');
+if (cmp) {
+  fillDraft(document.getElementById('cb'), false);
+  fillDraft(document.getElementById('ca'), true);
+  document.getElementById('ca').setAttribute('aria-hidden', 'true');
+  let auto = !reduce, drag = false, visible = true;
+  const t0 = performance.now();
+  const set = v => cmp.style.setProperty('--cut', Math.max(4, Math.min(96, v)) + '%');
+  const pos = e => { const r = cmp.getBoundingClientRect(); set((e.clientX - r.left) / r.width * 100); };
+  cmp.addEventListener('pointerdown', e => { drag = true; auto = false; pos(e); });
+  window.addEventListener('pointerup', () => { drag = false; });
+  cmp.addEventListener('pointermove', e => { if (drag) pos(e); });
+  cmp.addEventListener('keydown', e => { if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') { auto = false; const cur = parseFloat(getComputedStyle(cmp).getPropertyValue('--cut')) || 50; set(cur + (e.key === 'ArrowRight' ? 5 : -5)); } });
+  cmp.tabIndex = 0;
+  if ('IntersectionObserver' in window) new IntersectionObserver(es => { visible = es[0].isIntersecting; }).observe(cmp);
+  const loop = now => { if (auto && visible) set(50 + 36 * Math.sin((now - t0) / 1000 * 0.55)); requestAnimationFrame(loop); };
+  if (reduce) set(50); else requestAnimationFrame(loop);
+}

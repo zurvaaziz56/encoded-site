@@ -187,3 +187,7 @@ Checked in headless Chromium (Playwright) against a local server with clean URLs
 - Layout shift in the hero: CLS of about 0.003 over the first 6.5 seconds, including the draft animation.
 - Reduced motion: every scene shows its finished state (corrected draft, drawn circle, full timeline, static before-and-after in the rules scene), with no sticky scroll.
 - Screenshots are in `docs/redesign-screens/`: `home-desktop-*` and `home-phone-*` step through the page in order; `*-reduced-*` are the reduced-motion versions; `pr-*` are the `/for-pr-agencies` page.
+
+## Final direction (5 November 2026): Aurora glass, self-serve
+
+The editorial paper design above was replaced after the offer changed to a self-serve product. Zurva chose the "Aurora glass" direction: warm sunrise light (peach, apricot, mint, sky) drifting behind frosted glass, Plus Jakarta Sans with JetBrains Mono for rule IDs. The page leads with the $99 House Rules Kit, shows how it works in three steps, proves it with a before-and-after slider labelled by rule, unpacks the six files in the kit, then pricing ($99 / $249 / contact), who builds it, and FAQs. All visuals are real product content from the fictional Fernhill PR sample kit. Screenshots in `docs/redesign-screens/` are of this version.

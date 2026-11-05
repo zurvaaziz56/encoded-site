@@ -3,5 +3,9 @@
   "buildCommand": null,
   "outputDirectory": ".",
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/for-pr-agencies", "destination": "/", "permanent": false },
+    { "source": "/for-pr-agencies.html", "destination": "/", "permanent": false }
+  ]
 }
