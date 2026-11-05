@@ -1,14 +1,16 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-GB">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Editorial AI for PR agencies · Encoded</title>
-<meta name="description" content="Encoded builds the editorial system PR agencies use to turn interviews and research into drafts in each client's voice and house format, checked before an editor sees them.">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Encoded for PR agencies · Your house rules on every AI draft</title>
+<meta name="description" content="For PR agencies of 2 to 15 people that already use AI. Encoded writes your house rules down and sets your AI up to check every draft against them. Start with a $1,500, 7-day audit.">
 <link rel="canonical" href="https://www.getencoded.co/for-pr-agencies">
 
-<meta property="og:title" content="Editorial AI for PR agencies · Encoded">
-<meta property="og:description" content="Turn interviews, research and briefing docs into drafts in each client's voice and your house format, checked against your own rules before an account director opens them.">
+<!-- CTA links live in site.js only: data-cta="book" (Cal.com) and data-cta="form" (Tally). -->
+
+<meta property="og:title" content="Encoded for PR agencies · Your house rules on every AI draft">
+<meta property="og:description" content="We write your house rules down and set your AI up to check every draft against them. Start with a $1,500, 7-day audit.">
 <meta property="og:url" content="https://www.getencoded.co/for-pr-agencies">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Encoded">
@@ -16,415 +18,122 @@
 <meta property="og:image" content="https://www.getencoded.co/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Encoded: editorial AI systems for PR agencies.">
+<meta property="og:image:alt" content="Encoded: AI drafts that follow your house style. Every time.">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Editorial AI for PR agencies · Encoded">
-<meta name="twitter:description" content="Turn interviews and research into drafts in each client's voice and your house format, checked against your own rules.">
+<meta name="twitter:title" content="Encoded for PR agencies · Your house rules on every AI draft">
+<meta name="twitter:description" content="We write your house rules down and set your AI up to check every draft against them.">
 <meta name="twitter:image" content="https://www.getencoded.co/og.png">
 <meta name="author" content="Zurva Aziz">
-<meta name="theme-color" content="#ffffff">
+<meta name="theme-color" content="#F4F0E8">
 
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='2' y='18' width='28' height='11' rx='2' fill='%23FFE566' transform='rotate(-2 16 23)'/%3E%3Ctext x='16' y='23' font-family='Arial Black,sans-serif' font-size='22' font-weight='900' fill='%2314181D' text-anchor='middle'%3EE%3C/text%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"WebPage","@id":"https://www.getencoded.co/for-pr-agencies#page","url":"https://www.getencoded.co/for-pr-agencies","name":"Encoded for PR agencies","isPartOf":{"@id":"https://www.getencoded.co/#site"},"about":{"@id":"https://www.getencoded.co/#org"}},
+{"@type":"Organization","@id":"https://www.getencoded.co/#org","name":"Encoded","url":"https://www.getencoded.co/","address":{"@type":"PostalAddress","addressLocality":"London","addressCountry":"GB"}}
+]}
+</script>
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2316130F'/%3E%3Ctext x='14.5' y='23.5' font-family='Georgia,serif' font-size='21' fill='%23F4F0E8' text-anchor='middle'%3EE%3C/text%3E%3Ccircle cx='24.5' cy='22' r='2.6' fill='%23D23E26'/%3E%3C/svg%3E">
+<link rel="preload" href="fonts/newsreader.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/geist.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="styles.css">
+<script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
 
-<a class="skip" href="#top">Skip to content</a>
+<a class="skip" href="#main">Skip to content</a>
 
-<header>
-  <div class="wrap nav">
-    <a class="logo" href="index.html">En<span class="hl">coded</span></a>
-    <button class="menu-btn" aria-label="Open menu" aria-expanded="false" onclick="toggleMenu(this)">☰</button>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="index.html#how">How it works</a></li>
-      <li><a href="index.html#work">Our work</a></li>
-      <li><a href="index.html#pricing">Pricing</a></li>
-      <li><a href="index.html#about">About</a></li>
-      <li><a class="btn small nav-cta" href="#" data-cta="book">Book a call</a></li>
-    </ul>
+<header class="nav" id="nav">
+  <div class="wrap nav__inner">
+    <a class="brand" href="/" aria-label="Encoded, home">Encoded<span class="brand__dot" aria-hidden="true">.</span></a>
+    <nav class="nav__links" aria-label="Main">
+      <a href="/#how">How it works</a>
+      <a href="/#work">Our work</a>
+      <a href="/#pricing">Pricing</a>
+      <a href="/#faq">FAQ</a>
+    </nav>
+    <a class="btn btn--sm" href="#" data-cta="book">Book a call</a>
   </div>
 </header>
 
-<main id="top">
+<main id="main">
 
-  <!-- HERO -->
-  <div class="hero">
-    <div class="wrap">
-      <div class="prose" style="max-width:760px">
-        <h1>Your house style, enforced on <span class="hl">every draft.</span></h1>
-        <p class="lede">Encoded builds the editorial system PR agencies use to turn interviews, research and briefing docs into drafts in each client's voice and your house format, checked against your own rules before an account director ever opens them.</p>
-        <div class="cta-row">
-          <a class="btn" href="#" data-cta="book">Book a 30-minute call</a>
-          <a class="btn ghost" href="#proven">See what we run today ↓</a>
-        </div>
-        <p class="quiet">Start with a fixed-price audit. One workflow, seven days, a written report you keep either way.</p>
-        <p><a class="cta-alt" href="#" data-cta="form">Not ready for a call? Tell us what's breaking →</a></p>
-      </div>
+<section class="hero page-hero">
+  <canvas class="flow" data-flow="hero" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <p class="eyebrow"><span class="dot" aria-hidden="true"></span>For PR agencies of 2 to 15 people</p>
+    <h1 class="display">Your house rules, <em>on every AI draft.</em></h1>
+    <p class="lede">Your team uses AI most days, and someone still rereads every piece to catch the same mistakes. We write your rules down and set your AI up to check every draft against them.</p>
+    <div class="cta-row">
+      <a class="btn" href="#" data-cta="book">Book a 30-minute call</a>
+      <a class="link-cta" href="#" data-cta="form">Tell us what's breaking <span aria-hidden="true">→</span></a>
     </div>
   </div>
+</section>
 
-  <!-- PROOF -->
-  <div class="receipts">
-    <div class="wrap">
-      <p class="r-head">Proof, not promises</p>
-      <p class="r-lead">Three editorial AI systems we built are running for real clients <b>right now:</b></p>
-      <div class="badges">
-        <span class="badge"><i class="dot" aria-hidden="true"></i>PR agency · 8-stage editorial check on every piece, weekly</span>
-        <span class="badge"><i class="dot" aria-hidden="true"></i>Podcast magazine · 200+ episode packages shipped</span>
-        <span class="badge"><i class="dot" aria-hidden="true"></i>Growth agency · LinkedIn posts, daily</span>
-      </div>
-      <p class="r-sub">Client names stay private. We will walk you through the real pipelines on a call.</p>
+<section class="section">
+  <div class="wrap split">
+    <div data-reveal>
+      <p class="eyebrow">What gets checked</p>
+      <h2>The rules your editors enforce. <em>Checked every time.</em></h2>
+      <p style="margin-top:24px">These are the kinds of checks we set up. Yours are written from your own house style, so they catch what your editors catch.</p>
     </div>
-  </div>
-
-  <!-- THE PROBLEM -->
-  <section>
-    <div class="wrap">
-      <h2>The week this fixes</h2>
-      <div class="prose">
-        <p>An account director rereads everything before it goes out. A junior pastes the style guide into a chat window for the third time this week. A client asks why Thursday's draft does not sound like Tuesday's.</p>
-        <p style="margin-top:.9rem">None of that is a prompt problem. A prompt is a request. What actually holds a standard is a system that checks the work against your rules <span class="hl">before a person ever sees it.</span></p>
-      </div>
-    </div>
-  </section>
-
-  <!-- DEMO -->
-  <section id="demo" class="section-tight">
-    <div class="wrap">
-      <h2>Same prompt. Two tries.</h2>
-      <p class="prose"><strong>A demonstration, not client work.</strong> The client is invented. The rules, and the ways AI breaks them, are the ones we see every week.</p>
-
-      <div class="demo-shell">
-        <p class="task-line"><b>The task:</b> write the headline for a client's press release. <b>The rules:</b> sentence case, the client's full name on first mention, no hype words, clean punctuation.</p>
-
-        <div class="toggle" aria-label="Demo mode">
-          <button id="btnPlain" aria-pressed="true" onclick="setMode('plain')">Plain AI</button>
-          <button id="btnEnc" aria-pressed="false" onclick="setMode('enc')">With Encoded</button>
-        </div>
-
-        <p class="hint" id="hint"></p>
-        <div class="runs" id="runs" aria-live="polite"></div>
-        <p class="meter" id="meter" aria-live="polite"></p>
-
-        <button class="rerun" onclick="rerun()">↻ Run it again</button>
-        <p class="demo-caption" id="caption"></p>
-      </div>
-    </div>
-  </section>
-
-  <!-- WHERE IT FITS -->
-  <section class="section-tight">
-    <div class="wrap">
-      <h2>Where it fits in an agency week</h2>
-      <p class="prose">Six places agencies put a system like this to work. You do not have to start with all of them. The audit picks one.</p>
-
-      <div class="uses">
-        <div class="use">
-          <h3>Interviews into copy</h3>
-          <p>Call notes and transcripts become drafts in the client's voice and your house format, not a generic summary somebody has to rewrite.</p>
-        </div>
-        <div class="use">
-          <h3>Source material, organised</h3>
-          <p>Research, briefing docs and past coverage pulled into one place the system can actually use, instead of five tabs and one person's memory.</p>
-        </div>
-        <div class="use">
-          <h3>Quotes kept intact</h3>
-          <p>Usable quotes and lines pulled from the source with the wording preserved, so nothing gets smoothed over or invented on the way into a draft.</p>
-        </div>
-        <div class="use">
-          <h3>Outreach that reads like a person</h3>
-          <p>Pitch notes and journalist outreach drafted to your angle and your tone, ready for someone on your team to read, change and send.</p>
-        </div>
-        <div class="use">
-          <h3>One story, every channel</h3>
-          <p>The release, the social post, the newsletter line and the client summary, each in its own format, all from the same source material.</p>
-        </div>
-        <div class="use">
-          <h3>Your standards, enforced</h3>
-          <p>Sentence case, banned words, client naming rules, embargo lines. The checks an editor runs by hand today, run on every piece instead.</p>
-        </div>
-      </div>
-
-      <div class="note-box">
-        <p><strong>Where the line is.</strong> Encoded fits inside the way your agency already works. It does not send anything, approve anything, or speak to your clients. A person still signs off on every piece, with more time to do it properly.</p>
-        <p><strong>It does not replace your writers.</strong> It removes the pass where your team fixes the same formatting and voice problems every week. Judgment, story sense and the client relationship stay with people.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- THE PROVEN ONE -->
-  <section id="proven">
-    <div class="wrap">
-      <h2>The system we run for an agency today</h2>
-      <p class="prose">One of those six is not a proposal. It has been running in production for a PR agency, week in and week out. Here is what it does.</p>
-
-      <div class="folders" style="grid-template-columns:1fr;max-width:760px">
-        <article class="folder" style="--rot:-0.8deg">
-          <span class="f-tab">Case 01 · PR agency</span>
-          <span class="f-icon" aria-hidden="true">📰</span>
-          <dl class="cf">
-            <dt>The problem</dt>
-            <dd>Every piece needed a full reread before it went out. The AI drafts broke house style somewhere different each time, so nobody could trust them unchecked. The checking fell to the person with the least time.</dd>
-            <dt>What the system does</dt>
-            <dd>An <b>8-stage editorial check</b> runs on each piece, around <b>20 checks per piece</b>, in <b>weekly batches</b>. Each stage looks for a different class of problem, in the same order every time.</dd>
-            <dt>What they get</dt>
-            <dd>The checking happens before the work reaches a person. What arrives on an editor's desk has already been through every check the agency would have run by hand.</dd>
-            <dt>What stayed with people</dt>
-            <dd>Every judgment call. The system flags and fixes what it can prove is wrong against the rules. It does not decide whether a story is any good.</dd>
-          </dl>
-        </article>
-      </div>
-
-      <p class="prose" style="margin-top:2rem">The other five are builds we would scope with you on the call, against your workflow. We would rather tell you which is which now than oversell and disappoint you in week three.</p>
-    </div>
-  </section>
-
-  <!-- HOW WE START -->
-  <section class="section-tight">
-    <div class="wrap">
-      <h2>How we start</h2>
-      <p class="prose">We will not ask you to trust a pitch. We ask for one workflow and seven days.</p>
-      <ol class="steps">
-        <li class="step">
-          <span class="step-ico" aria-hidden="true">📞</span>
-          <span class="step-cal">Day 1</span>
-          <h3>Pick one workflow that hurts</h3>
-          <p>A 30-minute call. You choose the workflow, we collect your rules: client voice, formats, banned words, the things your best editor holds in their head.</p>
-        </li>
-        <li class="step">
-          <span class="step-ico" aria-hidden="true">🔍</span>
-          <span class="step-cal">Days 2–5</span>
-          <h3>We measure the damage</h3>
-          <p>We take 10 to 20 pieces you have already published and check them against your own rules: where the AI broke them, how often, and what the fixing costs you in hours.</p>
-        </li>
-        <li class="step">
-          <span class="step-ico" aria-hidden="true">📋</span>
-          <span class="step-cal">Day 7</span>
-          <h3>You get the report</h3>
-          <p>A written report and a working session to walk it through: exactly where your output breaks your rules, and a concrete plan to fix it. Yours to keep either way.</p>
-        </li>
+    <div class="rulebook" data-reveal>
+      <div class="rulebook__head"><span>House rules · example</span><span>Run on every draft</span></div>
+      <ol>
+        <li>The count matches the headline's promise</li>
+        <li>The body matches the brief and the headline</li>
+        <li>Every brief point gets its own item</li>
+        <li>The headline uses the expert's most specific credential</li>
+        <li>House subheading labels, used exactly</li>
+        <li>No placeholders like "TBD" in figures</li>
+        <li>Spelling, currency and terms match the outlet</li>
+        <li>No em dashes</li>
+        <li>No AI filler phrases</li>
+        <li>It opens on the point</li>
       </ol>
-
-      <div class="note-box" style="margin-top:2.4rem">
-        <h3 class="also-h" style="margin-top:0">What you're agreeing to</h3>
-        <ul class="mat-list" style="margin-top:.5rem">
-          <li><b>A fixed price.</b> $1,500, agreed before anything starts. No hourly creep.</li>
-          <li><b>The report is yours either way.</b> Hire us for the build or don't. It is worth having on its own.</li>
-          <li><b>We start with work you have already published.</b> Nothing confidential has to move for you to get the answer.</li>
-          <li><b>Your fee comes off the build</b> if you go ahead within 60 days.</li>
-        </ul>
-      </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- PRICING -->
-  <section class="offer">
-    <div class="wrap">
-      <div class="offer-cols">
-        <div>
-          <h2>What it costs</h2>
-          <div class="price">$1,500</div>
-          <p>The audit is fixed price and stands on its own. You get the report and the fix plan whether or not you hire us again. If you do go ahead with a build, the $1,500 comes off the price.</p>
-          <h3 class="inc-h">Stage 1 · what the $1,500 buys</h3>
-          <ul class="includes">
-            <li>A 30-minute intake call where we write down your rules</li>
-            <li>10 to 20 of your published pieces checked against those rules</li>
-            <li>The written report: what breaks, how often, what the fixing costs you</li>
-            <li>A step-by-step fix plan you can act on with us or without us</li>
-            <li>Delivered within 7 days of the call</li>
-          </ul>
-          <a class="btn" href="#" data-cta="book">Book a 30-minute call</a>
-          <p class="quiet">Not ready to book? <a href="#" data-cta="form">Tell us what's breaking →</a></p>
-        </div>
-        <div class="ladder">
-          <h3>How the work is staged</h3>
-          <div class="row"><span>1 · Find what's breaking</span><span>$1,500 fixed</span></div>
-          <div class="row"><span>2 · Fix it for good</span><span>from $10,000</span></div>
-          <div class="row"><span>3 · Keep it working</span><span>from $2,000/mo</span></div>
-          <p>Three founding clients at the $1,500 rate, then it goes up. <a href="index.html#pricing">What each stage includes →</a></p>
-        </div>
-      </div>
+<section class="section" style="padding-top:0">
+  <div class="wrap split">
+    <div data-reveal>
+      <p class="eyebrow">Where to start</p>
+      <h2>See what's breaking <em>in seven days.</em></h2>
+      <p style="margin-top:24px">We check pieces you've already published against your own rules. You see what breaks, how often and what it costs in hours before you commit to anything bigger.</p>
+      <a class="back" href="/">See how the whole system works <span aria-hidden="true">→</span></a>
     </div>
-  </section>
-
-  <!-- MATERIAL -->
-  <section class="section-tight">
-    <div class="wrap">
-      <h2>Working with client material</h2>
-      <p class="prose">You would be handing us client interviews and copy that has not been published yet. Here is what we can tell you now, and what we put in writing before anything sensitive moves.</p>
-      <div class="mat">
-        <div class="mat-col">
-          <h3>True today</h3>
-          <ul class="mat-list">
-            <li><b>The audit only needs work you have already published.</b> Nothing confidential has to leave your side for us to find what is breaking.</li>
-            <li><b>Zurva does the work herself.</b> She runs the intake, the audit and the build. No subcontractors, no team to brief.</li>
-            <li><b>You own everything we build.</b> The rules, the documentation, the workflow files.</li>
-          </ul>
-        </div>
-        <div class="mat-col pending">
-          <h3>Agreed in writing before a build</h3>
-          <ul class="mat-list">
-            <li><b>Your NDA,</b> signed before you send anything.</li>
-            <li><b>Which tools and AI providers</b> process your material, named.</li>
-            <li><b>Where the material lives</b> and how long it is kept.</li>
-            <li><b>What gets deleted at the end,</b> and when.</li>
-          </ul>
-        </div>
-      </div>
-      <p class="prose" style="margin-top:1.8rem">If your client contracts set rules we would have to meet, bring them to the call. That is a better conversation before a build than after one.</p>
+    <div class="offer-card" data-reveal>
+      <p class="tier__step" style="color:#F2B7A9">Start here</p>
+      <h3 class="tier-name">Find what's breaking</h3>
+      <p class="tier__price">$1,500 <span>fixed · 7 days</span></p>
+      <ul>
+        <li>Day 1: a 30-minute call to write down your rules</li>
+        <li>Days 2 to 5: we check 10 to 20 published pieces</li>
+        <li>Day 7: your report and fix plan</li>
+      </ul>
+      <p class="tier__credit">Fully credited toward a build if you go ahead within 60 days. The report is yours either way.</p>
+      <a class="btn btn--paper" href="#" data-cta="book">Book a 30-minute call</a>
     </div>
-  </section>
-
-  <!-- FINAL CTA -->
-  <section class="final">
-    <div class="wrap">
-      <h2>One workflow. Seven days. <span class="hl">Real numbers.</span> <span class="stamp inline-stamp">YOUR MOVE</span></h2>
-      <p class="prose" style="margin:.8rem 0 1.8rem">You will know exactly where your AI breaks your agency's rules, what it costs you every month, and how to fix it.</p>
-      <div class="cta-row">
-        <a class="btn" href="#" data-cta="book">Book a 30-minute call</a>
-        <a class="btn ghost" href="#" data-cta="form">Tell us what's breaking</a>
-      </div>
-    </div>
-  </section>
+  </div>
+</section>
 
 </main>
 
-<footer>
-  <div class="wrap">
-    <span>© 2026 Encoded · getencoded.co · London, United Kingdom</span>
-    <nav class="foot-links" aria-label="Footer">
-      <a href="index.html">Home</a>
-      <a href="index.html#work">Our work</a>
-      <a href="index.html#faq">FAQ</a>
-      <a href="#" data-cta="form">Get in touch →</a>
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <a class="brand brand--sm" href="/">Encoded<span class="brand__dot" aria-hidden="true">.</span></a>
+    <nav class="footer__links" aria-label="Footer">
+      <a href="/">Home</a>
+      <a href="/#how">How it works</a>
+      <a href="/#pricing">Pricing</a>
+      <a href="#" data-cta="form">Tell us what's breaking</a>
     </nav>
+    <p class="footer__legal">© 2026 Encoded · getencoded.co · London, United Kingdom</p>
   </div>
 </footer>
 
-<script src="site.js"></script>
-<script>
-/* page-specific: the editor demo. noMotion comes from site.js. */
-/* demo: be the editor */
-const RULES=[
-  {id:'case', label:'sentence case'},
-  {id:'name', label:'full client name'},
-  {id:'hype', label:'no hype words'},
-  {id:'punct',label:'clean punctuation'}
-];
-const plainPool=[
-  {out:"Northwind Unveils Game-Changing Freight Platform", broken:{case:"Every Word Capitalised",hype:'"unveils", "game-changing"',name:'"Northwind Logistics" cut to "Northwind"'}},
-  {out:"A seismic leap forward for logistics — Northwind delivers", broken:{hype:'"seismic leap forward"',punct:"em dash, the classic",name:"client buried at the end, short name"}},
-  {out:"northwind launches freight platform", broken:{case:"no capital at all",name:"not the client's full name"}},
-  {out:"Revolutionary New Platform Set To Disrupt UK Freight", broken:{case:"Title Case",hype:'"revolutionary", "disrupt"',name:"client missing entirely"}},
-  {out:"Northwind Logistics launches a freight platform!!", broken:{punct:"double exclamation mark"}},
-  {out:"Game-Changing: Northwind Rewrites The Rules Of Freight", broken:{case:"Title Case",hype:'"game-changing", "rewrites the rules"',name:"short name only"}}
-];
-const encPool=[
-  {out:"Northwind Logistics opens its freight platform to small carriers"},
-  {out:"Northwind Logistics launches same-day freight for independent retailers"},
-  {out:"Northwind Logistics adds live tracking across its UK network"},
-  {out:"Northwind Logistics brings freight booking under one login"},
-  {out:"Northwind Logistics cuts booking time for small freight operators"},
-  {out:"Northwind Logistics extends same-day delivery to three more cities"}
-];
-let mode='plain', fixes=0, totalBroken=0, current=[];
-function pick(pool,n){
-  const copy=[...pool]; const out=[];
-  for(let i=0;i<n;i++){out.push(copy.splice(Math.floor(Math.random()*copy.length),1)[0]);}
-  return out;
-}
-function meterText(){
-  if(mode==='enc') return '0 fixes · 0 minutes · your evening back';
-  const mins=fixes*2;
-  return fixes+' fixes found · ≈ '+mins+' min of your day';
-}
-function updateMeter(){
-  document.getElementById('meter').textContent=meterText();
-  if(mode==='plain' && totalBroken>0 && fixes>=totalBroken){
-    document.getElementById('caption').textContent='And that is two headlines. Now imagine forty pieces a week. Flip the switch.';
-    document.getElementById('btnEnc').classList.add('pulse');
-  }
-}
-function chipRow(run,idx){
-  return '<div class="chips">'+RULES.map(rule=>{
-    return '<button class="chip" data-run="'+idx+'" data-rule="'+rule.id+'" onclick="judge(this)">'+rule.label+'</button>';
-  }).join('')+'</div>';
-}
-function judge(btn){
-  if(mode!=='plain'||btn.classList.contains('done'))return;
-  btn.classList.add('done');
-  const run=current[+btn.dataset.run];
-  const why=run.broken[btn.dataset.rule];
-  if(why){
-    btn.classList.add('hit');
-    btn.innerHTML='✕ '+btn.textContent+' · <i>'+why+'</i>';
-    fixes++;
-  }else{
-    btn.classList.add('held');
-    btn.innerHTML='✓ '+btn.textContent+' · held';
-  }
-  updateMeter();
-}
-let renderSeq=0;
-async function render(){
-  const seq=++renderSeq;
-  fixes=0;
-  document.getElementById('btnEnc').classList.remove('pulse');
-  const isPlain=mode==='plain';
-  current=pick(isPlain?plainPool:encPool,2);
-  totalBroken=isPlain?current.reduce((n,r)=>n+Object.keys(r.broken).length,0):0;
-  const box=document.getElementById('runs');
-  box.innerHTML=current.map((r,i)=>
-    '<div class="run '+(isPlain?'bad':'good')+'">'+
-      (isPlain?'':'<span class="stamp" id="st'+i+'">APPROVED</span>')+
-      '<span class="r-label">Run '+String(i+1).padStart(2,'0')+'</span>'+
-      '<span class="r-out" id="ro'+i+'"></span>'+
-      (isPlain?chipRow(r,i):'<span class="r-note good-note" id="gn'+i+'"></span>')+
-    '</div>').join('');
-  document.getElementById('hint').textContent=isPlain
-    ? 'Your turn: tap the rules each run breaks. Be the editor for a second.'
-    : 'Nothing to tap. Every run already passed the same four rules.';
-  document.getElementById('caption').textContent=isPlain
-    ? 'Every fix you find is a fix someone on your team makes by hand today.'
-    : 'Still different headlines. Creative where it can be, fixed where it must be. That is the difference between a prompt and a system.';
-  updateMeter();
-  const typeSpeed=noMotion?0:14;
-  for(let i=0;i<current.length;i++){
-    if(seq!==renderSeq)return;
-    const out=document.getElementById('ro'+i);
-    if(!out)return;
-    if(typeSpeed===0){out.textContent=current[i].out;}
-    else{
-      out.classList.add('caret');
-      for(const ch of current[i].out){
-        if(seq!==renderSeq)return;
-        out.textContent+=ch;
-        await new Promise(r=>setTimeout(r,typeSpeed));
-      }
-      out.classList.remove('caret');
-    }
-    if(!isPlain){
-      const st=document.getElementById('st'+i);
-      const gn=document.getElementById('gn'+i);
-      if(st){st.classList.add('on');}
-      if(gn){gn.textContent='✓ passed all four rules · no edits';}
-      await new Promise(r=>setTimeout(r,noMotion?0:260));
-    }else{
-      await new Promise(r=>setTimeout(r,noMotion?0:140));
-    }
-  }
-}
-function setMode(m){
-  mode=m;
-  document.getElementById('btnPlain').setAttribute('aria-pressed',m==='plain');
-  document.getElementById('btnEnc').setAttribute('aria-pressed',m==='enc');
-  render();
-}
-function rerun(){render();}
-render();
-</script>
+<script src="site.js" defer></script>
 </body>
 </html>

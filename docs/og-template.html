@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<title>Encoded OG image template</title>
+<!-- Source for og.png (1200x630). Render: serve the repo root, open /docs/og-template.html at 1200x630, screenshot. -->
+<style>
+@font-face{font-family:"Newsreader";src:url(../fonts/newsreader.woff2) format("woff2");font-weight:300 600}
+@font-face{font-family:"Newsreader";src:url(../fonts/newsreader-italic.woff2) format("woff2");font-weight:300 600;font-style:italic}
+@font-face{font-family:"Geist";src:url(../fonts/geist.woff2) format("woff2");font-weight:300 700}
+@font-face{font-family:"Geist Mono";src:url(../fonts/geist-mono.woff2) format("woff2");font-weight:400 500}
+html,body{margin:0}
+body{width:1200px;height:630px;overflow:hidden;background:#F4F0E8;color:#16130F;font-family:Geist,sans-serif;position:relative}
+canvas{position:absolute;inset:0}
+.brand{position:absolute;left:72px;top:58px;font-family:Newsreader,serif;font-size:40px;letter-spacing:-.03em}
+.brand span{color:#D23E26}
+h1{position:absolute;left:72px;top:150px;margin:0;font-family:Newsreader,serif;font-weight:400;font-size:84px;line-height:1;letter-spacing:-.025em;width:600px}
+h1 em{color:#4F4A43}
+.foot{position:absolute;left:72px;bottom:58px;font-family:"Geist Mono",monospace;font-size:19px;color:#4F4A43;display:flex;gap:12px;align-items:center}
+.foot i{width:9px;height:9px;border-radius:50%;background:#D23E26;box-shadow:0 0 0 5px rgba(210,62,38,.14)}
+.card{position:absolute;right:72px;top:92px;width:400px;background:#FFFDF8;border-radius:16px;padding:26px 26px 28px;box-shadow:0 0 0 1px rgba(22,19,15,.12),0 30px 60px -30px rgba(40,30,15,.4);font-size:15px}
+.meta{display:flex;justify-content:space-between;font-family:"Geist Mono",monospace;font-size:12px;color:#857E74;padding-bottom:14px;margin-bottom:16px;border-bottom:1px dashed rgba(22,19,15,.22)}
+.head{font-family:Newsreader,serif;font-size:25px;line-height:1.12;letter-spacing:-.015em;margin-bottom:16px}
+.bars i{display:block;height:7px;border-radius:4px;background:#ECE6DB;margin-bottom:9px}
+.row{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:12px;color:#4F4A43}
+.tag{font-family:"Geist Mono",monospace;font-size:11px;padding:5px 8px;border-radius:999px;color:#2D6B48;background:rgba(45,107,72,.12);white-space:nowrap}
+.checks{position:absolute;right:270px;top:352px;width:300px;background:#16130F;color:#EFE9DD;border-radius:13px;padding:18px 18px 16px;box-shadow:0 24px 50px -24px rgba(20,15,10,.6);font-size:14px}
+.checks p{margin:0 0 10px;font-family:"Geist Mono",monospace;font-size:11px;color:rgba(239,233,221,.7)}
+.checks div{display:flex;align-items:center;gap:10px;margin-top:7px}
+.checks div::before{content:"";width:14px;height:14px;border-radius:50%;background:#5FAE7E url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'%3E%3Cpath d='M2 5.3l2 2 4-4.6' fill='none' stroke='%2313120F' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/9px no-repeat}
+.checks b{display:block;font-weight:400;font-family:"Geist Mono",monospace;font-size:12px;color:#8FD3A8;margin-top:12px;padding-top:11px;border-top:1px solid rgba(239,233,221,.14)}
+</style>
+</head>
+<body>
+<canvas id="c" width="2400" height="1260" style="width:1200px;height:630px"></canvas>
+<div class="brand">Encoded<span>.</span></div>
+<h1>AI drafts that follow your house style. <em>Every time.</em></h1>
+<div class="foot"><i></i>Editorial AI systems for PR agencies · getencoded.co</div>
+<div class="card">
+  <div class="meta"><span>Draft 03</span><span>For a UK trade title</span></div>
+  <div class="head">Four ways retailers can win back January shoppers</div>
+  <div class="bars"><i></i><i style="width:92%"></i><i style="width:64%"></i></div>
+  <div class="row"><span>Personalised colour edits</span><span class="tag">✓ UK spelling</span></div>
+  <div class="row"><span>Start early, and stay visible.</span><span class="tag">✓ Em dash</span></div>
+</div>
+<div class="checks">
+  <p>House rules</p>
+  <div>Count matches the headline</div>
+  <div>Opens on the point</div>
+  <div>No em dashes</div>
+  <b>Ready for your editor.</b>
+</div>
+<script>
+const c=document.getElementById('c'),x=c.getContext('2d');x.scale(2,2);
+const w=1200,h=630,gap=17,n=Math.ceil(h/gap)+1;
+const sm=(a,b,v)=>{const t=Math.min(1,Math.max(0,(v-a)/(b-a)));return t*t*(3-2*t)};
+const g=x.createLinearGradient(0,0,w,0);for(let s=0;s<=10;s++)g.addColorStop(s/10,`rgba(22,19,15,${(0.04+0.09*sm(.25,.9,s/10)).toFixed(3)})`);
+const r=x.createLinearGradient(0,0,w,0);for(let s=0;s<=10;s++)r.addColorStop(s/10,`rgba(210,62,38,${(0.6*sm(.4,.95,s/10)).toFixed(3)})`);
+for(let li=0;li<n;li++){const y0=li*gap+gap/2;x.beginPath();
+for(let px=0;px<=w+5;px+=5){const u=px/w,a=1.2+30*(1-sm(.12,.72,u));const t=1.7;
+const nz=Math.sin(px*.0042+t*.5+li*.38)*.55+Math.sin(px*.011-t*.75+li*.93)*.3+Math.sin(px*.024+t*1.15+li*1.71)*.15;
+const y=y0+a*nz;px?x.lineTo(px,y):x.moveTo(px,y)}
+const red=li===Math.round(n*.86);x.strokeStyle=red?r:g;x.lineWidth=red?1.5:1;x.stroke()}
+</script>
+</body>
+</html>
