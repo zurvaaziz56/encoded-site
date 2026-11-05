@@ -60,7 +60,7 @@ const PAIRS = [
 function fillDraft(el, after) {
   const sw = p => `<span class="sw"><span class="o">${p[0]}</span><span class="n">${p[1]}</span></span><span class="rt">${p[2]}</span>`;
   el.innerHTML =
-    `<div class="tagline"><span>${after ? 'With your House Rules Kit' : 'AI draft today'}</span><span>${after ? 'READY · 23/23 rules' : '15 rule breaks'}</span></div>` +
+    `<div class="tagline"><span>${after ? 'With your kit' : 'AI today'}</span><span>${after ? 'All rules pass' : '15 mistakes'}</span></div>` +
     `<div class="hd">${sw(PAIRS[0])}</div><p>${sw(PAIRS[1])}</p><p style="margin-top:10px">${sw(PAIRS[2])}</p>` +
     `<ol><li>${sw(PAIRS[3])}</li><li>${sw(PAIRS[4])}</li><li>${sw(PAIRS[5])}</li></ol>`;
   if (!after) el.querySelectorAll('.n, .rt').forEach(n => n.setAttribute('aria-hidden', 'true'));
