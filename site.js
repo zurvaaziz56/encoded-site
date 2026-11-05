@@ -1,20 +1,23 @@
 /* Encoded · shared behaviour. */
 
 /* ===== YOUR LINKS: the only place these URLs live. =====
-   BUY_URL            data-cta="buy"             $99 House Rules Kit checkout (Stripe or Lemon Squeezy payment link)
-   BUY_CALIBRATED_URL data-cta="buy-calibrated"  $249 Calibrated Kit checkout
-   BOOKING_URL        data-cta="book"            Cal.com intro call (custom systems)
-   FORM_URL           data-cta="form"            Tally "what's breaking" form
-   Until a checkout link is set, its buttons fall back to FORM_URL so nobody hits a dead end. */
-const BUY_URL            = "";  /* paste the $99 payment link here */
-const BUY_CALIBRATED_URL = "";  /* paste the $249 payment link here */
+   data-cta="buy"            opens /order (the order form, which then takes payment through Stripe via /api/order)
+   data-cta="buy-calibrated" opens /order?tier=calibrated
+   data-cta="book"           Cal.com intro call (custom systems)
+   data-cta="form"           Tally "what's breaking" form
+   BUY_URL / BUY_CALIBRATED_URL: leave empty to use the built-in order form. Set them only to send buyers
+   to an outside checkout instead (for example a Lemon Squeezy link). */
+const BUY_URL            = "";
+const BUY_CALIBRATED_URL = "";
 const BOOKING_URL        = "https://cal.com/zurva-aziz-encoded/30min";
 const FORM_URL           = "https://tally.so/r/RGl40j";
 
-const LINKS = { buy: BUY_URL || FORM_URL, "buy-calibrated": BUY_CALIBRATED_URL || FORM_URL, book: BOOKING_URL, form: FORM_URL };
+const LINKS = { buy: BUY_URL || "/order", "buy-calibrated": BUY_CALIBRATED_URL || "/order?tier=calibrated", book: BOOKING_URL, form: FORM_URL };
 document.querySelectorAll('[data-cta]').forEach(a => {
   const url = LINKS[a.dataset.cta];
-  if (url) { a.href = url; a.target = "_blank"; a.rel = "noopener"; }
+  if (!url) return;
+  a.href = url;
+  if (/^https?:/.test(url)) { a.target = "_blank"; a.rel = "noopener"; }
 });
 
 const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;

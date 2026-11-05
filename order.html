@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Get your kit · Encoded</title>
+<meta name="description" content="Order your House Rules Kit. A few questions, 3 published pieces, then payment.">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://www.getencoded.co/order">
+<meta name="theme-color" content="#FFF9F5">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23FFB49A'/%3E%3Cstop offset='1' stop-color='%23A9E8CC'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='9' fill='url(%23g)'/%3E%3Ctext x='16' y='22.5' font-family='Arial,sans-serif' font-weight='800' font-size='17' fill='%231D1A21' text-anchor='middle'%3Ee%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400..800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body class="page-order">
+
+<div class="aurora aurora--fixed" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+<div class="grain grain--fixed" aria-hidden="true"></div>
+
+<header class="nav is-scrolled">
+  <div class="wrap nav__inner">
+    <a class="brand" href="/">encoded</a>
+    <p class="nav__note">House Rules Kit · secure checkout</p>
+  </div>
+</header>
+
+<main class="order wrap" id="main">
+  <form class="oform glass" id="oform" novalidate>
+    <div class="oprog" aria-hidden="true"><span id="obar"></span></div>
+    <p class="ostep-count" id="ocount">Step 1 of 6</p>
+
+    <!-- 1 -->
+    <fieldset class="ostep is-on" data-step="1">
+      <legend>Let's start with you</legend>
+      <p class="ohelp">We send your kit here.</p>
+      <div class="ogrid">
+        <label class="ofield"><span>Your name</span><input name="name" autocomplete="name" required placeholder="Priya Shah"></label>
+        <label class="ofield"><span>Work email</span><input name="email" type="email" autocomplete="email" required placeholder="priya@agency.com"></label>
+        <label class="ofield"><span>Agency or team</span><input name="agency" autocomplete="organization" required placeholder="Fernhill PR"></label>
+        <label class="ofield"><span>Website <em>optional</em></span><input name="website" type="url" placeholder="https://"></label>
+      </div>
+      <div class="ofield"><span>Which AI tools does your team use?</span>
+        <div class="chips" data-name="tools" data-required="1">
+          <button type="button" class="chip" data-v="Claude">Claude</button>
+          <button type="button" class="chip" data-v="ChatGPT">ChatGPT</button>
+          <button type="button" class="chip" data-v="Gemini">Gemini</button>
+          <button type="button" class="chip" data-v="Copilot">Copilot</button>
+        </div>
+      </div>
+    </fieldset>
+
+    <!-- 2 -->
+    <fieldset class="ostep" data-step="2">
+      <legend>What do you write?</legend>
+      <p class="ohelp">Pick all that apply.</p>
+      <div class="chips" data-name="formats" data-required="1">
+        <button type="button" class="chip" data-v="Press releases">Press releases</button>
+        <button type="button" class="chip" data-v="Expert comment">Expert comment</button>
+        <button type="button" class="chip" data-v="Listicles and tips">Listicles and tips</button>
+        <button type="button" class="chip" data-v="Bylines">Bylines</button>
+        <button type="button" class="chip" data-v="Pitch emails">Pitch emails</button>
+        <button type="button" class="chip" data-v="Newsletters">Newsletters</button>
+        <button type="button" class="chip" data-v="Social posts">Social posts</button>
+      </div>
+      <div class="ogrid">
+        <label class="ofield"><span>Which one matters most?</span><input name="priority" required placeholder="Expert comment for consumer press"></label>
+        <label class="ofield"><span>Who do you write for? <em>optional</em></span><input name="outlets" placeholder="UK national press, trade titles"></label>
+      </div>
+      <div class="ofield"><span>English</span>
+        <div class="chips chips--one" data-name="english" data-required="1">
+          <button type="button" class="chip" data-v="UK">UK</button>
+          <button type="button" class="chip" data-v="US">US</button>
+          <button type="button" class="chip" data-v="Match the outlet">Match the outlet</button>
+        </div>
+      </div>
+    </fieldset>
+
+    <!-- 3 -->
+    <fieldset class="ostep" data-step="3">
+      <legend>Your house rules</legend>
+      <p class="ohelp">Answer what you can. Skip the rest.</p>
+      <div class="ogrid ogrid--rules">
+        <label class="ofield"><span>Headlines</span><textarea name="headlines" rows="2" placeholder="Number first. Real credential, never 'expert'."></textarea></label>
+        <label class="ofield"><span>Fixed labels or subheadings</span><textarea name="labels" rows="2" placeholder="Why it matters: / What to do:"></textarea></label>
+        <label class="ofield"><span>Experts and quotes</span><textarea name="quotes" rows="2" placeholder="Full name, title at company, says:"></textarea></label>
+        <label class="ofield"><span>Numbers, dates, money</span><textarea name="numbers" rows="2" placeholder="one to nine in words · 5 November 2026 · £2.5m"></textarea></label>
+        <label class="ofield"><span>Words you never use</span><textarea name="banned" rows="2" placeholder="thrilled, game-changer, in today's fast-paced world"></textarea></label>
+        <label class="ofield"><span>Names that must be exact</span><textarea name="names" rows="2" placeholder="Client names, job titles, products"></textarea></label>
+        <label class="ofield"><span>Punctuation</span><textarea name="punctuation" rows="2" placeholder="No em dashes. Oxford comma. No exclamation marks."></textarea></label>
+        <label class="ofield"><span>Your style in a few words</span><textarea name="style" rows="2" placeholder="Clear, warm, expert. Never salesy."></textarea></label>
+      </div>
+    </fieldset>
+
+    <!-- 4 -->
+    <fieldset class="ostep" data-step="4">
+      <legend>What goes wrong?</legend>
+      <p class="ohelp">This is what your kit will learn to catch.</p>
+      <label class="ofield"><span>The 3 things your editors fix most</span><textarea name="fixes" rows="4" required placeholder="1. Lists have the wrong number of items&#10;2. US spelling sneaks in&#10;3. Experts called 'expert' instead of their title"></textarea></label>
+      <label class="ofield"><span>An AI draft that went wrong <em>optional</em></span><textarea name="baddraft" rows="5" placeholder="Paste it here, and say what was wrong."></textarea></label>
+      <label class="ofield"><span>Anything clients have pushed back on? <em>optional</em></span><textarea name="pushback" rows="2"></textarea></label>
+    </fieldset>
+
+    <!-- 5 -->
+    <fieldset class="ostep" data-step="5">
+      <legend>Your best work</legend>
+      <p class="ohelp">3 to 5 published pieces you're proud of. Upload files or paste text.</p>
+      <label class="drop" id="drop">
+        <input type="file" id="files" multiple accept=".docx,.pdf,.txt,.md,.rtf,.doc">
+        <span class="drop__icon" aria-hidden="true">↑</span>
+        <b>Drop files here, or click to choose</b>
+        <small>Word, PDF or text · up to 3 MB in total</small>
+      </label>
+      <ul class="filelist" id="filelist"></ul>
+      <details class="paste">
+        <summary>Or paste the text instead</summary>
+        <textarea name="pasted" rows="8" placeholder="Paste each piece, with a line of --- between them."></textarea>
+      </details>
+      <label class="consent"><input type="checkbox" name="consent" required> <span>These pieces are published or approved for this. Encoded uses them only to build my kit and deletes them after 30 days (longer for the Calibrated Kit).</span></label>
+    </fieldset>
+
+    <!-- 6 -->
+    <fieldset class="ostep" data-step="6">
+      <legend>Choose your kit</legend>
+      <div class="plans">
+        <label class="plan"><input type="radio" name="tier" value="kit" checked><span class="plan__in"><b>House Rules Kit</b><strong>$99</strong><small>Your rules, a writer, a checker. Ready in 2 business days.</small></span></label>
+        <label class="plan"><input type="radio" name="tier" value="calibrated"><span class="plan__in"><b>Calibrated Kit</b><strong>$249</strong><small>Everything, then tuned to your edits after 2 weeks, plus a call.</small></span></label>
+      </div>
+      <div class="summary" id="summary"></div>
+      <p class="ohelp ohelp--small">Next you'll pay securely with Stripe. By ordering you agree to our <a href="/terms" target="_blank">terms</a>.</p>
+    </fieldset>
+
+    <p class="oerror" id="oerror" role="alert"></p>
+
+    <div class="onav">
+      <button type="button" class="btn btn--glass" id="oback">Back</button>
+      <button type="button" class="btn" id="onext">Next</button>
+      <button type="submit" class="btn" id="osubmit">Continue to payment</button>
+    </div>
+  </form>
+  <p class="order__foot">Questions? <a href="#" data-cta="book">Book a call</a> · <a href="/terms">Terms</a></p>
+</main>
+
+<script src="site.js" defer></script>
+<script src="order.js" defer></script>
+</body>
+</html>
