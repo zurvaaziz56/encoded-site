@@ -5,7 +5,23 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [
-    { "source": "/for-pr-agencies", "destination": "/", "permanent": false },
-    { "source": "/for-pr-agencies.html", "destination": "/", "permanent": false }
-  ]
+    {
+      "source": "/for-pr-agencies",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/for-pr-agencies.html",
+      "destination": "/",
+      "permanent": false
+    }
+  ],
+  "functions": {
+    "api/confirm.js": {
+      "maxDuration": 300
+    },
+    "api/order.js": {
+      "maxDuration": 60
+    }
+  }
 }

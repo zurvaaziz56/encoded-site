@@ -6,6 +6,8 @@
  *   ORDER_EMAIL_FROM   required. A sender on a domain verified in Resend, e.g. "Encoded orders <orders@getencoded.co>".
  *   STRIPE_SECRET_KEY  optional but needed to take payment. Without it, orders are still emailed and the
  *                      customer sees "we'll send a payment link".
+ *   ANTHROPIC_API_KEY, KIT_BUILDER_SKILL_ID  optional. Switch on automatic kit building: the order's files
+ *                      are uploaded to your Anthropic account here, and /api/confirm builds the kit once paid.
  *   SITE_URL           optional. Defaults to https://www.getencoded.co
  *
  * Nothing secret lives in this file: keys are read from the environment only.
@@ -15,6 +17,7 @@ const PLANS = {
   kit: { name: 'House Rules Kit', amount: 9900 },
   calibrated: { name: 'Calibrated Kit', amount: 24900 }
 };
+const { uploadOrderFiles } = require('../lib/kit-build');
 const MAX_FILES = 8;
 const MAX_FILE_BYTES = 3 * 1024 * 1024;
 
@@ -90,12 +93,12 @@ async function sendEmail(o, orderId, md) {
   if (!r.ok) throw new Error(`email ${r.status}: ${(await r.text()).slice(0, 200)}`);
 }
 
-async function createCheckout(o, orderId, site) {
+async function createCheckout(o, orderId, site, fileIds) {
   const p = new URLSearchParams();
   p.set('mode', 'payment');
   p.set('customer_email', o.email);
   p.set('client_reference_id', orderId);
-  p.set('success_url', `${site}/thanks?status=paid&order=${orderId}`);
+  p.set('success_url', `${site}/thanks?status=paid&order=${orderId}&session_id={CHECKOUT_SESSION_ID}`);
   p.set('cancel_url', `${site}/order?cancelled=1&tier=${o.tier}`);
   p.set('line_items[0][quantity]', '1');
   p.set('line_items[0][price_data][currency]', 'usd');
@@ -104,6 +107,10 @@ async function createCheckout(o, orderId, site) {
   p.set('line_items[0][price_data][product_data][description]', `Order ${orderId} · ${o.agency}`.slice(0, 200));
   p.set('metadata[order_id]', orderId);
   p.set('metadata[agency]', o.agency.slice(0, 200));
+  p.set('metadata[email]', o.email.slice(0, 200));
+  p.set('metadata[tier]', o.tier);
+  p.set('metadata[slug]', o.agency.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 60) || 'house-rules');
+  if (fileIds && fileIds.length && fileIds.join(',').length <= 500) p.set('metadata[files]', fileIds.join(','));
   p.set('payment_intent_data[metadata][order_id]', orderId);
   const r = await fetch('https://api.stripe.com/v1/checkout/sessions', {
     method: 'POST',
@@ -172,8 +179,20 @@ module.exports = async function handler(req, res) {
 
   const site = (process.env.SITE_URL || 'https://www.getencoded.co').replace(/\/$/, '');
   if (!process.env.STRIPE_SECRET_KEY) return res.status(200).json({ ok: true, orderId });
+
+  // Automatic building: put the order's files in your Anthropic account now, so the paid build can use them.
+  let fileIds = [];
+  if (process.env.ANTHROPIC_API_KEY && process.env.KIT_BUILDER_SKILL_ID) {
+    try {
+      const uploads = [{ name: `${orderId}-intake-answers.md`, type: 'text/markdown', data: Buffer.from(md, 'utf8').toString('base64') },
+        ...o.files.map(f => ({ name: f.name, type: 'application/octet-stream', data: f.data }))];
+      fileIds = await uploadOrderFiles(uploads);
+    } catch (e) {
+      console.error('Upload for automatic build failed (order still emailed)', orderId, e.message);
+    }
+  }
   try {
-    const checkoutUrl = await createCheckout(o, orderId, site);
+    const checkoutUrl = await createCheckout(o, orderId, site, fileIds);
     return res.status(200).json({ ok: true, orderId, checkoutUrl });
   } catch (e) {
     console.error('Stripe checkout failed', orderId, e.message);

@@ -7,3 +7,6 @@ BRANDSCRIPT.md
 
 # Local Claude Code settings
 .claude/settings.local.json
+
+# Dependencies
+node_modules/

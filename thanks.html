@@ -36,7 +36,8 @@
 (function(){var q=new URLSearchParams(location.search),s=q.get('status'),o=q.get('order');
 if(o)document.getElementById('torder').textContent='Your order number: '+o;
 if(s==='received'){document.getElementById('tstatus').textContent='Answers received';document.getElementById('ttitle').textContent='Thank you. Almost there.';document.getElementById('tlede').textContent="We'll email you a payment link today. Your kit arrives 2 business days after payment.";}
-else if(s==='paid'){document.getElementById('tstatus').textContent='Payment received';}})();
+else if(s==='paid'){document.getElementById('tstatus').textContent='Payment received';
+var sid=q.get('session_id');if(sid&&/^cs_/.test(sid)){fetch('/api/confirm?session_id='+encodeURIComponent(sid)).then(function(r){return r.json()}).then(function(d){if(d&&d.building){document.getElementById('tstatus').textContent='Payment received · building your kit';}}).catch(function(){});}}})();
 </script>
 </body>
 </html>
