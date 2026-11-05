@@ -12,9 +12,8 @@ const noMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const clamp = (v, a = 0, b = 1) => Math.min(b, Math.max(a, v));
 
 /* ---------- small helpers ---------- */
-document.querySelectorAll('.viz-stages i, .viz-days i').forEach((el, i, all) => {
-  const siblings = [...el.parentNode.children];
-  el.style.setProperty('--i', siblings.indexOf(el));
+document.querySelectorAll('.viz-stages i, .viz-days i').forEach(el => {
+  el.style.setProperty('--i', [...el.parentNode.children].indexOf(el));
 });
 document.querySelectorAll('.rulebook li').forEach((el, i) => el.style.setProperty('--i', i));
 document.querySelectorAll('[data-dots]').forEach(box => {

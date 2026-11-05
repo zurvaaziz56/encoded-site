@@ -176,3 +176,14 @@ Sources: [Marketing Made Simple podcast, ep. 13: A website wireframe that works]
 
 No stock or third-party photography is used. Every visual on the site is drawn in code (HTML, CSS, SVG and canvas). The only photo is `zurva.jpg` (Zurva's own portrait), also saved as `zurva.webp`. `og.png` is rendered from `docs/og-template.html`.
 
+
+## QA
+
+Checked in headless Chromium (Playwright) against a local server with clean URLs.
+
+- Viewports: 1440x900, 1512x860 and 1280x720 desktop, 820x1180 tablet, 390x844 and 360x740 phone. At 1280x720 the hero's main button sits above the fold.
+- Console: no errors or warnings on either page, with or without reduced motion.
+- Horizontal overflow: none at 1440, 1280, 820, 390 or 360 (document scroll width equals the viewport width).
+- Layout shift in the hero: CLS of about 0.003 over the first 6.5 seconds, including the draft animation.
+- Reduced motion: every scene shows its finished state (corrected draft, drawn circle, full timeline, static before-and-after in the rules scene), with no sticky scroll.
+- Screenshots are in `docs/redesign-screens/`: `home-desktop-*` and `home-phone-*` step through the page in order; `*-reduced-*` are the reduced-motion versions; `pr-*` are the `/for-pr-agencies` page.
