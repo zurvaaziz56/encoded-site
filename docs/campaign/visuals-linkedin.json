@@ -1,0 +1,196 @@
+{"posts": [
+{"id": "li-01", "channel": "linkedin", "week": 1, "day": "Tue", "title": "The rewrite pass", "format": "image", "slides": [
+  {"layout": "doc", "tag": "The rewrite pass", "headline": "5 tips for smarter saving this year",
+   "lines": [
+     {"text": "In today's fast-paced world, saving matters more than ever.", "mark": "strike", "note": "Banned opener"},
+     {"text": "Finance expert Jo Bloggs shares her advice.", "mark": "flag", "note": "Head of Savings"},
+     {"text": "The organization recommends starting small.", "mark": "flag", "note": "UK title: organisation"},
+     {"text": "Tip: check your direct debits.", "mark": "strike", "note": "No labels"},
+     {"text": "6. Review your rate every year.", "mark": "flag", "note": "Headline says 5"}
+   ],
+   "verdict": "Drafted pre-kettle. Fixed by lunch."}
+]},
+{"id": "li-02", "channel": "linkedin", "week": 1, "day": "Thu", "title": "Who rereads the drafts", "format": "image", "slides": [
+  {"layout": "quiz", "tag": "Quick census", "title": "Who rereads every AI draft?", "question": "Be honest. I won't tell your clients.",
+   "items": ["Me. Always me.", "Our most senior person", "Whoever's nearest the kettle", "Nobody. We live dangerously."],
+   "answer_index": null}
+]},
+{"id": "li-03", "channel": "linkedin", "week": 1, "day": "Fri", "title": "Red Pen Friday: the job title", "format": "image", "slides": [
+  {"layout": "before_after", "tag": "Red Pen Friday #1", "title": "Today's casualty: a job title",
+   "bad": "Finance expert Jo Bloggs shares her top tips for savvy savers.",
+   "good": "Jo Bloggs, Head of Retail Savings at [client], shares her tips for savers.",
+   "rule": "Rule: approved title on first mention"}
+]},
+{"id": "li-04", "channel": "linkedin", "week": 2, "day": "Tue", "title": "Six things the rewrite pass catches", "format": "carousel", "slides": [
+  {"layout": "cover", "tag": "Count the items", "title": "6 things your rewrite pass is quietly catching", "sub": "(I counted. Twice.)"},
+  {"layout": "quiz", "tag": "1. The count", "title": "5 ways to cut your energy bill", "question": "Headline says 5. Count them.",
+   "items": ["Switch supplier", "Turn the thermostat down 1 degree", "Bleed your radiators", "Draught-proof the doors", "Wash at 30 degrees", "Switch off standby"],
+   "answer_index": 5},
+  {"layout": "before_after", "tag": "2. The spelling", "title": "A piece for a UK trade title",
+   "bad": "The organization welcomes the new rules.",
+   "good": "The organisation welcomes the new rules.",
+   "rule": "Rule: spelling follows the outlet"},
+  {"layout": "chat", "tag": "3. The title", "prompt": "Introduce our client's Head of Retail Savings, Jo Bloggs.",
+   "reply": "Leading [[finance expert]] Jo Bloggs shares her top tips for savvy savers.",
+   "note": "Promoted sideways. Nobody approved 'expert'."},
+  {"layout": "meme", "panels": [
+    {"label": "Every client brief:", "text": "Please make it sound like us."},
+    {"label": "Every AI draft:", "text": "\"In today's fast-paced world...\""},
+    {"label": "4. The opener", "text": "Every time. Every client."}
+  ]},
+  {"layout": "doc", "tag": "5. The labels", "headline": "Switching supplier? Read this first",
+   "lines": [
+     {"text": "Most households never compare their tariff.", "mark": "none"},
+     {"text": "Tip: read the small print before you switch.", "mark": "strike", "note": "No labels"},
+     {"text": "Key takeaway: compare tariffs every year.", "mark": "strike", "note": "Still a label"}
+   ],
+   "verdict": "2 labels in body copy"},
+  {"layout": "checklist", "tag": "6. The punctuation", "title": "What this house allows",
+   "items": [
+     {"text": "Full stops", "ok": true},
+     {"text": "Commas", "ok": true},
+     {"text": "Colons", "ok": true},
+     {"text": "Long dashes in every other sentence", "ok": false}
+   ]},
+  {"layout": "cta", "tag": "Count: 6 of 6", "title": "That's six. The headline said six.", "sub": "Lovely when that happens. Your house rules, built into your AI tools.", "button": "getencoded.co"}
+]},
+{"id": "li-05", "channel": "linkedin", "week": 2, "day": "Thu", "title": "Reading drafts out loud", "format": "image", "slides": [
+  {"layout": "meme", "panels": [
+    {"label": "My neighbours:", "text": "Who is she arguing with?"},
+    {"label": "Me, reading an AI draft aloud:", "text": "\"Five tips. One, two, three, four, five... six.\""}
+  ]}
+]},
+{"id": "li-06", "channel": "linkedin", "week": 2, "day": "Fri", "title": "Red Pen Friday: spelling", "format": "image", "slides": [
+  {"layout": "before_after", "tag": "Red Pen Friday #2", "title": "Four spelling mistakes. Spellcheck found none.",
+   "bad": "The organization will prioritize customer behavior in its new program.",
+   "good": "The organisation will prioritise customer behaviour in its new programme.",
+   "rule": "Rule: spelling follows the outlet"}
+]},
+{"id": "li-07", "channel": "linkedin", "week": 3, "day": "Tue", "title": "How house rules work", "format": "carousel", "slides": [
+  {"layout": "cover", "tag": "How it works", "title": "How a house style gets into your AI tools", "sub": "From questionnaire to checker in 2 business days."},
+  {"layout": "checklist", "tag": "Step 1", "title": "A 15-minute questionnaire",
+   "items": [
+     {"text": "Spelling", "ok": true},
+     {"text": "Job titles", "ok": true},
+     {"text": "Numbers and dates", "ok": true},
+     {"text": "Quotes", "ok": true},
+     {"text": "Words you never want to see again", "ok": true}
+   ]},
+  {"layout": "files", "tag": "Step 2", "title": "Send 3 to 5 pieces you've published",
+   "items": ["Spring launch release", "Trade feature", "Op-ed (final_FINAL)"],
+   "sub": "Your best work shows the rules better than any PDF."},
+  {"layout": "steps", "tag": "Step 3", "title": "Answers in, house rules out",
+   "steps": ["Your answers and your pieces", "Turned into precise house rules", "Followed by Claude, ChatGPT, Gemini, Copilot"]},
+  {"layout": "doc", "tag": "Step 4. The checker", "headline": "5 ways to make your office greener",
+   "lines": [
+     {"text": "Says sustainability guru Jo Bloggs.", "mark": "flag", "note": "Approved title?"},
+     {"text": "The organization plans to cut paper use.", "mark": "flag", "note": "UK: organisation"},
+     {"text": "6. Switch off monitors overnight.", "mark": "flag", "note": "Headline says 5"}
+   ],
+   "verdict": "Any draft, any tool · 3 flags"},
+  {"layout": "stat", "tag": "Step 5", "number": "2", "label": "business days, start to finish", "sub": "It all arrives: house rules in your AI tools, plus the checker."},
+  {"layout": "cover", "tag": "Optional", "title": "Calibrated Kit, $249", "sub": "Rules tuned to how your team really edits after 2 weeks, plus a 30-minute call."},
+  {"layout": "cta", "tag": "Free sample", "title": "See a finished one first", "sub": "A full kit for Fernhill PR, a made-up agency with strong views.", "button": "Download at getencoded.co"}
+]},
+{"id": "li-08", "channel": "linkedin", "week": 3, "day": "Thu", "title": "Rule of the week: headline counts", "format": "image", "slides": [
+  {"layout": "quiz", "tag": "Rule of the week", "title": "5 ways to make your office greener", "question": "Headline says 5. List has...",
+   "items": ["Switch off monitors overnight", "Ditch the printer", "Reusable cups only", "Recycling by every desk", "Cycle-to-work scheme", "One more, on sustainability"],
+   "answer_index": 5}
+]},
+{"id": "li-09", "channel": "linkedin", "week": 3, "day": "Fri", "title": "Red Pen Friday: meet Fernhill PR", "format": "image", "slides": [
+  {"layout": "doc", "tag": "Fernhill PR (made up)", "headline": "Switching energy supplier? Read this first",
+   "lines": [
+     {"text": "Tip: Always read the small print before switching.", "mark": "strike", "note": "No labels"},
+     {"text": "Most households never compare their tariff.", "mark": "none"},
+     {"text": "Key takeaway: switching takes minutes.", "mark": "strike", "note": "Same rule"}
+   ],
+   "verdict": "Comment RULES for the sample"}
+]},
+{"id": "li-10", "channel": "linkedin", "week": 4, "day": "Tue", "title": "Live systems I run", "format": "image", "slides": [
+  {"layout": "files", "tag": "Running right now", "title": "What I run in production (names private)",
+   "items": ["8-stage editorial QA", "Around 20 checks a piece", "200+ podcast episodes", "Daily LinkedIn engine"],
+   "sub": "Two years of editorial AI. The same method is in the House Rules Kit."}
+]},
+{"id": "li-11", "channel": "linkedin", "week": 4, "day": "Thu", "title": "Behind the build: the checker demo", "format": "image", "slides": [
+  {"layout": "doc", "tag": "Fernhill PR rules (made up)", "headline": "5 tips for a warmer home this winter",
+   "lines": [
+     {"text": "In today's fast-paced world, heating bills matter.", "mark": "strike", "note": "Banned opener"},
+     {"text": "Act now, says energy expert Jo Bloggs.", "mark": "flag", "note": "Approved title?"},
+     {"text": "The organization advises switching by March 3rd.", "mark": "flag", "note": "organisation, 3 March"},
+     {"text": "Tip: bleed your radiators.", "mark": "strike", "note": "No labels"},
+     {"text": "6. Check your loft insulation.", "mark": "flag", "note": "Headline says 5"}
+   ],
+   "verdict": "7 breaks · 1 paragraph · video below"}
+]},
+{"id": "li-12", "channel": "linkedin", "week": 4, "day": "Fri", "title": "Red Pen Friday: your turn", "format": "image", "slides": [
+  {"layout": "quiz", "tag": "Red Pen Friday #4", "title": "7 ways to cut your bills, from energy guru Sam Patel", "question": "What breaks the house rules?",
+   "items": ["The count", "The title", "The spelling", "Nothing. Ship it."],
+   "answer_index": null}
+]},
+{"id": "li-13", "channel": "linkedin", "week": 5, "day": "Tue", "title": "The $99 kit", "format": "image", "slides": [
+  {"layout": "meme", "panels": [
+    {"label": "Your house style now:", "text": "Lives in your most senior person's head."},
+    {"label": "For $99:", "text": "It lives in your AI tools, with a checker. They get to keep the head."},
+    {"label": "Your part:", "text": "A 15-minute questionnaire. Back in 2 business days. getencoded.co"}
+  ]}
+]},
+{"id": "li-14", "channel": "linkedin", "week": 5, "day": "Thu", "title": "What you get", "format": "carousel", "slides": [
+  {"layout": "cover", "tag": "Unboxing", "title": "What's in the House Rules Kit", "sub": "(No box. Still counts as an unboxing.)"},
+  {"layout": "checklist", "tag": "You send", "title": "Your whole part",
+   "items": [
+     {"text": "Answers to a 15-minute questionnaire", "ok": true},
+     {"text": "3 to 5 pieces you've published", "ok": true},
+     {"text": "A brand bible nobody opens", "ok": false}
+   ]},
+  {"layout": "files", "tag": "You get, part 1", "title": "Your house style, built into your AI tools",
+   "items": ["Claude", "ChatGPT", "Gemini", "Copilot"],
+   "sub": "Drafts arrive closer to how your team already writes."},
+  {"layout": "doc", "tag": "You get, part 2: the checker", "headline": "3 reasons to switch your savings account",
+   "lines": [
+     {"text": "Finance expert Jo Bloggs explains.", "mark": "flag", "note": "Approved title?"},
+     {"text": "1. Better rates", "mark": "none"},
+     {"text": "2. An easier app", "mark": "none"},
+     {"text": "3. No monthly fees", "mark": "none"},
+     {"text": "4. A free tote bag", "mark": "flag", "note": "Headline says 3"}
+   ],
+   "verdict": "Any writer, any tool · 2 flags"},
+  {"layout": "checklist", "tag": "Rules it can hold", "title": "For example",
+   "items": [
+     {"text": "Spelling by outlet", "ok": true},
+     {"text": "Approved spokesperson titles", "ok": true},
+     {"text": "Headline counts that match the list", "ok": true},
+     {"text": "\"In today's fast-paced world\"", "ok": false}
+   ]},
+  {"layout": "stat", "tag": "When", "number": "2", "label": "business days after you send everything", "sub": "Questionnaire and pieces in. House rules and checker back."},
+  {"layout": "cover", "tag": "Two options", "title": "$99 kit, or the $249 Calibrated Kit", "sub": "Calibrated: tuned to your real edits after 2 weeks, plus a 30-minute call."},
+  {"layout": "cta", "tag": "Your move", "title": "Order at getencoded.co", "sub": "Or comment RULES for the free Fernhill PR sample first. Bigger agency? Book a call.", "button": "Get your kit ($99)"}
+]},
+{"id": "li-15", "channel": "linkedin", "week": 5, "day": "Fri", "title": "Red Pen Friday: dates", "format": "image", "slides": [
+  {"layout": "before_after", "tag": "Red Pen Friday #5", "title": "\"On March 3rd\" walked into a UK press release",
+   "bad": "On March 3rd, the company will launch its new savings app, nationwide from April 1st.",
+   "good": "On 3 March, the company will launch its new savings app, across the UK from 1 April.",
+   "rule": "Rule: day then month, no ordinals"}
+]},
+{"id": "li-16", "channel": "linkedin", "week": 6, "day": "Tue", "title": "Objections, answered", "format": "image", "slides": [
+  {"layout": "chat", "tag": "\"We already have a style guide\"", "prompt": "Write our launch release. Follow our house style guide.",
+   "reply": "Of course! [[In today's fast-paced world]], the [[organization]] is [[thrilled to announce]] its new app, [[shared]] [[finance expert]] Jo Bloggs.",
+   "note": "Lovely guide. When did the AI last read it?"}
+]},
+{"id": "li-17", "channel": "linkedin", "week": 6, "day": "Thu", "title": "Comment RULES for the sample", "format": "image", "slides": [
+  {"layout": "meme", "panels": [
+    {"label": "Me, counting the bullets:", "text": "1, 2, 3, 4, 5... 6?"},
+    {"label": "Me, counting again:", "text": "1, 2, 3, 4, 5, 6. Brilliant."},
+    {"label": "Fernhill PR's checker:", "text": "Headline says 5. List has 6. Comment RULES for the free sample."}
+  ]}
+]},
+{"id": "li-18", "channel": "linkedin", "week": 6, "day": "Fri", "title": "Red Pen Friday: the quote", "format": "image", "slides": [
+  {"layout": "doc", "tag": "Red Pen Friday #6", "headline": "Jane Doe on the new partnership",
+   "lines": [
+     {"text": "\"We are thrilled to announce this exciting new partnership,\"", "mark": "strike", "note": "Said at the pub? No."},
+     {"text": "shared Jane Doe, CEO of [client].", "mark": "flag", "note": "said, not shared"},
+     {"text": "\"This partnership puts our app in [number] more shops,\"", "mark": "none"},
+     {"text": "said Jane Doe, CEO of [client].", "mark": "none"}
+   ],
+   "verdict": "2 rules · kit $99 at getencoded.co"}
+]}
+]}

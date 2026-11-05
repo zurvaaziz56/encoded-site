@@ -1,0 +1,718 @@
+[
+ {
+  "id": "li-01",
+  "channel": "linkedin",
+  "week": 1,
+  "day": "Tue",
+  "title": "The rewrite pass",
+  "format": "image",
+  "files": [
+   "li-01-01.jpg"
+  ]
+ },
+ {
+  "id": "li-02",
+  "channel": "linkedin",
+  "week": 1,
+  "day": "Thu",
+  "title": "Who rereads the drafts",
+  "format": "image",
+  "files": [
+   "li-02-01.jpg"
+  ]
+ },
+ {
+  "id": "li-03",
+  "channel": "linkedin",
+  "week": 1,
+  "day": "Fri",
+  "title": "Red Pen Friday: the job title",
+  "format": "image",
+  "files": [
+   "li-03-01.jpg"
+  ]
+ },
+ {
+  "id": "li-04",
+  "channel": "linkedin",
+  "week": 2,
+  "day": "Tue",
+  "title": "Six things the rewrite pass catches",
+  "format": "carousel",
+  "files": [
+   "li-04-01.jpg",
+   "li-04-02.jpg",
+   "li-04-03.jpg",
+   "li-04-04.jpg",
+   "li-04-05.jpg",
+   "li-04-06.jpg",
+   "li-04-07.jpg",
+   "li-04-08.jpg"
+  ]
+ },
+ {
+  "id": "li-05",
+  "channel": "linkedin",
+  "week": 2,
+  "day": "Thu",
+  "title": "Reading drafts out loud",
+  "format": "image",
+  "files": [
+   "li-05-01.jpg"
+  ]
+ },
+ {
+  "id": "li-06",
+  "channel": "linkedin",
+  "week": 2,
+  "day": "Fri",
+  "title": "Red Pen Friday: spelling",
+  "format": "image",
+  "files": [
+   "li-06-01.jpg"
+  ]
+ },
+ {
+  "id": "li-07",
+  "channel": "linkedin",
+  "week": 3,
+  "day": "Tue",
+  "title": "How house rules work",
+  "format": "carousel",
+  "files": [
+   "li-07-01.jpg",
+   "li-07-02.jpg",
+   "li-07-03.jpg",
+   "li-07-04.jpg",
+   "li-07-05.jpg",
+   "li-07-06.jpg",
+   "li-07-07.jpg",
+   "li-07-08.jpg"
+  ]
+ },
+ {
+  "id": "li-08",
+  "channel": "linkedin",
+  "week": 3,
+  "day": "Thu",
+  "title": "Rule of the week: headline counts",
+  "format": "image",
+  "files": [
+   "li-08-01.jpg"
+  ]
+ },
+ {
+  "id": "li-09",
+  "channel": "linkedin",
+  "week": 3,
+  "day": "Fri",
+  "title": "Red Pen Friday: meet Fernhill PR",
+  "format": "image",
+  "files": [
+   "li-09-01.jpg"
+  ]
+ },
+ {
+  "id": "li-10",
+  "channel": "linkedin",
+  "week": 4,
+  "day": "Tue",
+  "title": "Live systems I run",
+  "format": "image",
+  "files": [
+   "li-10-01.jpg"
+  ]
+ },
+ {
+  "id": "li-11",
+  "channel": "linkedin",
+  "week": 4,
+  "day": "Thu",
+  "title": "Behind the build: the checker demo",
+  "format": "image",
+  "files": [
+   "li-11-01.jpg"
+  ]
+ },
+ {
+  "id": "li-12",
+  "channel": "linkedin",
+  "week": 4,
+  "day": "Fri",
+  "title": "Red Pen Friday: your turn",
+  "format": "image",
+  "files": [
+   "li-12-01.jpg"
+  ]
+ },
+ {
+  "id": "li-13",
+  "channel": "linkedin",
+  "week": 5,
+  "day": "Tue",
+  "title": "The $99 kit",
+  "format": "image",
+  "files": [
+   "li-13-01.jpg"
+  ]
+ },
+ {
+  "id": "li-14",
+  "channel": "linkedin",
+  "week": 5,
+  "day": "Thu",
+  "title": "What you get",
+  "format": "carousel",
+  "files": [
+   "li-14-01.jpg",
+   "li-14-02.jpg",
+   "li-14-03.jpg",
+   "li-14-04.jpg",
+   "li-14-05.jpg",
+   "li-14-06.jpg",
+   "li-14-07.jpg",
+   "li-14-08.jpg"
+  ]
+ },
+ {
+  "id": "li-15",
+  "channel": "linkedin",
+  "week": 5,
+  "day": "Fri",
+  "title": "Red Pen Friday: dates",
+  "format": "image",
+  "files": [
+   "li-15-01.jpg"
+  ]
+ },
+ {
+  "id": "li-16",
+  "channel": "linkedin",
+  "week": 6,
+  "day": "Tue",
+  "title": "Objections, answered",
+  "format": "image",
+  "files": [
+   "li-16-01.jpg"
+  ]
+ },
+ {
+  "id": "li-17",
+  "channel": "linkedin",
+  "week": 6,
+  "day": "Thu",
+  "title": "Comment RULES for the sample",
+  "format": "image",
+  "files": [
+   "li-17-01.jpg"
+  ]
+ },
+ {
+  "id": "li-18",
+  "channel": "linkedin",
+  "week": 6,
+  "day": "Fri",
+  "title": "Red Pen Friday: the quote",
+  "format": "image",
+  "files": [
+   "li-18-01.jpg"
+  ]
+ },
+ {
+  "id": "ig-01",
+  "channel": "instagram",
+  "week": 1,
+  "day": "Mon",
+  "title": "Count the items",
+  "format": "carousel",
+  "files": [
+   "ig-01-01.jpg",
+   "ig-01-02.jpg",
+   "ig-01-03.jpg",
+   "ig-01-04.jpg",
+   "ig-01-05.jpg",
+   "ig-01-06.jpg",
+   "ig-01-07.jpg"
+  ]
+ },
+ {
+  "id": "ig-02",
+  "channel": "instagram",
+  "week": 1,
+  "day": "Wed",
+  "title": "The rewrite pass",
+  "format": "reel-cover",
+  "files": [
+   "ig-02-01.jpg"
+  ]
+ },
+ {
+  "id": "ig-03",
+  "channel": "instagram",
+  "week": 1,
+  "day": "Thu",
+  "title": "Nobody / the AI draft",
+  "format": "image",
+  "files": [
+   "ig-03-01.jpg"
+  ]
+ },
+ {
+  "id": "ig-04",
+  "channel": "instagram",
+  "week": 1,
+  "day": "Fri",
+  "title": "Red pen Friday: finance expert",
+  "format": "carousel",
+  "files": [
+   "ig-04-01.jpg",
+   "ig-04-02.jpg",
+   "ig-04-03.jpg",
+   "ig-04-04.jpg",
+   "ig-04-05.jpg",
+   "ig-04-06.jpg",
+   "ig-04-07.jpg"
+  ]
+ },
+ {
+  "id": "ig-05",
+  "channel": "instagram",
+  "week": 2,
+  "day": "Mon",
+  "title": "AI wrote / Editor wrote",
+  "format": "carousel",
+  "files": [
+   "ig-05-01.jpg",
+   "ig-05-02.jpg",
+   "ig-05-03.jpg",
+   "ig-05-04.jpg",
+   "ig-05-05.jpg",
+   "ig-05-06.jpg",
+   "ig-05-07.jpg"
+  ]
+ },
+ {
+  "id": "ig-06",
+  "channel": "instagram",
+  "week": 2,
+  "day": "Wed",
+  "title": "Spot the mistake speed round",
+  "format": "reel-cover",
+  "files": [
+   "ig-06-01.jpg"
+  ]
+ },
+ {
+  "id": "ig-07",
+  "channel": "instagram",
+  "week": 2,
+  "day": "Thu",
+  "title": "Every client, a different style",
+  "format": "image",
+  "files": [
+   "ig-07-01.jpg"
+  ]
+ },
+ {
+  "id": "ig-08",
+  "channel": "instagram",
+  "week": 2,
+  "day": "Fri",
+  "title": "Red pen Friday: the dash count",
+  "format": "reel-cover",
+  "files": [
+   "ig-08-01.jpg"
+  ]
+ },
+ {
+  "id": "ig-09",
+  "channel": "instagram",
+  "week": 3,
+  "day": "Mon",
+  "title": "What is a House Rules Kit?",
+  "format": "carousel",
+  "files": [
+   "ig-09-01.jpg",
+   "ig-09-02.jpg",
+   "ig-09-03.jpg",
+   "ig-09-04.jpg",
+   "ig-09-05.jpg",
+   "ig-09-06.jpg",
+   "ig-09-07.jpg"
+  ]
+ },
+ {
+  "id": "ig-10",
+  "channel": "instagram",
+  "week": 3,
+  "day": "Wed",
+  "title": "Who is building this",
+  "format": "reel-cover",
+  "files": [
+   "ig-10-01.jpg"
+  ]
+ },
+ {
+  "id": "ig-11",
+  "channel": "instagram",
+  "week": 3,
+  "day": "Thu",
+  "title": "The style guide nobody opens",
+  "format": "carousel",
+  "files": [
+   "ig-11-01.jpg",
+   "ig-11-02.jpg",
+   "ig-11-03.jpg",
+   "ig-11-04.jpg",
+   "ig-11-05.jpg",
+   "ig-11-06.jpg"
+  ]
+ },
+ {
+  "id": "ig-12",
+  "channel": "instagram",
+  "week": 3,
+  "day": "Fri",
+  "title": "Red pen Friday: the spelling one",
+  "format": "carousel",
+  "files": [
+   "ig-12-01.jpg",
+   "ig-12-02.jpg",
+   "ig-12-03.jpg",
+   "ig-12-04.jpg",
+   "ig-12-05.jpg",
+   "ig-12-06.jpg"
+  ]
+ },
+ {
+  "id": "ig-13",
+  "channel": "instagram",
+  "week": 4,
+  "day": "Mon",
+  "title": "The sample kit flip-through",
+  "format": "reel-cover",
+  "files": [
+   "ig-13-01.jpg"
+  ]
+ },
+ {
+  "id": "ig-14",
+  "channel": "instagram",
+  "week": 4,
+  "day": "Wed",
+  "title": "Rule of the week: the count matches",
+  "format": "carousel",
+  "files": [
+   "ig-14-01.jpg",
+   "ig-14-02.jpg",
+   "ig-14-03.jpg",
+   "ig-14-04.jpg",
+   "ig-14-05.jpg",
+   "ig-14-06.jpg",
+   "ig-14-07.jpg"
+  ]
+ },
+ {
+  "id": "ig-15",
+  "channel": "instagram",
+  "week": 4,
+  "day": "Thu",
+  "title": "The AI draft starter pack",
+  "format": "image",
+  "files": [
+   "ig-15-01.jpg"
+  ]
+ },
+ {
+  "id": "ig-16",
+  "channel": "instagram",
+  "week": 4,
+  "day": "Fri",
+  "title": "Red pen Friday: made-up labels",
+  "format": "reel-cover",
+  "files": [
+   "ig-16-01.jpg"
+  ]
+ },
+ {
+  "id": "ig-17",
+  "channel": "instagram",
+  "week": 5,
+  "day": "Mon",
+  "title": "What you send, what you get",
+  "format": "carousel",
+  "files": [
+   "ig-17-01.jpg",
+   "ig-17-02.jpg",
+   "ig-17-03.jpg",
+   "ig-17-04.jpg",
+   "ig-17-05.jpg",
+   "ig-17-06.jpg",
+   "ig-17-07.jpg"
+  ]
+ },
+ {
+  "id": "ig-18",
+  "channel": "instagram",
+  "week": 5,
+  "day": "Wed",
+  "title": "The checker at work",
+  "format": "reel-cover",
+  "files": [
+   "ig-18-01.jpg"
+  ]
+ },
+ {
+  "id": "ig-19",
+  "channel": "instagram",
+  "week": 5,
+  "day": "Thu",
+  "title": "$99 or $249?",
+  "format": "carousel",
+  "files": [
+   "ig-19-01.jpg",
+   "ig-19-02.jpg",
+   "ig-19-03.jpg",
+   "ig-19-04.jpg",
+   "ig-19-05.jpg",
+   "ig-19-06.jpg",
+   "ig-19-07.jpg"
+  ]
+ },
+ {
+  "id": "ig-20",
+  "channel": "instagram",
+  "week": 5,
+  "day": "Fri",
+  "title": "Red pen Friday: the quote",
+  "format": "carousel",
+  "files": [
+   "ig-20-01.jpg",
+   "ig-20-02.jpg",
+   "ig-20-03.jpg",
+   "ig-20-04.jpg",
+   "ig-20-05.jpg",
+   "ig-20-06.jpg"
+  ]
+ },
+ {
+  "id": "ig-21",
+  "channel": "instagram",
+  "week": 6,
+  "day": "Mon",
+  "title": "FAQ in 30 seconds",
+  "format": "reel-cover",
+  "files": [
+   "ig-21-01.jpg"
+  ]
+ },
+ {
+  "id": "ig-22",
+  "channel": "instagram",
+  "week": 6,
+  "day": "Wed",
+  "title": "Is the kit for your team?",
+  "format": "carousel",
+  "files": [
+   "ig-22-01.jpg",
+   "ig-22-02.jpg",
+   "ig-22-03.jpg",
+   "ig-22-04.jpg",
+   "ig-22-05.jpg"
+  ]
+ },
+ {
+  "id": "ig-23",
+  "channel": "instagram",
+  "week": 6,
+  "day": "Thu",
+  "title": "The offer",
+  "format": "image",
+  "files": [
+   "ig-23-01.jpg"
+  ]
+ },
+ {
+  "id": "ig-24",
+  "channel": "instagram",
+  "week": 6,
+  "day": "Fri",
+  "title": "Red pen Friday: six rules",
+  "format": "carousel",
+  "files": [
+   "ig-24-01.jpg",
+   "ig-24-02.jpg",
+   "ig-24-03.jpg",
+   "ig-24-04.jpg",
+   "ig-24-05.jpg",
+   "ig-24-06.jpg",
+   "ig-24-07.jpg",
+   "ig-24-08.jpg"
+  ]
+ },
+ {
+  "id": "tt-01",
+  "channel": "tiktok",
+  "week": 1,
+  "day": "Tue",
+  "title": "One quick read",
+  "format": "reel-cover",
+  "files": [
+   "tt-01-01.jpg"
+  ]
+ },
+ {
+  "id": "tt-02",
+  "channel": "tiktok",
+  "week": 1,
+  "day": "Wed",
+  "title": "Which world?",
+  "format": "reel-cover",
+  "files": [
+   "tt-02-01.jpg"
+  ]
+ },
+ {
+  "id": "tt-03",
+  "channel": "tiktok",
+  "week": 1,
+  "day": "Thu",
+  "title": "Count the items: crisis plan",
+  "format": "reel-cover",
+  "files": [
+   "tt-03-01.jpg"
+  ]
+ },
+ {
+  "id": "tt-04",
+  "channel": "tiktok",
+  "week": 2,
+  "day": "Fri",
+  "title": "Red Pen Friday: the demoted CFO",
+  "format": "reel-cover",
+  "files": [
+   "tt-04-01.jpg"
+  ]
+ },
+ {
+  "id": "tt-05",
+  "channel": "tiktok",
+  "week": 2,
+  "day": "Tue",
+  "title": "AI wrote, editor wrote: the labels",
+  "format": "reel-cover",
+  "files": [
+   "tt-05-01.jpg"
+  ]
+ },
+ {
+  "id": "tt-06",
+  "channel": "tiktok",
+  "week": 2,
+  "day": "Thu",
+  "title": "Reacting to a bad release",
+  "format": "reel-cover",
+  "files": [
+   "tt-06-01.jpg"
+  ]
+ },
+ {
+  "id": "tt-07",
+  "channel": "tiktok",
+  "week": 3,
+  "day": "Tue",
+  "title": "Four clients, four style guides",
+  "format": "reel-cover",
+  "files": [
+   "tt-07-01.jpg"
+  ]
+ },
+ {
+  "id": "tt-08",
+  "channel": "tiktok",
+  "week": 3,
+  "day": "Thu",
+  "title": "Count the items: hard mode",
+  "format": "reel-cover",
+  "files": [
+   "tt-08-01.jpg"
+  ]
+ },
+ {
+  "id": "tt-09",
+  "channel": "tiktok",
+  "week": 3,
+  "day": "Fri",
+  "title": "Red Pen Friday: two spellings",
+  "format": "reel-cover",
+  "files": [
+   "tt-09-01.jpg"
+  ]
+ },
+ {
+  "id": "tt-10",
+  "channel": "tiktok",
+  "week": 4,
+  "day": "Tue",
+  "title": "What your AI should have read first",
+  "format": "reel-cover",
+  "files": [
+   "tt-10-01.jpg"
+  ]
+ },
+ {
+  "id": "tt-11",
+  "channel": "tiktok",
+  "week": 4,
+  "day": "Thu",
+  "title": "Same prompt, with and without the rules",
+  "format": "reel-cover",
+  "files": [
+   "tt-11-01.jpg"
+  ]
+ },
+ {
+  "id": "tt-12",
+  "channel": "tiktok",
+  "week": 5,
+  "day": "Tue",
+  "title": "The sample kit checker in 30 seconds",
+  "format": "reel-cover",
+  "files": [
+   "tt-12-01.jpg"
+  ]
+ },
+ {
+  "id": "tt-13",
+  "channel": "tiktok",
+  "week": 5,
+  "day": "Thu",
+  "title": "One quick read, 6.15pm",
+  "format": "reel-cover",
+  "files": [
+   "tt-13-01.jpg"
+  ]
+ },
+ {
+  "id": "tt-14",
+  "channel": "tiktok",
+  "week": 6,
+  "day": "Tue",
+  "title": "The House Rules Kit in 40 seconds",
+  "format": "reel-cover",
+  "files": [
+   "tt-14-01.jpg"
+  ]
+ },
+ {
+  "id": "tt-15",
+  "channel": "tiktok",
+  "week": 6,
+  "day": "Thu",
+  "title": "Can't I just paste our style guide in?",
+  "format": "reel-cover",
+  "files": [
+   "tt-15-01.jpg"
+  ]
+ }
+]

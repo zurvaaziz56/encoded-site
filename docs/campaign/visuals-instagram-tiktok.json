@@ -1,0 +1,1371 @@
+{
+ "posts": [
+  {
+   "id": "ig-01",
+   "channel": "instagram",
+   "week": 1,
+   "day": "Mon",
+   "title": "Count the items",
+   "format": "carousel",
+   "slides": [
+    {
+     "layout": "cover",
+     "tag": "count the items · 01",
+     "title": "Count the items.",
+     "sub": "The headline promises 5. Read the list."
+    },
+    {
+     "layout": "quiz",
+     "tag": "",
+     "title": "5 ways to get your press release read",
+     "question": "How many did you count?",
+     "items": [
+      "1. Lead with the news",
+      "2. Cut the adjectives",
+      "3. Put the date up top",
+      "4. Quote a real person",
+      "5. Keep it to one page",
+      "6. Send it before lunch"
+     ],
+     "answer_index": null
+    },
+    {
+     "layout": "quiz",
+     "tag": "",
+     "title": "5 ways to get your press release read",
+     "question": "Got it? There are 6.",
+     "items": [
+      "1. Lead with the news",
+      "2. Cut the adjectives",
+      "3. Put the date up top",
+      "4. Quote a real person",
+      "5. Keep it to one page",
+      "6. Send it before lunch"
+     ],
+     "answer_index": 5
+    },
+    {
+     "layout": "chat",
+     "tag": "",
+     "prompt": "Write 5 ways to get a press release read",
+     "reply": "Here are 5 ways: 1. Lead with the news. 2. Cut the adjectives. 3. Date up top. 4. Quote a real person. 5. One page. [[6. Send it before lunch.]]",
+     "note": "One more good idea. Never looked back up."
+    },
+    {
+     "layout": "quote",
+     "quote": "A tired editor catches it on the third read. A client catches it on the first.",
+     "by": "Count the items"
+    },
+    {
+     "layout": "before_after",
+     "tag": "",
+     "title": "The rule",
+     "bad": "5 ways to get your press release read (list of 6)",
+     "good": "6 ways to get your press release read",
+     "rule": "Rule · count = headline"
+    },
+    {
+     "layout": "cta",
+     "tag": "",
+     "title": "6 ways to get your press release read. ✓",
+     "sub": "Save this for the next time someone sends you \"5 tips\" at 5.45pm.",
+     "button": "Save for later"
+    }
+   ]
+  },
+  {
+   "id": "ig-02",
+   "channel": "instagram",
+   "week": 1,
+   "day": "Wed",
+   "title": "The rewrite pass",
+   "format": "reel-cover",
+   "slides": [
+    {
+     "layout": "cover",
+     "tag": "the rewrite pass · 01",
+     "title": "The rewrite pass",
+     "sub": "Observed in its natural habitat. It feeds after six, on the most senior person."
+    }
+   ]
+  },
+  {
+   "id": "ig-03",
+   "channel": "instagram",
+   "week": 1,
+   "day": "Thu",
+   "title": "Nobody / the AI draft",
+   "format": "image",
+   "slides": [
+    {
+     "layout": "meme",
+     "panels": [
+      {
+       "label": "Nobody:",
+       "text": ""
+      },
+      {
+       "label": "Absolutely nobody:",
+       "text": ""
+      },
+      {
+       "label": "The AI draft:",
+       "text": "\"In today's fast-paced world, communication is more important than ever.\""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ig-04",
+   "channel": "instagram",
+   "week": 1,
+   "day": "Fri",
+   "title": "Red pen Friday: finance expert",
+   "format": "carousel",
+   "slides": [
+    {
+     "layout": "cover",
+     "tag": "red pen friday · 01",
+     "title": "Red pen Friday",
+     "sub": "Every week: one AI line and how an editor fixes it."
+    },
+    {
+     "layout": "chat",
+     "tag": "",
+     "prompt": "Write a line quoting Sarah from the client firm",
+     "reply": "Sarah, a [[finance expert]], says households should review their budgets.",
+     "note": "Sarah has a title. It's in the brief."
+    },
+    {
+     "layout": "before_after",
+     "tag": "",
+     "title": "Editor wrote",
+     "bad": "Sarah, a finance expert, says households should review their budgets.",
+     "good": "Sarah Patel, chartered financial planner at the client firm, says...",
+     "rule": "Rule · exact title, as given"
+    },
+    {
+     "layout": "quote",
+     "quote": "The client paid for that title. They earned it, and they will notice it missing.",
+     "by": "Why it matters"
+    },
+    {
+     "layout": "checklist",
+     "tag": "",
+     "title": "Titles AI reaches for",
+     "items": [
+      {
+       "text": "Expert",
+       "ok": false
+      },
+      {
+       "text": "Specialist",
+       "ok": false
+      },
+      {
+       "text": "Industry leader",
+       "ok": false
+      },
+      {
+       "text": "Guru, on a bad day",
+       "ok": false
+      },
+      {
+       "text": "Chartered financial planner",
+       "ok": true
+      }
+     ]
+    },
+    {
+     "layout": "cover",
+     "tag": "the rule",
+     "title": "Always use the spokesperson's exact title.",
+     "sub": "As the client gave it. No upgrades, no downgrades."
+    },
+    {
+     "layout": "cta",
+     "tag": "",
+     "title": "Red pen Friday, every week.",
+     "sub": "Next week: the dash count.",
+     "button": "Follow along"
+    }
+   ]
+  },
+  {
+   "id": "ig-05",
+   "channel": "instagram",
+   "week": 2,
+   "day": "Mon",
+   "title": "AI wrote / Editor wrote",
+   "format": "carousel",
+   "slides": [
+    {
+     "layout": "cover",
+     "tag": "ai wrote / editor wrote",
+     "title": "AI wrote / Editor wrote",
+     "sub": "Five lines from a normal Tuesday."
+    },
+    {
+     "layout": "before_after",
+     "tag": "",
+     "title": "Spelling",
+     "bad": "The organization launched its new program.",
+     "good": "The organisation launched its new programme.",
+     "rule": "UK outlet, UK spelling"
+    },
+    {
+     "layout": "before_after",
+     "tag": "",
+     "title": "Labels",
+     "bad": "Tip: send your release before 10am.",
+     "good": "Send your release before 10am.",
+     "rule": "No made-up labels"
+    },
+    {
+     "layout": "before_after",
+     "tag": "",
+     "title": "Dashes",
+     "bad": "The results were clear — growth was up.",
+     "good": "The results were clear. Growth was up.",
+     "rule": "No long dashes"
+    },
+    {
+     "layout": "before_after",
+     "tag": "",
+     "title": "Titles",
+     "bad": "Leading industry expert Tom Reid",
+     "good": "Tom Reid, head of research",
+     "rule": "Exact title, always"
+    },
+    {
+     "layout": "before_after",
+     "tag": "",
+     "title": "The opener",
+     "bad": "In today's fast-paced world, brands must adapt.",
+     "good": "(deleted)",
+     "rule": "The first line is the news"
+    },
+    {
+     "layout": "cta",
+     "tag": "",
+     "title": "Same fixes, every draft.",
+     "sub": "There has to be a better place to keep them.",
+     "button": "Save as a checklist"
+    }
+   ]
+  },
+  {
+   "id": "ig-06",
+   "channel": "instagram",
+   "week": 2,
+   "day": "Wed",
+   "title": "Spot the mistake speed round",
+   "format": "reel-cover",
+   "slides": [
+    {
+     "layout": "chat",
+     "tag": "spot the mistake · 01",
+     "prompt": "Round 1. Quote Jane Hart, the new CEO. 5 seconds.",
+     "reply": "The company's new CEO, Jane Hart, said: \"We are [[thrilled]].\"",
+     "note": "Spot the mistake. 4 rounds. Score yourself."
+    }
+   ]
+  },
+  {
+   "id": "ig-07",
+   "channel": "instagram",
+   "week": 2,
+   "day": "Thu",
+   "title": "Every client, a different style",
+   "format": "image",
+   "slides": [
+    {
+     "layout": "doc",
+     "tag": "house style · 01",
+     "headline": "House style: percentages",
+     "lines": [
+      {
+       "text": "Client A: \"per cent\"",
+       "mark": "none"
+      },
+      {
+       "text": "Client B: \"%\"",
+       "mark": "none"
+      },
+      {
+       "text": "Client C: \"percent, but only in headlines\"",
+       "mark": "none"
+      },
+      {
+       "text": "Your AI tool: whatever it felt like that morning.",
+       "mark": "flag",
+       "note": "written down nowhere"
+      }
+     ],
+     "verdict": "Write it down where the AI can read it"
+    }
+   ]
+  },
+  {
+   "id": "ig-08",
+   "channel": "instagram",
+   "week": 2,
+   "day": "Fri",
+   "title": "Red pen Friday: the dash count",
+   "format": "reel-cover",
+   "slides": [
+    {
+     "layout": "chat",
+     "tag": "red pen friday · 02",
+     "prompt": "Write a 300-word release about the launch",
+     "reply": "The launch was a success [[—]] customers loved it. The team [[—]] small but mighty [[—]] delivered on time.",
+     "note": "Red pen Friday: the dash count"
+    }
+   ]
+  },
+  {
+   "id": "ig-09",
+   "channel": "instagram",
+   "week": 3,
+   "day": "Mon",
+   "title": "What is a House Rules Kit?",
+   "format": "carousel",
+   "slides": [
+    {
+     "layout": "cover",
+     "tag": "how it works · 01",
+     "title": "What is a House Rules Kit? ✓",
+     "sub": "Your house style, where your AI can read it."
+    },
+    {
+     "layout": "stat",
+     "tag": "",
+     "number": "15 min",
+     "label": "Step 1: a questionnaire about how your team writes",
+     "sub": "15 minutes. That's the whole form."
+    },
+    {
+     "layout": "files",
+     "tag": "",
+     "title": "Step 2: send 3 to 5 published pieces",
+     "items": [
+      "launch-release.pdf",
+      "byline-article.docx",
+      "client-feature.pdf"
+     ],
+     "sub": "Pieces your team has already published."
+    },
+    {
+     "layout": "stat",
+     "tag": "",
+     "number": "2 days",
+     "label": "Step 3: your house style, inside your AI tools",
+     "sub": "Claude, ChatGPT, Gemini and Copilot. Ready in 2 business days."
+    },
+    {
+     "layout": "chat",
+     "tag": "",
+     "prompt": "Check this draft against our house rules",
+     "reply": "2 breaks: [[\"finance expert\"]] should be the approved title. [[\"organization\"]] should be \"organisation\" for a UK outlet.",
+     "note": "Plus a checker. Paste in any draft."
+    },
+    {
+     "layout": "before_after",
+     "tag": "",
+     "title": "So the titles come out right",
+     "bad": "said finance expert Dr Amy Lowe",
+     "good": "said Dr Amy Lowe, Chief Financial Officer",
+     "rule": "And \"organization\" stays in America"
+    },
+    {
+     "layout": "cta",
+     "tag": "",
+     "title": "$99. See a finished one first.",
+     "sub": "Free sample kit at getencoded.co. Or comment RULES and I'll send it.",
+     "button": "Get the free sample"
+    }
+   ]
+  },
+  {
+   "id": "ig-10",
+   "channel": "instagram",
+   "week": 3,
+   "day": "Wed",
+   "title": "Who is building this",
+   "format": "reel-cover",
+   "slides": [
+    {
+     "layout": "cover",
+     "tag": "about · 01",
+     "title": "Who writes your house rules?",
+     "sub": "Zurva Aziz, copywriter in London. 2 years building editorial AI systems."
+    }
+   ]
+  },
+  {
+   "id": "ig-11",
+   "channel": "instagram",
+   "week": 3,
+   "day": "Thu",
+   "title": "The style guide nobody opens",
+   "format": "carousel",
+   "slides": [
+    {
+     "layout": "files",
+     "tag": "house style · 02",
+     "title": "Your style guide lives here",
+     "items": [
+      "house-style-FINAL-v7.pdf"
+     ],
+     "sub": "The last person to open it was the person who wrote it."
+    },
+    {
+     "layout": "meme",
+     "panels": [
+      {
+       "label": "Opened by your team:",
+       "text": "Twice. Lovingly."
+      },
+      {
+       "label": "Opened by your AI tool:",
+       "text": "Never. Not once."
+      }
+     ]
+    },
+    {
+     "layout": "cover",
+     "tag": "",
+     "title": "So the rules live in the senior editor's head.",
+     "sub": "And the rewrite pass does the rest."
+    },
+    {
+     "layout": "files",
+     "tag": "",
+     "title": "The kit puts your rules where drafts get written",
+     "items": [
+      "Claude",
+      "ChatGPT",
+      "Gemini",
+      "Copilot"
+     ],
+     "sub": "Inside the tools your team already uses."
+    },
+    {
+     "layout": "doc",
+     "tag": "",
+     "headline": "Draft for Fernhill PR (made up)",
+     "lines": [
+      {
+       "text": "Sarah Patel, chartered financial planner, says...",
+       "mark": "none"
+      },
+      {
+       "text": "The organization's new program launches today.",
+       "mark": "flag",
+       "note": "UK: organisation"
+      },
+      {
+       "text": "Tip: send it before 10am.",
+       "mark": "strike",
+       "note": "made-up label"
+      }
+     ],
+     "verdict": "FIX FIRST · 2 breaks"
+    },
+    {
+     "layout": "cta",
+     "tag": "",
+     "title": "Keep the PDF if you like.",
+     "sub": "Your AI will finally have read it. Free sample kit at getencoded.co.",
+     "button": "Download the free sample"
+    }
+   ]
+  },
+  {
+   "id": "ig-12",
+   "channel": "instagram",
+   "week": 3,
+   "day": "Fri",
+   "title": "Red pen Friday: the spelling one",
+   "format": "carousel",
+   "slides": [
+    {
+     "layout": "chat",
+     "tag": "red pen friday · 03",
+     "prompt": "Write one line for a UK trade title about the launch",
+     "reply": "The [[organization's]] new [[program]] will help customers [[analyze]] their spending.",
+     "note": "Three US spellings. One sentence."
+    },
+    {
+     "layout": "before_after",
+     "tag": "",
+     "title": "Editor wrote",
+     "bad": "The organization's new program will help customers analyze their spending.",
+     "good": "The organisation's new programme will help customers analyse their spending.",
+     "rule": "Rule · spelling follows the outlet"
+    },
+    {
+     "layout": "quote",
+     "quote": "A UK editor spots it in the first line. So does the client.",
+     "by": "Why it matters"
+    },
+    {
+     "layout": "cover",
+     "tag": "",
+     "title": "AI drifts back to US spelling.",
+     "sub": "Sometimes even after it has been told."
+    },
+    {
+     "layout": "checklist",
+     "tag": "",
+     "title": "Spelling, written down per client",
+     "items": [
+      {
+       "text": "UK release: organisation, programme",
+       "ok": true
+      },
+      {
+       "text": "US press: organization, program",
+       "ok": true
+      },
+      {
+       "text": "AI tool: whichever it fancied",
+       "ok": false
+      }
+     ]
+    },
+    {
+     "layout": "cta",
+     "tag": "",
+     "title": "In the kit, spelling is a rule per client.",
+     "sub": "The checker flags US spelling in a UK piece, and the other way round.",
+     "button": "Get your kit, $99"
+    }
+   ]
+  },
+  {
+   "id": "ig-13",
+   "channel": "instagram",
+   "week": 4,
+   "day": "Mon",
+   "title": "The sample kit flip-through",
+   "format": "reel-cover",
+   "slides": [
+    {
+     "layout": "cover",
+     "tag": "sample kit · 01",
+     "title": "Meet Fernhill PR. They don't exist.",
+     "sub": "A made-up agency with very real-looking house rules. Free sample kit."
+    }
+   ]
+  },
+  {
+   "id": "ig-14",
+   "channel": "instagram",
+   "week": 4,
+   "day": "Wed",
+   "title": "Rule of the week: the count matches",
+   "format": "carousel",
+   "slides": [
+    {
+     "layout": "cover",
+     "tag": "rule of the week · 01",
+     "title": "Rule of the week",
+     "sub": "The number in the headline matches the list."
+    },
+    {
+     "layout": "quiz",
+     "tag": "",
+     "title": "7 ways to pitch a busy journalist",
+     "question": "Headline says 7. Count them.",
+     "items": [
+      "Read what they cover",
+      "Lead with the news",
+      "Keep it short",
+      "Send it early",
+      "Offer a real spokesperson",
+      "Follow up once"
+     ],
+     "answer_index": null
+    },
+    {
+     "layout": "chat",
+     "tag": "",
+     "prompt": "Write 7 ways to pitch a busy journalist",
+     "reply": "Here are [[7 ways]] to pitch a busy journalist: 1. Read what they cover. 2. Lead with the news ... 6. Follow up once.",
+     "note": "Headline first. List second. Never compared."
+    },
+    {
+     "layout": "quote",
+     "quote": "It is the first thing a reader can check. If the count is off, why trust the rest?",
+     "by": "Why it matters"
+    },
+    {
+     "layout": "checklist",
+     "tag": "",
+     "title": "How the kit handles it",
+     "items": [
+      {
+       "text": "Rule built into your AI tools",
+       "ok": true
+      },
+      {
+       "text": "AI is told before it starts",
+       "ok": true
+      },
+      {
+       "text": "The checker counts the list",
+       "ok": true
+      },
+      {
+       "text": "Headline 7, list 6: flagged",
+       "ok": false
+      }
+     ]
+    },
+    {
+     "layout": "cover",
+     "tag": "",
+     "title": "One rule down.",
+     "sub": "Your house style has plenty more."
+    },
+    {
+     "layout": "cta",
+     "tag": "",
+     "title": "See a full set of house rules.",
+     "sub": "Free sample kit at getencoded.co. Link in bio.",
+     "button": "Download the free sample"
+    }
+   ]
+  },
+  {
+   "id": "ig-15",
+   "channel": "instagram",
+   "week": 4,
+   "day": "Thu",
+   "title": "The AI draft starter pack",
+   "format": "image",
+   "slides": [
+    {
+     "layout": "meme",
+     "panels": [
+      {
+       "label": "The AI draft starter pack",
+       "text": "\"In today's fast-paced world\" · \"Tip:\" · Seven long dashes"
+      },
+      {
+       "label": "Also included:",
+       "text": "\"Finance expert\" · \"5 tips\" (6 tips)"
+      },
+      {
+       "label": "Collector's edition:",
+       "text": "\"Organization\" in a UK release · A quote the client never said"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ig-16",
+   "channel": "instagram",
+   "week": 4,
+   "day": "Fri",
+   "title": "Red pen Friday: made-up labels",
+   "format": "reel-cover",
+   "slides": [
+    {
+     "layout": "chat",
+     "tag": "red pen friday · 04",
+     "prompt": "Write a short press release about the launch",
+     "reply": "[[Key takeaway:]] the launch went well. [[Tip:]] send your release before 10am.",
+     "note": "Red pen Friday: the labels"
+    }
+   ]
+  },
+  {
+   "id": "ig-17",
+   "channel": "instagram",
+   "week": 5,
+   "day": "Mon",
+   "title": "What you send, what you get",
+   "format": "carousel",
+   "slides": [
+    {
+     "layout": "cover",
+     "tag": "how it works · 02",
+     "title": "What you send. What you get.",
+     "sub": "The whole process, in one carousel."
+    },
+    {
+     "layout": "stat",
+     "tag": "",
+     "number": "15 min",
+     "label": "You send: answers to a questionnaire",
+     "sub": "15 minutes on how your team writes."
+    },
+    {
+     "layout": "files",
+     "tag": "",
+     "title": "You send: 3 to 5 published pieces",
+     "items": [
+      "launch-release.pdf",
+      "byline-article.docx",
+      "client-feature.pdf"
+     ],
+     "sub": "Pieces your team was proud of."
+    },
+    {
+     "layout": "stat",
+     "tag": "",
+     "number": "2 days",
+     "label": "You get: your house style in your AI tools",
+     "sub": "Claude, ChatGPT, Gemini and Copilot. 2 business days."
+    },
+    {
+     "layout": "chat",
+     "tag": "",
+     "prompt": "Check this draft against our house rules",
+     "reply": "3 breaks. Headline says [[5]], list has 6. [[\"Tip:\"]] is a made-up label. [[\"organization\"]] in a UK piece.",
+     "note": "You get: a checker for any draft."
+    },
+    {
+     "layout": "quote",
+     "quote": "No style guide yet? Fine. Your published pieces show how your team already writes.",
+     "by": "Zurva Aziz"
+    },
+    {
+     "layout": "cta",
+     "tag": "",
+     "title": "$99. Order at getencoded.co.",
+     "sub": "15-minute questionnaire. 3 to 5 pieces. 2 business days.",
+     "button": "Get your kit, $99"
+    }
+   ]
+  },
+  {
+   "id": "ig-18",
+   "channel": "instagram",
+   "week": 5,
+   "day": "Wed",
+   "title": "The checker at work",
+   "format": "reel-cover",
+   "slides": [
+    {
+     "layout": "cover",
+     "tag": "the checker · 01",
+     "title": "Paste a draft. Watch it get marked.",
+     "sub": "Running on the Fernhill PR sample kit. A made-up agency, a real checker."
+    }
+   ]
+  },
+  {
+   "id": "ig-19",
+   "channel": "instagram",
+   "week": 5,
+   "day": "Thu",
+   "title": "$99 or $249?",
+   "format": "carousel",
+   "slides": [
+    {
+     "layout": "quiz",
+     "tag": "prices · 01",
+     "title": "$99 or $249?",
+     "question": "Which kit is yours?",
+     "items": [
+      "House Rules Kit, $99",
+      "Calibrated Kit, $249",
+      "Custom system, book a call"
+     ],
+     "answer_index": null
+    },
+    {
+     "layout": "stat",
+     "tag": "",
+     "number": "$99",
+     "label": "House Rules Kit",
+     "sub": "Your house style in your AI tools, plus the checker. Ready in 2 business days."
+    },
+    {
+     "layout": "stat",
+     "tag": "",
+     "number": "$249",
+     "label": "Calibrated Kit",
+     "sub": "The $99 kit, tuned to your real edits after 2 weeks. Plus a 30-minute call."
+    },
+    {
+     "layout": "checklist",
+     "tag": "",
+     "title": "Pick $99 if...",
+     "items": [
+      {
+       "text": "Your house style is fairly settled",
+       "ok": true
+      },
+      {
+       "text": "You want the rules in place fast",
+       "ok": true
+      },
+      {
+       "text": "You want the checker on every draft",
+       "ok": true
+      }
+     ]
+    },
+    {
+     "layout": "checklist",
+     "tag": "",
+     "title": "Pick $249 if...",
+     "items": [
+      {
+       "text": "You want rules checked against real edits",
+       "ok": true
+      },
+      {
+       "text": "Your team edits a lot after the AI",
+       "ok": true
+      },
+      {
+       "text": "A 30-minute call to talk them through",
+       "ok": true
+      }
+     ]
+    },
+    {
+     "layout": "cover",
+     "tag": "",
+     "title": "Bigger agency, lots of client styles?",
+     "sub": "Custom systems. Book a call."
+    },
+    {
+     "layout": "cta",
+     "tag": "",
+     "title": "Still deciding?",
+     "sub": "Download the free sample kit first. getencoded.co",
+     "button": "Download the free sample"
+    }
+   ]
+  },
+  {
+   "id": "ig-20",
+   "channel": "instagram",
+   "week": 5,
+   "day": "Fri",
+   "title": "Red pen Friday: the quote",
+   "format": "carousel",
+   "slides": [
+    {
+     "layout": "chat",
+     "tag": "red pen friday · 05",
+     "prompt": "Use the CEO's quote: \"We're pleased with the result and grateful to the team.\"",
+     "reply": "\"We're [[absolutely thrilled]] with this [[incredible]] result,\" said the CEO.",
+     "note": "Red pen Friday 05. The quote."
+    },
+    {
+     "layout": "quote",
+     "quote": "We're pleased with the result and grateful to the team.",
+     "by": "What the client actually said"
+    },
+    {
+     "layout": "before_after",
+     "tag": "",
+     "title": "Editor wrote",
+     "bad": "\"We're absolutely thrilled with this incredible result,\" said the CEO.",
+     "good": "\"We're pleased with the result and grateful to the team,\" said Jane Hart.",
+     "rule": "Rule · never edit a direct quote"
+    },
+    {
+     "layout": "cover",
+     "tag": "",
+     "title": "A quote is someone's words on the record.",
+     "sub": "Polish it and it stops being theirs."
+    },
+    {
+     "layout": "steps",
+     "tag": "",
+     "title": "The rule",
+     "steps": [
+      "Never edit a direct quote",
+      "If it needs changing, flag it",
+      "Ask first, then change it"
+     ]
+    },
+    {
+     "layout": "cta",
+     "tag": "",
+     "title": "Your team's rule might be different.",
+     "sub": "Write it down either way. Your kit makes it a rule your AI follows.",
+     "button": "Get your kit, $99"
+    }
+   ]
+  },
+  {
+   "id": "ig-21",
+   "channel": "instagram",
+   "week": 6,
+   "day": "Mon",
+   "title": "FAQ in 30 seconds",
+   "format": "reel-cover",
+   "slides": [
+    {
+     "layout": "meme",
+     "panels": [
+      {
+       "label": "You:",
+       "text": "\"What do I send? What do I get? Which AI tools?\""
+      },
+      {
+       "label": "Me, in 30 seconds:",
+       "text": "Your questions about the House Rules Kit, answered. ✓"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ig-22",
+   "channel": "instagram",
+   "week": 6,
+   "day": "Wed",
+   "title": "Is the kit for your team?",
+   "format": "carousel",
+   "slides": [
+    {
+     "layout": "cover",
+     "tag": "who it's for · 01",
+     "title": "Is the kit for your team?",
+     "sub": "A quick check. Tick as you go."
+    },
+    {
+     "layout": "checklist",
+     "tag": "",
+     "title": "You, probably",
+     "items": [
+      {
+       "text": "You look after editorial quality",
+       "ok": true
+      },
+      {
+       "text": "Agency or comms team of 2 to 15",
+       "ok": true
+      },
+      {
+       "text": "Your team uses AI for first drafts",
+       "ok": true
+      },
+      {
+       "text": "Someone senior rereads every one",
+       "ok": true
+      },
+      {
+       "text": "Every client has its own house style",
+       "ok": true
+      }
+     ]
+    },
+    {
+     "layout": "meme",
+     "panels": [
+      {
+       "label": "Your team:",
+       "text": "Uses AI for every first draft."
+      },
+      {
+       "label": "The most senior person:",
+       "text": "Rereads every single one."
+      }
+     ]
+    },
+    {
+     "layout": "files",
+     "tag": "",
+     "title": "Also a fit",
+     "items": [
+      "Freelance PR writers",
+      "Content agencies",
+      "Comms leads"
+     ],
+     "sub": "If your days go on fixing AI drafts."
+    },
+    {
+     "layout": "cta",
+     "tag": "",
+     "title": "Ticked most of these?",
+     "sub": "$99 kit at getencoded.co. Bigger team? Book a call.",
+     "button": "Get your kit, $99"
+    }
+   ]
+  },
+  {
+   "id": "ig-23",
+   "channel": "instagram",
+   "week": 6,
+   "day": "Thu",
+   "title": "The offer",
+   "format": "image",
+   "slides": [
+    {
+     "layout": "stat",
+     "tag": "house rules kit",
+     "number": "$99",
+     "label": "Your house style, built into your AI tools. ✓",
+     "sub": "getencoded.co · ready in 2 business days"
+    }
+   ]
+  },
+  {
+   "id": "ig-24",
+   "channel": "instagram",
+   "week": 6,
+   "day": "Fri",
+   "title": "Red pen Friday: six rules",
+   "format": "carousel",
+   "slides": [
+    {
+     "layout": "cover",
+     "tag": "red pen friday · recap",
+     "title": "6 rules from six weeks of red pen. ✓",
+     "sub": "Counted. There are 6."
+    },
+    {
+     "layout": "before_after",
+     "tag": "",
+     "title": "Rule 1",
+     "bad": "5 ways to get your press release read (lists 6)",
+     "good": "6 ways to get your press release read",
+     "rule": "Rule 1 · count = headline"
+    },
+    {
+     "layout": "before_after",
+     "tag": "",
+     "title": "Rule 2",
+     "bad": "Sarah, a finance expert, says...",
+     "good": "Sarah Patel, chartered financial planner, says...",
+     "rule": "Rule 2 · the exact title"
+    },
+    {
+     "layout": "before_after",
+     "tag": "",
+     "title": "Rule 3",
+     "bad": "The results were clear — growth was up.",
+     "good": "The results were clear. Growth was up.",
+     "rule": "Rule 3 · no long dashes"
+    },
+    {
+     "layout": "before_after",
+     "tag": "",
+     "title": "Rule 4",
+     "bad": "The organization's new program",
+     "good": "The organisation's new programme",
+     "rule": "Rule 4 · spelling follows outlet"
+    },
+    {
+     "layout": "before_after",
+     "tag": "",
+     "title": "Rule 5",
+     "bad": "Key takeaway: the launch went well.",
+     "good": "The launch went well.",
+     "rule": "Rule 5 · no made-up labels"
+    },
+    {
+     "layout": "before_after",
+     "tag": "",
+     "title": "Rule 6",
+     "bad": "\"We're absolutely thrilled,\" said the CEO.",
+     "good": "\"We're pleased with the result,\" said Jane Hart.",
+     "rule": "Rule 6 · never edit a quote"
+    },
+    {
+     "layout": "cta",
+     "tag": "",
+     "title": "Your team has dozens more.",
+     "sub": "Put them where your AI can read them. getencoded.co",
+     "button": "Get your kit, $99"
+    }
+   ]
+  },
+  {
+   "id": "tt-01",
+   "channel": "tiktok",
+   "week": 1,
+   "day": "Tue",
+   "title": "One quick read",
+   "format": "reel-cover",
+   "slides": [
+    {
+     "layout": "meme",
+     "panels": [
+      {
+       "label": "The plan:",
+       "text": "\"One quick read, then it goes.\""
+      },
+      {
+       "label": "11.47pm:",
+       "text": "Headline: 5. List: 6. \"Organization\". \"Finance expert\". Tea: cold."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tt-02",
+   "channel": "tiktok",
+   "week": 1,
+   "day": "Wed",
+   "title": "Which world?",
+   "format": "reel-cover",
+   "slides": [
+    {
+     "layout": "chat",
+     "tag": "every ai press release",
+     "prompt": "Write the opening line for Brightwell Boilers (made up)",
+     "reply": "[[In today's fast-paced world]], businesses are constantly seeking [[innovative ways to stay ahead of the curve]].",
+     "note": "Which world? The client sells boilers."
+    }
+   ]
+  },
+  {
+   "id": "tt-03",
+   "channel": "tiktok",
+   "week": 1,
+   "day": "Thu",
+   "title": "Count the items: crisis plan",
+   "format": "reel-cover",
+   "slides": [
+    {
+     "layout": "cover",
+     "tag": "count the items",
+     "title": "5 things every crisis comms plan needs",
+     "sub": "Count the items. You've got 5 seconds."
+    }
+   ]
+  },
+  {
+   "id": "tt-04",
+   "channel": "tiktok",
+   "week": 2,
+   "day": "Fri",
+   "title": "Red Pen Friday: the demoted CFO",
+   "format": "reel-cover",
+   "slides": [
+    {
+     "layout": "chat",
+     "tag": "red pen friday",
+     "prompt": "Quote Dr Amy Lowe, CFO at Brightwell Boilers (made up)",
+     "reply": "\"We're seeing real demand,\" said [[finance expert]] Dr Amy Lowe.",
+     "note": "Red Pen Friday: the AI demoted the CFO"
+    }
+   ]
+  },
+  {
+   "id": "tt-05",
+   "channel": "tiktok",
+   "week": 2,
+   "day": "Tue",
+   "title": "AI wrote, editor wrote: the labels",
+   "format": "reel-cover",
+   "slides": [
+    {
+     "layout": "meme",
+     "panels": [
+      {
+       "label": "Nobody in PR, ever:",
+       "text": "Needed the word \"Tip\" with a colon after it."
+      },
+      {
+       "label": "The AI draft:",
+       "text": "Tip: Always include a high-res image. Key takeaway: Consistency is key."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tt-06",
+   "channel": "tiktok",
+   "week": 2,
+   "day": "Thu",
+   "title": "Reacting to a bad release",
+   "format": "reel-cover",
+   "slides": [
+    {
+     "layout": "cover",
+     "tag": "sample draft · made-up client",
+     "title": "Four em dashes. Still in paragraph one.",
+     "sub": "Reacting to an AI press release I wrote badly on purpose."
+    }
+   ]
+  },
+  {
+   "id": "tt-07",
+   "channel": "tiktok",
+   "week": 3,
+   "day": "Tue",
+   "title": "Four clients, four style guides",
+   "format": "reel-cover",
+   "slides": [
+    {
+     "layout": "meme",
+     "panels": [
+      {
+       "label": "Client A:",
+       "text": "Oxford comma."
+      },
+      {
+       "label": "Client B:",
+       "text": "No Oxford comma."
+      },
+      {
+       "label": "Me at 11pm:",
+       "text": "Which client is this?"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tt-08",
+   "channel": "tiktok",
+   "week": 3,
+   "day": "Thu",
+   "title": "Count the items: hard mode",
+   "format": "reel-cover",
+   "slides": [
+    {
+     "layout": "cover",
+     "tag": "sample draft · made-up firm",
+     "title": "Holloway & Marsh appoints three new partners",
+     "sub": "Count the items: hard mode. The headline says three. Something's still wrong."
+    }
+   ]
+  },
+  {
+   "id": "tt-09",
+   "channel": "tiktok",
+   "week": 3,
+   "day": "Fri",
+   "title": "Red Pen Friday: two spellings",
+   "format": "reel-cover",
+   "slides": [
+    {
+     "layout": "chat",
+     "tag": "red pen friday",
+     "prompt": "Same release, UK version please",
+     "reply": "The [[organization]] will launch its new [[color]] range on [[November 5, 2026]].",
+     "note": "Red Pen Friday: colour or color?"
+    }
+   ]
+  },
+  {
+   "id": "tt-10",
+   "channel": "tiktok",
+   "week": 4,
+   "day": "Tue",
+   "title": "What your AI should have read first",
+   "format": "reel-cover",
+   "slides": [
+    {
+     "layout": "cover",
+     "tag": "fernhill pr · sample kit",
+     "title": "What your AI should read before it writes a word",
+     "sub": "Fernhill PR is made up. The rules are real ones. Free sample kit."
+    }
+   ]
+  },
+  {
+   "id": "tt-11",
+   "channel": "tiktok",
+   "week": 4,
+   "day": "Thu",
+   "title": "Same prompt, with and without the rules",
+   "format": "reel-cover",
+   "slides": [
+    {
+     "layout": "meme",
+     "panels": [
+      {
+       "label": "Same AI, no rules:",
+       "text": "Knows how to write."
+      },
+      {
+       "label": "Same AI, Fernhill kit loaded:",
+       "text": "Knows how Fernhill writes."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tt-12",
+   "channel": "tiktok",
+   "week": 5,
+   "day": "Tue",
+   "title": "The sample kit checker in 30 seconds",
+   "format": "reel-cover",
+   "slides": [
+    {
+     "layout": "chat",
+     "tag": "the checker",
+     "prompt": "Check this draft against the Fernhill PR house rules",
+     "reply": "Headline says [[5]], list has 6. US spelling: [[organization]]. Label: [[Tip:]]. Title: [[finance expert]], use the approved title.",
+     "note": "Paste a draft. Get the rule breaks."
+    }
+   ]
+  },
+  {
+   "id": "tt-13",
+   "channel": "tiktok",
+   "week": 5,
+   "day": "Thu",
+   "title": "One quick read, 6.15pm",
+   "format": "reel-cover",
+   "slides": [
+    {
+     "layout": "cover",
+     "tag": "pov · series finale",
+     "title": "POV: you're the senior account director at... 6.15pm?",
+     "sub": "Two flags. Two fixes. Tea: still hot."
+    }
+   ]
+  },
+  {
+   "id": "tt-14",
+   "channel": "tiktok",
+   "week": 6,
+   "day": "Tue",
+   "title": "The House Rules Kit in 40 seconds",
+   "format": "reel-cover",
+   "slides": [
+    {
+     "layout": "meme",
+     "panels": [
+      {
+       "label": "What you send:",
+       "text": "A 15-minute questionnaire and 3 to 5 published pieces."
+      },
+      {
+       "label": "2 business days later:",
+       "text": "Your house style inside Claude, ChatGPT, Gemini or Copilot. Plus a checker."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tt-15",
+   "channel": "tiktok",
+   "week": 6,
+   "day": "Thu",
+   "title": "Can't I just paste our style guide in?",
+   "format": "reel-cover",
+   "slides": [
+    {
+     "layout": "cover",
+     "tag": "your question",
+     "title": "\"Can't I just paste our style guide into ChatGPT?\"",
+     "sub": "You can. Try this first."
+    }
+   ]
+  }
+ ]
+}

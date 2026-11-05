@@ -29,6 +29,25 @@ gallery = "".join(
     for f in VISUALS)
 parts.insert(1, f'<section class="sec" id="visuals"><h2 class="sec__title">Ready-made visuals</h2><p class="note">Feed posts at 1080×1350, Reel covers at 1080×1920, LinkedIn banner at 1584×396. Download any image and post it as is.</p><div class="gallery">{gallery}</div></section>')
 
+import json
+IDX = json.load(open(os.path.join(D, "posts", "index.json"), encoding="utf-8")) if os.path.exists(os.path.join(D, "posts", "index.json")) else []
+CH = [("linkedin", "LinkedIn"), ("instagram", "Instagram and Facebook"), ("tiktok", "TikTok")]
+FMT = {"image": "Single image", "carousel": "Carousel", "reel-cover": "Reel cover"}
+if IDX:
+    blocks = []
+    for key, label in CH:
+        posts = [q for q in IDX if q["channel"].lower().startswith(key)]
+        if not posts:
+            continue
+        cards = []
+        for q in posts:
+            imgs = "".join(f'<a href="posts/{f}" target="_blank" rel="noopener"><img src="posts/{f}" alt="{html.escape(q["title"])}, slide {i+1}" loading="lazy" class="{'tall' if q['format']=='reel-cover' else ''}"></a>' for i, f in enumerate(q["files"]))
+            meta = f'{html.escape(q["id"])} · week {q.get("week","")} · {html.escape(str(q.get("day","")))} · {FMT.get(q["format"], q["format"])} · {len(q["files"])} slide{"s" if len(q["files"])>1 else ""}'
+            cards.append(f'<article class="post"><p class="post__meta">{meta}</p><h4 class="post__title">{html.escape(q["title"])}</h4><div class="strip">{imgs}</div></article>')
+        blocks.append(f'<h3 class="ch">{label} <span>{len(posts)} posts</span></h3>' + "".join(cards))
+    toc.insert(1, '<a href="#posts">Post visuals</a>')
+    parts.insert(1, f'<section class="sec" id="posts"><h2 class="sec__title">Post visuals, ready to upload</h2><p class="note">Every post in the calendar, designed. Swipe each row for the slides. Feed posts are 1080×1350, Reel and TikTok covers 1080×1920. Tap a slide to open it full size. For LinkedIn carousels, combine the slides into one PDF.</p>{"".join(blocks)}</section>')
+
 page = f"""<title>Encoded Launch Campaign</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -71,6 +90,14 @@ nav.toc a:hover{{background:var(--card)}}
 .vis{{margin:0;border-radius:16px;overflow:hidden;background:var(--card);box-shadow:0 0 0 1px var(--line)}}
 .vis img{{display:block;width:100%;height:auto;max-width:100%}}
 .vis figcaption{{font-family:"JetBrains Mono",monospace;font-size:11px;color:var(--muted);padding:8px 10px}}
+.ch{{font-size:1.3rem;letter-spacing:-.02em;margin:36px 0 6px}} .ch span{{font-family:"JetBrains Mono",monospace;font-size:12px;color:var(--muted);font-weight:500;margin-left:8px}}
+.post{{margin:18px 0 26px;min-width:0}}
+.post__meta{{font-family:"JetBrains Mono",monospace;font-size:11px;color:var(--muted);margin:0}}
+.post__title{{margin:2px 0 10px;font-size:1rem}}
+.strip{{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:8px}}
+.strip a{{flex:0 0 auto;scroll-snap-align:start}}
+.strip img{{display:block;width:200px;height:250px;object-fit:cover;border-radius:12px;box-shadow:0 0 0 1px var(--line)}}
+.strip img.tall{{width:160px;height:284px}}
 @media (max-width:820px){{.layout{{grid-template-columns:minmax(0,1fr)}} nav.toc{{position:static;flex-direction:row;flex-wrap:wrap}}}}
 </style>
 <header class="hero">
